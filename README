@@ -11,12 +11,17 @@ top is the latitude of the top (northernmost) side of the bounding box.
 
 to get coordinates: http://www.getlatlon.com/
 
+Atomium:
 http://api.openstreetmap.org/api/0.6/map?bbox=4.331445693969727,50.8924225710247,4.347238540649414,50.899000134415864
+
+Flagey:
+http://api.openstreetmap.org/api/0.6/map?bbox=4.370412826538086,50.82627053184742,4.374446868896484,50.82917782833559
+
 
 
 Running Saxon:
 
-java -jar ../saxon9he.jar -t -s:atomium.xml -xsl:maporizer.xsl -o:map.svg
+java -jar saxon.jar -t -s:atomium.xml -xsl:maporizer.xsl -o:map.svg
 
 Todo: 
 - make sure the area is square
