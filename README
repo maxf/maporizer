@@ -1,0 +1,23 @@
+Retrieving OpenStreetMap data in XML by bounding box:
+http://wiki.openstreetmap.org/wiki/API_v0.6#Retrieving_map_data_by_bounding_box:_GET_.2Fapi.2F0.6.2Fmap
+
+http://api.openstreetmap.org/api/0.6/map?bbox=left,bottom, right,top
+
+left is the longitude of the left (westernmost) side of the bounding box.
+bottom is the latitude of the bottom (southernmost) side of the bounding box.
+right is the longitude of the right (easternmost) side of the bounding box.
+top is the latitude of the top (northernmost) side of the bounding box.
+
+
+to get coordinates: http://www.getlatlon.com/
+
+http://api.openstreetmap.org/api/0.6/map?bbox=4.331445693969727,50.8924225710247,4.347238540649414,50.899000134415864
+
+
+Running Saxon:
+
+java -jar ../saxon9he.jar -t -s:atomium.xml -xsl:maporizer.xsl -o:map.svg
+
+Todo: 
+- make sure the area is square
+- find out why it displays in FF but not Chrome
