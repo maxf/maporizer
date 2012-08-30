@@ -31,8 +31,13 @@
 
 
   <template match="way" mode="area-pattern">
-    <s:pattern id="ID{@id}" patternUnits="objectBoundingBox" patternContentUnits="objectBoundingBox" viewBox="0 0 10 10" >
-      <s:path d="M 0 0 L 7 0 L 3.5 7 z" fill="red" stroke="blue" />
+   <s:pattern id="ID{@id}" patternUnits="objectBoundingBox"
+            x="0" y="0" width=".3" height=".3"
+            viewBox="0 0 10 10" >
+        <s:text x="1" y="6" font-family="Verdana" font-size="5" fill="black">
+          <value-of select="tag[@k='name']/@v"/>
+        </s:text>
+<!--        <s:rect x="0" y="0" width="10" height="10" stroke="red" /> -->
     </s:pattern> 
   </template>
 
