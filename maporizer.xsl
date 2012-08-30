@@ -71,48 +71,12 @@
     <s:use xlink:href="#{@id}" fill="none" stroke="red" stroke-width="0.01" />
     <s:text font-family="Verdana" font-size="{$font-size}" fill="black">
       <s:textPath xlink:href="#{@id}" baseline-shift="-30%">
-        <value-of select="tag[@k='name']/@v"/><text> </text>
-        <value-of select="tag[@k='name']/@v"/><text> </text>
-        <value-of select="tag[@k='name']/@v"/><text> </text>
-        <value-of select="tag[@k='name']/@v"/><text> </text>
-        <value-of select="tag[@k='name']/@v"/><text> </text>
-        <value-of select="tag[@k='name']/@v"/><text> </text>
-        <value-of select="tag[@k='name']/@v"/><text> </text>
-        <value-of select="tag[@k='name']/@v"/><text> </text>
-        <value-of select="tag[@k='name']/@v"/><text> </text>
-        <value-of select="tag[@k='name']/@v"/><text> </text>
-        <value-of select="tag[@k='name']/@v"/><text> </text>
-        <value-of select="tag[@k='name']/@v"/><text> </text>
-        <value-of select="tag[@k='name']/@v"/><text> </text>
-        <value-of select="tag[@k='name']/@v"/><text> </text>
-        <value-of select="tag[@k='name']/@v"/><text> </text>
-        <value-of select="tag[@k='name']/@v"/><text> </text>
-        <value-of select="tag[@k='name']/@v"/><text> </text>
-        <value-of select="tag[@k='name']/@v"/><text> </text>
+        <value-of select="for $a in (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1) return tag[@k='name']/@v"/><text> - </text>
       </s:textPath>
     </s:text>
 
   </template>
 
-<!--
-    <variable name="highway-width">
-      <choose>
-        <when test="tag[@k='highway' and @v='tertiary']">0.00005</when>
-        <when test="tag[@k='highway' and @v='residential']">0.00003</when>
-        <when test="tag[@k='highway' and @v='pedestrian']">0.00002</when>
-        <otherwise>0.00001</otherwise>
-      </choose>
-    </variable>
-    <s:polyline stroke-width="{$highway-width}" fill="none" stroke="black">
-      <attribute name="points">
-        <for-each select="nd">
-          <variable name="node" select="/osm/node[@id=current()/@ref]"/>
-          <value-of select="concat($node/@lon,',',-$node/@lat,' ')"/>
-        </for-each>
-      </attribute>
-    </s:polyline>
-  </template>
--->
 
 
 </transform>
