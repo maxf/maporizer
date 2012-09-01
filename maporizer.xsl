@@ -2,6 +2,7 @@
            xmlns="http://www.w3.org/2000/svg"
            xmlns:f="http://lapin-bleu.net"
            xmlns:xlink="http://www.w3.org/1999/xlink"
+           xmlns:fn= "http://www.w3.org/2005/xpath-functions"
            xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
 
@@ -61,10 +62,10 @@
         newString.setAttributeNS(null,"stroke-width", fontSize/15);
         newString.setAttributeNS(null,"fill","black");
         newString.setAttributeNS(null,"font-size", fontSize);
-        newString.setAttributeNS(null,"font-family","Verdana");
+        newString.setAttributeNS(null,"font-family","Impact");
         newString.setAttributeNS(null,"text-anchor","middle");
         newString.setAttributeNS(null,"transform","rotate("+(Math.random()*40-5)+")");
-        var textNode = document.createTextNode(text);
+        var textNode = document.createTextNode(text.toUpperCase());
         newString.appendChild(textNode);
         poly.parentElement.appendChild(newString);
       }      
@@ -96,7 +97,7 @@
     <use xlink:href="#ID{@id}" fill="none" stroke="white" stroke-width="10" />
     <text font-family="Verdana" font-size="{$font-size}" fill="black">
       <textPath xlink:href="#ID{@id}" baseline-shift="-30%">
-        <x:value-of select="for $a in (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1) return concat(tag[@k='name']/@v, ' -')"/>
+        <x:value-of select="for $a in (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1) return concat(fn:upper-case(tag[@k='name']/@v), ' -')"/>
       </textPath>
     </text>
 
