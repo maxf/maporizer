@@ -32,9 +32,14 @@
       <rect x="{-$width}" y="{-$height}" width="{3*$width}" height="{3*$height}" fill="#ddd"/>
 
       // areas
-      <x:apply-templates select="way[tag[(@k='natural' and @v='water')
+<!--      <x:apply-templates select="way[tag[(@k='natural' and @v='water')
                                           or (@k='natural' and @v='wood')
+                                          or (@k='amenity' and @v='square')
                                           or (@k='leisure')]]" mode="area-draw"/>
+-->
+<x:apply-templates select="way[tag[(@k='area' and @v='yes') or 
+                                   (@k='building' and @v='yes') or 
+                                   (@k='leisure')]]" mode="area-draw"/>
 
 
       // roads
@@ -56,6 +61,7 @@
       <x:choose>
         <x:when test="tag[@k='natural' and @v='water']">blue</x:when>
         <x:when test="tag[@k='natural' and @v='wood']">green</x:when>
+        <x:when test="tag[@k='amenity' and @v='square']">#aaa</x:when>
         <x:when test="tag[@k='leisure']">lightgreen</x:when>
         <x:otherwise>grey</x:otherwise>
       </x:choose>
@@ -97,13 +103,13 @@
       var width = 2*bbox.width;
       var ymin = bbox.y - bbox.height/2;
       var height = 2*bbox.height;
-      var nbStrokes = width*height/1000;
+      var nbStrokes = width*height/500;
       console.log(nbStrokes);
 
       for (var i=0; i<nbStrokes; i++) {
         var x = xmin + Math.random() * width;
         var y = ymin + Math.random() * height;
-        var fontSize = 50 + Math.random() * 20;
+        var fontSize = (50 + Math.random() * 30)*width/1000;
         var newString = document.createElementNS("http://www.w3.org/2000/svg","text");
         newString.setAttributeNS(null,"x",x);		
         newString.setAttributeNS(null,"y",y);
@@ -143,11 +149,11 @@
 
     <x:variable name="font-size">
       <x:choose>
-        <x:when test="tag[@k='highway' and (@v='primary' or @v='trunk')]">30px</x:when>
-        <x:when test="tag[@k='highway' and @v='secondary']">27px</x:when>
-        <x:when test="tag[@k='highway' and (@v='tertiary' or @v='unclassified')]">24px</x:when>
-        <x:when test="tag[@k='highway' and @v='residential']">21px</x:when>
-        <x:when test="tag[@k='highway' and @v='pedestrian']">18px</x:when>
+        <x:when test="tag[@k='highway' and (@v='primary' or @v='trunk')]">28px</x:when>
+        <x:when test="tag[@k='highway' and @v='secondary']">25px</x:when>
+        <x:when test="tag[@k='highway' and (@v='tertiary' or @v='unclassified')]">22px</x:when>
+        <x:when test="tag[@k='highway' and @v='residential']">19px</x:when>
+        <x:when test="tag[@k='highway' and @v='pedestrian']">16px</x:when>
         <x:otherwise>0</x:otherwise>
       </x:choose>
     </x:variable>
@@ -165,7 +171,7 @@
 
     <use xlink:href="#ID{@id}" fill="none" stroke="white" stroke-width="{$font-size}" />
     <text font-family="Impact" font-size="{$font-size}" fill="{$color}">
-      <textPath xlink:href="#ID{@id}" baseline-shift="-30%">
+      <textPath xlink:href="#ID{@id}" baseline-shift="-40%">
         <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
         <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
         <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
