@@ -1,3 +1,3 @@
-%.svg: %.xml maporizer.xsl
-	java -jar saxon.jar -t -s:$< -xsl:maporizer.xsl -o:$@
+%.svg: %.xml maporizer-bxl.xsl
+	java -jar saxon.jar -t -s:$< -xsl:maporizer-bxl.xsl -o:$@
 

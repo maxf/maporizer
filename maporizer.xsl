@@ -1,9 +1,10 @@
-<x:transform xmlns:x="http://www.w3.org/1999/XSL/Transform" version="2.0" 
+<x:transform xmlns:x="http://www.w3.org/1999/XSL/Transform" version="1.0" 
            xmlns="http://www.w3.org/2000/svg"
-           xmlns:f="http://lapin-bleu.net"
-           xmlns:xlink="http://www.w3.org/1999/xlink"
-           xmlns:fn= "http://www.w3.org/2005/xpath-functions"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+           xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <!-- we could use fn:upper-case but trying to stay on xslt1.0 for performance -->
+  <x:variable name="lowercase" select="'abcdeéèfghijklmnopqrstuvwxyz'" />
+  <x:variable name="uppercase" select="'ABCDEÉÈFGHIJKLMNOPQRSTUVWXYZ'" />
 
 
   <x:variable name="scaling-factor" select="100000"/>
@@ -165,7 +166,38 @@
     <use xlink:href="#ID{@id}" fill="none" stroke="white" stroke-width="{$font-size}" />
     <text font-family="Impact" font-size="{$font-size}" fill="{$color}">
       <textPath xlink:href="#ID{@id}" baseline-shift="-30%">
-        <x:value-of select="for $a in (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1) return concat(fn:upper-case(tag[@k='name']/@v), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
+        <x:value-of select="concat(translate(tag[@k='name']/@v, $lowercase, $uppercase), '·')"/>
       </textPath>
     </text>
 
