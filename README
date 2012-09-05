@@ -1,6 +1,11 @@
-Just like http://store.axismaps.co.uk/
+See    for details
 
-Retrieving OpenStreetMap data in XML by bounding box:
+Technical Notes:
+
+- Just like http://store.axismaps.co.uk/
+
+- Retrieving OpenStreetMap data in XML by bounding box:
+
 http://wiki.openstreetmap.org/wiki/API_v0.6#Retrieving_map_data_by_bounding_box:_GET_.2Fapi.2F0.6.2Fmap
 
 http://api.openstreetmap.org/api/0.6/map?bbox=left,bottom, right,top
@@ -13,9 +18,6 @@ top is the latitude of the top (northernmost) side of the bounding box.
 
 to get coordinates: http://www.getlatlon.com/
 
-Atomium:
-http://api.openstreetmap.org/api/0.6/map?bbox=4.331445693969727,50.8924225710247,4.347238540649414,50.899000134415864
-
 Flagey:
 http://api.openstreetmap.org/api/0.6/map?bbox=4.370412826538086,50.82627053184742,4.374446868896484,50.82917782833559
 
@@ -24,14 +26,3 @@ http://api.openstreetmap.org/api/0.6/map?bbox=4.348813461303711,50.8450555455673
 
 London
 http://api.openstreetmap.org/api/0.6/map?bbox=-0.1593017578125,51.49805708407405,-0.14591217041015625,51.50687269909403
-
-
-Running Saxon:
-
-java -jar saxon.jar -t -s:atomium.xml -xsl:maporizer.xsl -o:map.svg
-
-Todo: 
-- make sure the area is square
-- find out why it displays in FF but not Chrome
-
-
