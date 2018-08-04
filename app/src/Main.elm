@@ -1,24 +1,37 @@
 module Main exposing (..)
 
-import Types exposing (Uri(..))
-
-import Html exposing (Html, text, div, h1, img)
+import Types exposing (..)
+import Html exposing (..)
 import Html.Attributes exposing (src)
+import Http
+import Xml exposing (Value(..))
+import Xml.Encode exposing (null)
+import Xml.Decode exposing (decode)
+import Xml.Query exposing (tags)
 
 
 ---- MODEL ----
 
 
 type alias Model =
-    {
-        mapSourceUrl : Uri
+    { mapSourceUrl : Uri
+    , mapSource : XmlInstance
+    , message : String
     }
+
+
+initialModel : Model
+initialModel =
+    Model
+        (Uri "http://localhost:3000/montpelier.xml")
+        (XmlInstance (StrNode ""))
+        ""
 
 
 init : ( Model, Cmd Msg )
 init =
-    ( Model (Uri "http://localhost:3000/london.xml")
-    , Cmd.none
+    ( { initialModel | message = "Fetching XML" }
+    , fetchSourceMap initialModel.mapSourceUrl
     )
 
 
@@ -27,12 +40,27 @@ init =
 
 
 type Msg
-    = NoOp
+    = SourceMapLoaded (Result Http.Error String)
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
-    ( model, Cmd.none )
+    case msg of
+        SourceMapLoaded (Ok string) ->
+            let
+                xml : Value
+                xml =
+                    string
+                        |> decode
+                        |> Result.toMaybe
+                        |> Maybe.withDefault null
+            in
+                ( { model | mapSource = XmlInstance xml, message = "OK" }
+                , Cmd.none
+                )
+
+        SourceMapLoaded (Err err) ->
+            ( { model | message = "Error" }, Cmd.none )
 
 
 
@@ -44,6 +72,7 @@ view model =
     div []
         [ img [ src "/logo.svg" ] []
         , h1 [] [ text "Your Elm App is working!" ]
+        , h2 [] [ text model.message ]
         ]
 
 
@@ -59,3 +88,17 @@ main =
         , update = update
         , subscriptions = always Sub.none
         }
+
+
+
+---- MISC ----
+
+
+fetchSourceMap : Uri -> Cmd Msg
+fetchSourceMap (Uri url) =
+    Http.send SourceMapLoaded (Http.getString url)
+
+
+naturalThings : Value -> List Value
+naturalThings xml =
+    tags "way" xml
