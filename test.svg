@@ -1,0 +1,29 @@
+<svg  xmlns="http://www.w3.org/2000/svg" width="660" height="220" style="outline: 1px solid red; font-size: 1.5em; overflow: visible;">
+
+
+
+  <text x="0" y="0">SVG</text>
+
+
+
+  <text x="100" y="0" dominant-baseline="hanging">SVG (hanging)</text>
+
+
+
+  <text x="300" y="0" dominant-baseline="mathematical">SVG (mathematical)</text>
+
+
+
+  <text x="0" y="220" dominant-baseline="central">SVG (central)</text>
+
+
+
+  <text x="200" y="220" dominant-baseline="middle">SVG (middle)</text>
+
+
+
+  <text x="400" y="220" dominant-baseline="text-before-edge">SVG (text-before-edge)</text>
+
+
+
+</svg>

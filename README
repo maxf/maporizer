@@ -26,3 +26,12 @@ http://api.openstreetmap.org/api/0.6/map?bbox=4.348813461303711,50.8450555455673
 
 London
 http://api.openstreetmap.org/api/0.6/map?bbox=-0.1593017578125,51.49805708407405,-0.14591217041015625,51.50687269909403
+
+
+Run:
+
+    java -jar saxon.jar -s:montpelier.xml -xsl:maporizer.xsl -o:montpelier.svg
+
+auto reload:
+
+ls maporizer.xsl | entr -cr bash -c "java -jar saxon.jar -s:montpelier.xml -xsl:maporizer.xsl -o:montpelier.svg && echo done"
