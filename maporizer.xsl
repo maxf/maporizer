@@ -64,7 +64,7 @@
           text-anchor="middle"
           font-size="40px"
           fill="{$railway}"
-          font-family="dyuthi"
+          font-family="Attach"
           font-weight="bold">
       <x:value-of select="tag[@k='name']/@v"/>
     </text>
