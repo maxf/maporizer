@@ -52,12 +52,21 @@
 
       <x:apply-templates select="node[tag[@k='railway' and @v='station']]" mode="suburb-name"/>
 
+      <!-- and now transform all road paths into splines -->
+      <script>
+        <![CDATA[
+        document.querySelectorAll('.way').forEach(way => {
+          const path = way.getAttribute('d');
+          const reg = /(?:M|L)([\d.]+),([\d.]+)/g;
+          console.log(path.match(reg));
+        });
+        ]]>
+      </script>
     </svg>
   </x:template>
 
 
   <x:template match="node" mode="suburb-name">
-    <x:message>Found node</x:message>
     <x:variable name="x" select="@lon * $scaling-factor - $minlon"/>
     <x:variable name="y" select="-@lat * $scaling-factor + $maxlat"/>
     <text transform=" translate({$x},{$y + 40}) scale(1.5, 1.0)"
@@ -81,7 +90,7 @@
         <x:otherwise>0</x:otherwise>
       </x:choose>
     </x:variable>
-    <path id="ID{@id}" fill="none" stroke="{$road}" stroke-width="{$stroke-width}"  stroke-linejoin="round" stroke-linecap="round">
+    <path class="way" id="ID{@id}" fill="none" stroke="{$road}" stroke-width="{$stroke-width}"  stroke-linejoin="round" stroke-linecap="round">
       <x:attribute name="d">
         <x:for-each select="nd">
           <x:value-of select="if (position() = 1) then 'M' else 'L'"/>
@@ -93,7 +102,7 @@
   </x:template>
 
   <x:template match="way" mode="railway">
-     <path id="ID{@id}" fill="none" stroke="{$railway}" stroke-width="10px"  stroke-linejoin="round" stroke-linecap="round">
+     <path class="way" id="ID{@id}" fill="none" stroke="{$railway}" stroke-width="10px"  stroke-linejoin="round" stroke-linecap="round">
       <x:attribute name="d">
         <x:for-each select="nd">
           <x:value-of select="if (position() = 1) then 'M' else 'L'"/>
@@ -105,7 +114,7 @@
   </x:template>
 
  <x:template match="way" mode="polygon">
-    <path id="ID{@id}" fill="{$park}">
+    <path class="polygon" id="ID{@id}" fill="{$park}">
       <x:attribute name="d">
         <x:for-each select="nd">
           <x:value-of select="if (position() = 1) then 'M' else 'L'"/>
