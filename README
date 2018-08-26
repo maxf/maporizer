@@ -2,13 +2,13 @@ See    for details
 
 Technical Notes:
 
-- Just like http://store.axismaps.co.uk/
+- Just like https://store.axismaps.co.uk/
 
 - Retrieving OpenStreetMap data in XML by bounding box:
 
-http://wiki.openstreetmap.org/wiki/API_v0.6#Retrieving_map_data_by_bounding_box:_GET_.2Fapi.2F0.6.2Fmap
+https://wiki.openstreetmap.org/wiki/API_v0.6#Retrieving_map_data_by_bounding_box:_GET_.2Fapi.2F0.6.2Fmap
 
-http://api.openstreetmap.org/api/0.6/map?bbox=left,bottom, right,top
+https://api.openstreetmap.org/api/0.6/map?bbox=left,bottom, right,top
 
 left is the longitude of the left (westernmost) side of the bounding box.
 bottom is the latitude of the bottom (southernmost) side of the bounding box.
@@ -16,17 +16,19 @@ right is the longitude of the right (easternmost) side of the bounding box.
 top is the latitude of the top (northernmost) side of the bounding box.
 
 
-to get coordinates: http://www.getlatlon.com/
+to get coordinates: http://boundingbox.klokantech.com/
 
 Flagey:
-http://api.openstreetmap.org/api/0.6/map?bbox=4.370412826538086,50.82627053184742,4.374446868896484,50.82917782833559
+https://api.openstreetmap.org/api/0.6/map?bbox=4.370412826538086,50.82627053184742,4.374446868896484,50.82917782833559
 
 Bxl
-http://api.openstreetmap.org/api/0.6/map?bbox=4.348813461303711,50.84505554556735,4.355362487792969,50.848925202043825
+https://api.openstreetmap.org/api/0.6/map?bbox=4.348813461303711,50.84505554556735,4.355362487792969,50.848925202043825
 
 London
-http://api.openstreetmap.org/api/0.6/map?bbox=-0.1593017578125,51.49805708407405,-0.14591217041015625,51.50687269909403
+https://api.openstreetmap.org/api/0.6/map?bbox=-0.1593017578125,51.49805708407405,-0.14591217041015625,51.50687269909403
 
+Montpelier:
+https://api.openstreetmap.org/api/0.6/map?bbox=-2.594223,51.463989,-2.579204,51.471535
 
 Run:
 
