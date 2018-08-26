@@ -29,7 +29,7 @@
   <x:output indent="yes"/>
 
   <x:template match="osm">
-    <svg version="1.1" viewBox="0 0 {$width} {$height}" width="2500px" height="1500px" preserveAspectRatio="none" id="svgroot">
+    <svg version="1.1" viewBox="0 0 {$width} {$height}" width="2000px" height="1500px" preserveAspectRatio="none" id="svgroot">
 
       <rect x="0" y="0" width="{$width}" height="{$height}" fill="{$background}"/>
 
@@ -61,12 +61,17 @@
               const m = p.match(reg);
               return {x:parseFloat(m[1],10), y:parseFloat(m[2],10)};
             });
-            let beziers = [`M${path[0].x},${path[0].y}`];
-            beziers.push(` Q${(path[0].x+path[1].x)/2},${(path[0].y+path[1].y)/2}`);
-            beziers.push(` ${path[1].x},${path[1].y}`);
-            for (i=2; i<path.length; i++) {
-              beziers.push(` T${path[i].x},${path[i].y}`);
+            const s = i => `${path[i].x},${path[i].y}`;
+            const m = (i, j) => `${(path[i].x+path[j].x)/2},${(path[i].y+path[j].y)/2}`;
+
+            let beziers = [`M${s(0)}`];
+            beziers.push(` L${m(0,1)}`);
+            let i=1;
+            for (i=1; i<path.length-1; i++) {
+              beziers.push(` Q${s(i)} ${m(i,i+1)}`);
             }
+            beziers.push(` L${s(i)}`);
+
             way.setAttribute('d', beziers.join(''));
           });
         ]]>
@@ -82,7 +87,7 @@
           text-anchor="middle"
           font-size="40px"
           fill="{$railway}"
-          font-family="Attach"
+          font-family="Asap"
           font-weight="bold">
       <x:value-of select="tag[@k='name']/@v"/>
     </text>
@@ -91,11 +96,11 @@
   <x:template match="way" mode="line">
     <x:variable name="stroke-width">
       <x:choose>
-        <x:when test="tag[@k='highway' and (@v='primary' or @v='trunk')]">7px</x:when>
-        <x:when test="tag[@k='highway' and @v='secondary']">6px</x:when>
-        <x:when test="tag[@k='highway' and (@v='tertiary' or @v='unclassified')]">5px</x:when>
-        <x:when test="tag[@k='highway' and @v='residential']">4px</x:when>
-        <x:when test="tag[@k='highway' and @v='pedestrian']">3px</x:when>
+        <x:when test="tag[@k='highway' and (@v='primary' or @v='trunk')]">20px</x:when>
+        <x:when test="tag[@k='highway' and @v='secondary']">8px</x:when>
+        <x:when test="tag[@k='highway' and (@v='tertiary' or @v='unclassified')]">2px</x:when>
+        <x:when test="tag[@k='highway' and @v='residential']">2px</x:when>
+        <x:when test="tag[@k='highway' and @v='pedestrian']">2px</x:when>
         <x:otherwise>0</x:otherwise>
       </x:choose>
     </x:variable>
