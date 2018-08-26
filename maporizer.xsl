@@ -55,11 +55,20 @@
       <!-- and now transform all road paths into splines -->
       <script>
         <![CDATA[
-        document.querySelectorAll('.way').forEach(way => {
-          const path = way.getAttribute('d');
-          const reg = /(?:M|L)([\d.]+),([\d.]+)/g;
-          console.log(path.match(reg));
-        });
+          const reg = /(?:M|L)([-\d.]+),([-\d.]+)/;
+          document.querySelectorAll('.way').forEach(way => {
+            const path = way.getAttribute('d').split(' ').map(p => {
+              const m = p.match(reg);
+              return {x:parseFloat(m[1],10), y:parseFloat(m[2],10)};
+            });
+            let beziers = [`M${path[0].x},${path[0].y}`];
+            beziers.push(` Q${(path[0].x+path[1].x)/2},${(path[0].y+path[1].y)/2}`);
+            beziers.push(` ${path[1].x},${path[1].y}`);
+            for (i=2; i<path.length; i++) {
+              beziers.push(` T${path[i].x},${path[i].y}`);
+            }
+            way.setAttribute('d', beziers.join(''));
+          });
         ]]>
       </script>
     </svg>
@@ -93,9 +102,9 @@
     <path class="way" id="ID{@id}" fill="none" stroke="{$road}" stroke-width="{$stroke-width}"  stroke-linejoin="round" stroke-linecap="round">
       <x:attribute name="d">
         <x:for-each select="nd">
-          <x:value-of select="if (position() = 1) then 'M' else 'L'"/>
+          <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
           <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
-          <x:value-of select="concat($node/@lon * $scaling-factor - $minlon,',',-$node/@lat * $scaling-factor + $maxlat,' ')"/>
+          <x:value-of select="concat($node/@lon * $scaling-factor - $minlon,',',-$node/@lat * $scaling-factor + $maxlat)"/>
         </x:for-each>
       </x:attribute>
     </path>
@@ -105,9 +114,9 @@
      <path class="way" id="ID{@id}" fill="none" stroke="{$railway}" stroke-width="10px"  stroke-linejoin="round" stroke-linecap="round">
       <x:attribute name="d">
         <x:for-each select="nd">
-          <x:value-of select="if (position() = 1) then 'M' else 'L'"/>
+          <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
           <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
-          <x:value-of select="concat($node/@lon * $scaling-factor - $minlon,',',-$node/@lat * $scaling-factor + $maxlat,' ')"/>
+          <x:value-of select="concat($node/@lon * $scaling-factor - $minlon,',',-$node/@lat * $scaling-factor + $maxlat)"/>
         </x:for-each>
       </x:attribute>
     </path>
@@ -117,9 +126,9 @@
     <path class="polygon" id="ID{@id}" fill="{$park}">
       <x:attribute name="d">
         <x:for-each select="nd">
-          <x:value-of select="if (position() = 1) then 'M' else 'L'"/>
+          <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
           <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
-          <x:value-of select="concat($node/@lon * $scaling-factor - $minlon,',',-$node/@lat * $scaling-factor + $maxlat,' ')"/>
+          <x:value-of select="concat($node/@lon * $scaling-factor - $minlon,',',-$node/@lat * $scaling-factor + $maxlat)"/>
         </x:for-each>
       </x:attribute>
     </path>
