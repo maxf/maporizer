@@ -30,6 +30,21 @@
 
   <x:template match="osm">
     <svg version="1.1" viewBox="0 0 {$width} {$height}" width="2000px" height="1500px" preserveAspectRatio="none" id="svgroot">
+      <style>
+        .rail {
+          filter: drop-shadow(7px 7px 2px black);
+        }
+
+        .filtered{
+        filter: url(#filter);
+        -webkit-filter: url(#filter);
+        fill: #9673FF;
+        color: #9673FF;
+        font-family: 'Alfa Slab One', cursive;
+        text-transform: uppercase;
+        font-size: 40px;
+        }
+      </style>
 
       <rect x="0" y="0" width="{$width}" height="{$height}" fill="{$background}"/>
 
@@ -56,6 +71,20 @@
       <script>
         <![CDATA[
           const reg = /(?:M|L)([-\d.]+),([-\d.]+)/;
+          document.querySelectorAll('.rail').forEach(way => {
+            const path = way.getAttribute('d').split(' ').map(p => {
+              const m = p.match(reg);
+              return {x:parseFloat(m[1],10), y:parseFloat(m[2],10)};
+            });
+            let beziers = [`M${path[0].x},${path[0].y}`];
+            beziers.push(` Q${(path[0].x+path[1].x)/2},${(path[0].y+path[1].y)/2}`);
+            beziers.push(` ${path[1].x},${path[1].y}`);
+            for (i=2; i<path.length; i++) {
+              beziers.push(` T${path[i].x},${path[i].y}`);
+            }
+            way.setAttribute('d', beziers.join(''));
+          });
+
           document.querySelectorAll('.way').forEach(way => {
             const path = way.getAttribute('d').split(' ').map(p => {
               const m = p.match(reg);
@@ -74,6 +103,7 @@
 
             way.setAttribute('d', beziers.join(''));
           });
+
         ]]>
       </script>
     </svg>
@@ -83,11 +113,12 @@
   <x:template match="node" mode="suburb-name">
     <x:variable name="x" select="@lon * $scaling-factor - $minlon"/>
     <x:variable name="y" select="-@lat * $scaling-factor + $maxlat"/>
-    <text transform=" translate({$x},{$y + 40}) scale(1.5, 1.0)"
+    <text class="rail"
+          transform=" translate({$x},{$y + 40}) scale(1.5, 1.0)"
           text-anchor="middle"
-          font-size="40px"
           fill="{$railway}"
           font-family="Asap"
+          font-size="40px"
           font-weight="bold">
       <x:value-of select="tag[@k='name']/@v"/>
     </text>
@@ -116,7 +147,14 @@
   </x:template>
 
   <x:template match="way" mode="railway">
-     <path class="way" id="ID{@id}" fill="none" stroke="{$railway}" stroke-width="10px"  stroke-linejoin="round" stroke-linecap="round">
+     <path
+         class="rail"
+         id="ID{@id}"
+         fill="none"
+         stroke="{$railway}"
+         stroke-width="10px"
+         stroke-linejoin="round"
+         stroke-linecap="round">
       <x:attribute name="d">
         <x:for-each select="nd">
           <x:value-of select="if (position() = 1) then 'M' else ' L'"/>

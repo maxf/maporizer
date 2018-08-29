@@ -7,6 +7,21 @@
      height="1500px"
      preserveAspectRatio="none"
      id="svgroot">
+   <style>
+        .rail {
+          filter: drop-shadow(7px 7px 2px black);
+        }
+
+        .filtered{
+        filter: url(#filter);
+        -webkit-filter: url(#filter);
+        fill: #9673FF;
+        color: #9673FF;
+        font-family: 'Alfa Slab One', cursive;
+        text-transform: uppercase;
+        font-size: 40px;
+        }
+      </style>
    <rect x="0"
          y="0"
          width="1400.7000000000116"
@@ -1271,7 +1286,7 @@
          stroke-linejoin="round"
          stroke-linecap="round"
          d="M860.2099999999919,114.08999999985099 L850.820000000007,119.10999999940395 L844.5200000000186,119.8199999993667 L838.2200000000012,119.45999999996275"/>
-   <path class="way"
+   <path class="rail"
          id="ID4082935"
          fill="none"
          stroke="#ffc300"
@@ -1279,7 +1294,7 @@
          stroke-linejoin="round"
          stroke-linecap="round"
          d="M679.0599999999977,284.20000000018626 L769.5799999999872,253.9799999995157 L981.9599999999919,146.02999999932945"/>
-   <path class="way"
+   <path class="rail"
          id="ID4082936"
          fill="none"
          stroke="#ffc300"
@@ -1287,7 +1302,7 @@
          stroke-linejoin="round"
          stroke-linecap="round"
          d="M981.9599999999919,146.02999999932945 L1118.2399999999907,80.13999999966472 L1204.5,37.71999999973923 L1284.2600000000384,0.8399999998509884 L1377.0400000000081,-41.87999999988824"/>
-   <path class="way"
+   <path class="rail"
          id="ID72343220"
          fill="none"
          stroke="#ffc300"
@@ -1295,7 +1310,7 @@
          stroke-linejoin="round"
          stroke-linecap="round"
          d="M-131.8299999999872,219.62999999988824 L-91.72999999998137,219.2399999992922 L-37.69000000000233,220.50999999977648 L-3.040000000008149,222.2299999995157 L31.89999999999418,224.3300000000745 L60.49000000001979,227.339999999851"/>
-   <path class="way"
+   <path class="rail"
          id="ID112803866"
          fill="none"
          stroke="#ffc300"
@@ -1359,15 +1374,30 @@
          id="ID395171817"
          fill="#ff5733"
          d="M674.9599999999919,679.6299999998882 L690.3600000000151,671.679999999702 L702.5500000000175,680.8499999996275 L687.1500000000233,688.7900000000373 L674.9599999999919,679.6299999998882"/>
-   <text transform=" translate(453.11999999999534,345.0099999997765) scale(1.5, 1.0)"
+   <text class="rail"
+         transform=" translate(453.11999999999534,345.0099999997765) scale(1.5, 1.0)"
          text-anchor="middle"
-         font-size="40px"
          fill="#ffc300"
          font-family="Asap"
+         font-size="40px"
          font-weight="bold">Montpelier</text>
    <script>
         
           const reg = /(?:M|L)([-\d.]+),([-\d.]+)/;
+          document.querySelectorAll('.rail').forEach(way =&gt; {
+            const path = way.getAttribute('d').split(' ').map(p =&gt; {
+              const m = p.match(reg);
+              return {x:parseFloat(m[1],10), y:parseFloat(m[2],10)};
+            });
+            let beziers = [`M${path[0].x},${path[0].y}`];
+            beziers.push(` Q${(path[0].x+path[1].x)/2},${(path[0].y+path[1].y)/2}`);
+            beziers.push(` ${path[1].x},${path[1].y}`);
+            for (i=2; i&lt;path.length; i++) {
+              beziers.push(` T${path[i].x},${path[i].y}`);
+            }
+            way.setAttribute('d', beziers.join(''));
+          });
+
           document.querySelectorAll('.way').forEach(way =&gt; {
             const path = way.getAttribute('d').split(' ').map(p =&gt; {
               const m = p.match(reg);
@@ -1386,6 +1416,7 @@
 
             way.setAttribute('d', beziers.join(''));
           });
+
         
       </script>
 </svg>
