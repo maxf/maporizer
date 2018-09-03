@@ -31,20 +31,38 @@
   <x:template match="osm">
     <svg version="1.1" viewBox="0 0 {$width} {$height}" width="2000px" height="1500px" preserveAspectRatio="none" id="svgroot">
       <style>
+        .polygon {
+          filter: url('#hand-drawn');
+        }
+
         .rail {
           filter: drop-shadow(7px 7px 2px black);
         }
 
         .filtered{
-        filter: url(#filter);
-        -webkit-filter: url(#filter);
-        fill: #9673FF;
-        color: #9673FF;
-        font-family: 'Alfa Slab One', cursive;
-        text-transform: uppercase;
-        font-size: 40px;
+          filter: url(#filter);
+          -webkit-filter: url(#filter);
+          fill: #9673FF;
+          color: #9673FF;
+          font-family: 'Alfa Slab One', cursive;
+          text-transform: uppercase;
+          font-size: 40px;
         }
+
+        .way {
+          filter: url(#hand-drawn);
+        }
+
       </style>
+
+
+      <filter id="hand-drawn">
+        <feTurbulence type="turbulence" baseFrequency="0.02"
+                      numOctaves="1" result="turbulence"/>
+        <feDisplacementMap in2="turbulence" in="SourceGraphic"
+                           scale="4" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+
 
       <rect x="0" y="0" width="{$width}" height="{$height}" fill="{$background}"/>
 
@@ -114,7 +132,7 @@
     <x:variable name="x" select="@lon * $scaling-factor - $minlon"/>
     <x:variable name="y" select="-@lat * $scaling-factor + $maxlat"/>
     <text class="rail"
-          transform=" translate({$x},{$y + 40}) scale(1.5, 1.0)"
+          transform=" translate({$x},{$y + 43}) scale(1.5, 1.0)"
           text-anchor="middle"
           fill="{$railway}"
           font-family="Asap"
@@ -129,9 +147,9 @@
       <x:choose>
         <x:when test="tag[@k='highway' and (@v='primary' or @v='trunk')]">20px</x:when>
         <x:when test="tag[@k='highway' and @v='secondary']">8px</x:when>
-        <x:when test="tag[@k='highway' and (@v='tertiary' or @v='unclassified')]">2px</x:when>
-        <x:when test="tag[@k='highway' and @v='residential']">2px</x:when>
-        <x:when test="tag[@k='highway' and @v='pedestrian']">2px</x:when>
+        <x:when test="tag[@k='highway' and (@v='tertiary' or @v='unclassified')]">5px</x:when>
+        <x:when test="tag[@k='highway' and @v='residential']">5px</x:when>
+        <x:when test="tag[@k='highway' and @v='pedestrian']">5px</x:when>
         <x:otherwise>0</x:otherwise>
       </x:choose>
     </x:variable>

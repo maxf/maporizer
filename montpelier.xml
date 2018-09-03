@@ -10393,36 +10393,6 @@
   <tag k="postal_code" v="BS6"/>
   <tag k="surface" v="asphalt"/>
  </way>
- <way id="4082935" visible="true" version="5" changeset="35656887" timestamp="2015-11-29T23:09:03Z" user="lcmortensen" uid="341519">
-  <nd ref="21672145"/>
-  <nd ref="1281596194"/>
-  <nd ref="21672143"/>
-  <tag k="electrified" v="no"/>
-  <tag k="gauge" v="1435"/>
-  <tag k="layer" v="-2"/>
-  <tag k="maxspeed" v="30 mph"/>
-  <tag k="name" v="Severn Beach Line"/>
-  <tag k="passenger_lines" v="1"/>
-  <tag k="railway" v="rail"/>
-  <tag k="source" v="Landsat+NPE"/>
-  <tag k="tunnel" v="yes"/>
-  <tag k="usage" v="branch"/>
- </way>
- <way id="4082936" visible="true" version="7" changeset="35656887" timestamp="2015-11-29T23:09:04Z" user="lcmortensen" uid="341519">
-  <nd ref="21672143"/>
-  <nd ref="21672142"/>
-  <nd ref="21672141"/>
-  <nd ref="21672140"/>
-  <nd ref="1392107207"/>
-  <tag k="electrified" v="no"/>
-  <tag k="gauge" v="1435"/>
-  <tag k="maxspeed" v="30 mph"/>
-  <tag k="name" v="Severn Beach Line"/>
-  <tag k="passenger_lines" v="1"/>
-  <tag k="railway" v="rail"/>
-  <tag k="source" v="Landsat+NPE"/>
-  <tag k="usage" v="branch"/>
- </way>
  <way id="4315931" visible="true" version="4" changeset="48714913" timestamp="2017-05-15T22:36:12Z" user="ndm" uid="14846">
   <nd ref="21309752"/>
   <nd ref="26167374"/>
@@ -11509,24 +11479,6 @@
   <nd ref="19875356"/>
   <tag k="highway" v="unclassified"/>
   <tag k="name" v="Drummond Road"/>
- </way>
- <way id="72343220" visible="true" version="7" changeset="35656887" timestamp="2015-11-29T23:09:05Z" user="lcmortensen" uid="341519">
-  <nd ref="26233852"/>
-  <nd ref="1281467896"/>
-  <nd ref="26233853"/>
-  <nd ref="1281467883"/>
-  <nd ref="1025694253"/>
-  <nd ref="1281573828"/>
-  <tag k="bridge" v="yes"/>
-  <tag k="electrified" v="no"/>
-  <tag k="gauge" v="1435"/>
-  <tag k="layer" v="1"/>
-  <tag k="maxspeed" v="30 mph"/>
-  <tag k="name" v="Severn Beach Line"/>
-  <tag k="passenger_lines" v="1"/>
-  <tag k="railway" v="rail"/>
-  <tag k="source" v="Landsat+1953 7th series"/>
-  <tag k="usage" v="branch"/>
  </way>
  <way id="72343246" visible="true" version="5" changeset="33693213" timestamp="2015-08-30T23:30:08Z" user="ndm" uid="14846">
   <nd ref="17660388"/>
@@ -13641,6 +13593,10 @@
   <tag k="highway" v="steps"/>
  </way>
  <way id="112803866" visible="true" version="7" changeset="35656887" timestamp="2015-11-29T23:09:02Z" user="lcmortensen" uid="341519">
+  <nd ref="26233852"/>
+  <nd ref="26233853"/>
+  <nd ref="1281467883"/>
+  <nd ref="1025694253"/>
   <nd ref="1281573828"/>
   <nd ref="26233854"/>
   <nd ref="1281573824"/>
@@ -13658,6 +13614,12 @@
   <nd ref="2196131987"/>
   <nd ref="21672144"/>
   <nd ref="21672145"/>
+  <nd ref="1281596194"/>
+  <nd ref="21672143"/>
+  <nd ref="21672142"/>
+  <nd ref="21672141"/>
+  <nd ref="21672140"/>
+  <nd ref="1392107207"/>
   <tag k="electrified" v="no"/>
   <tag k="gauge" v="1435"/>
   <tag k="maxspeed" v="30 mph"/>
