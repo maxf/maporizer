@@ -37,6 +37,9 @@
 
         .rail {
           filter: drop-shadow(7px 7px 2px black);
+          font-family: 'BritishRailLightNormal';
+          font-size: 40px;
+          font-weight: bold;
         }
 
         .filtered{
@@ -134,10 +137,7 @@
     <text class="rail"
           transform=" translate({$x},{$y + 43}) scale(1.5, 1.0)"
           text-anchor="middle"
-          fill="{$railway}"
-          font-family="Asap"
-          font-size="40px"
-          font-weight="bold">
+          fill="{$railway}">
       <x:value-of select="tag[@k='name']/@v"/>
     </text>
   </x:template>
