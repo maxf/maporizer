@@ -9,13 +9,6 @@
 
   <x:variable name="scaling-factor" select="100000"/>
 
-  <x:variable name="background" select="'#571845'"/>
-  <x:variable name="station" select="'#900c3e'"/>
-  <x:variable name="road" select="'#c70039'"/>
-  <x:variable name="park" select="'#ff5733'"/>
-  <x:variable name="railway" select="'#ffc300'"/>
-
-
   <x:variable name="minlat" select="/osm/bounds/@minlat * $scaling-factor"/>
   <x:variable name="minlon" select="/osm/bounds/@minlon * $scaling-factor"/>
   <x:variable name="maxlat" select="/osm/bounds/@maxlat * $scaling-factor"/>
@@ -31,34 +24,8 @@
   <x:template match="osm">
     <svg version="1.1" viewBox="0 0 {$width} {$height}" width="2000px" height="1500px" preserveAspectRatio="none" id="svgroot">
       <style>
-        .polygon {
-          filter: url('#hand-drawn');
-        }
-
-        .rail {
-          filter: drop-shadow(7px 7px 2px black);
-          font-family: 'BritishRailLightNormal';
-          font-size: 40px;
-          font-weight: bold;
-        }
-
-        .filtered{
-          filter: url(#filter);
-          -webkit-filter: url(#filter);
-          fill: #9673FF;
-          color: #9673FF;
-          font-family: 'Alfa Slab One', cursive;
-          text-transform: uppercase;
-          font-size: 40px;
-        }
-
-        .way {
-          filter: url(#hand-drawn);
-        }
-
+        @import url(style.css);
       </style>
-
-
       <filter id="hand-drawn">
         <feTurbulence type="turbulence" baseFrequency="0.02"
                       numOctaves="1" result="turbulence"/>
@@ -67,7 +34,7 @@
       </filter>
 
 
-      <rect x="0" y="0" width="{$width}" height="{$height}" fill="{$background}"/>
+      <rect x="0" y="0" width="{$width}" height="{$height}" class="background"/>
 
 
       // roads
@@ -134,10 +101,9 @@
   <x:template match="node" mode="suburb-name">
     <x:variable name="x" select="@lon * $scaling-factor - $minlon"/>
     <x:variable name="y" select="-@lat * $scaling-factor + $maxlat"/>
-    <text class="rail"
+    <text class="station"
           transform=" translate({$x},{$y + 43}) scale(1.5, 1.0)"
-          text-anchor="middle"
-          fill="{$railway}">
+          text-anchor="middle">
       <x:value-of select="tag[@k='name']/@v"/>
     </text>
   </x:template>
@@ -153,7 +119,7 @@
         <x:otherwise>0</x:otherwise>
       </x:choose>
     </x:variable>
-    <path class="way" id="ID{@id}" fill="none" stroke="{$road}" stroke-width="{$stroke-width}"  stroke-linejoin="round" stroke-linecap="round">
+    <path class="way" id="ID{@id}" stroke-width="{$stroke-width}" stroke-linejoin="round" stroke-linecap="round">
       <x:attribute name="d">
         <x:for-each select="nd">
           <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
@@ -168,9 +134,6 @@
      <path
          class="rail"
          id="ID{@id}"
-         fill="none"
-         stroke="{$railway}"
-         stroke-width="10px"
          stroke-linejoin="round"
          stroke-linecap="round">
       <x:attribute name="d">
@@ -184,7 +147,7 @@
   </x:template>
 
  <x:template match="way" mode="polygon">
-    <path class="polygon" id="ID{@id}" fill="{$park}">
+    <path class="park" id="ID{@id}">
       <x:attribute name="d">
         <x:for-each select="nd">
           <x:value-of select="if (position() = 1) then 'M' else ' L'"/>

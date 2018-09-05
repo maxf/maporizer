@@ -1,0 +1,39 @@
+.background {
+    fill: #571845;
+}
+
+.park {
+    filter: url('#hand-drawn');
+    fill: #ff5733;
+}
+
+.rail {
+    filter: drop-shadow(7px 7px 2px black);
+    stroke: #ffc300;
+    fill: none;
+    stroke-width: 10px;
+}
+
+.station {
+    filter: drop-shadow(7px 7px 2px black);
+    font-family: 'BritishRailLightNormal', sans serif;
+    font-size: 40px;
+    font-weight: bold;
+    fill: #ffc300;
+}
+
+.filtered{
+    filter: url(#filter);
+    -webkit-filter: url(#filter);
+    fill: #9673FF;
+    color: #9673FF;
+    font-family: 'Alfa Slab One', cursive;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.way {
+    filter: url(#hand-drawn);
+    stroke: #C70039;
+    fill: none;
+}
