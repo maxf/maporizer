@@ -44,6 +44,9 @@
                                                            @v='residential' or
                                                            @v='trunk' or
                                                            @v='unclassified' or
+                                                           @v='cycleway' or
+                                                           @v='service' or
+                                                           @v='footway' or
                                                            @v='pedestrian')]]" mode="line"/>
 
       <x:apply-templates select="way[tag[@k='railway' and @v='rail']]" mode="railway"/>
@@ -52,6 +55,10 @@
       <x:apply-templates select="way[tag[@k='leisure' and (@v='park' or
                                                            @v='pitch' or
                                                            @v='playground')]]" mode="polygon"/>
+
+      <x:apply-templates select="way[tag[@k='building']]" mode="polygon"/>
+
+      <x:apply-templates select="way[tag[@k='amenity' and (@v='school')]]" mode="polygon"/>
 
       <x:apply-templates select="node[tag[@k='railway' and @v='station']]" mode="suburb-name"/>
 
