@@ -10,8 +10,14 @@
 }
 
 .park {
-//    filter: url('#hand-drawn');
-    fill: #a7dbdb;
+    filter: url('#hand-drawn');
+    fill: #ccc;
+}
+
+.way {
+    filter: url(#hand-drawn);
+    stroke: #333;
+    fill: none;
 }
 
 .rail {
@@ -39,11 +45,6 @@
     font-size: 40px;
 }
 
-.way {
-//    filter: url(#hand-drawn);
-    stroke: #69d2e7;
-    fill: none;
-}
 
 .border {
     fill: none;

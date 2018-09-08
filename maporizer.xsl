@@ -118,11 +118,11 @@
   <x:template match="way" mode="line">
     <x:variable name="stroke-width">
       <x:choose>
-        <x:when test="tag[@k='highway' and (@v='primary' or @v='trunk')]">20px</x:when>
-        <x:when test="tag[@k='highway' and @v='secondary']">8px</x:when>
-        <x:when test="tag[@k='highway' and (@v='tertiary' or @v='unclassified')]">5px</x:when>
-        <x:when test="tag[@k='highway' and @v='residential']">5px</x:when>
-        <x:when test="tag[@k='highway' and @v='pedestrian']">5px</x:when>
+        <x:when test="tag[@k='highway' and (@v='primary' or @v='trunk')]">10px</x:when>
+        <x:when test="tag[@k='highway' and @v='secondary']">4px</x:when>
+        <x:when test="tag[@k='highway' and (@v='tertiary' or @v='unclassified')]">3px</x:when>
+        <x:when test="tag[@k='highway' and @v='residential']">2px</x:when>
+        <x:when test="tag[@k='highway' and @v='pedestrian']">2px</x:when>
         <x:otherwise>0</x:otherwise>
       </x:choose>
     </x:variable>
