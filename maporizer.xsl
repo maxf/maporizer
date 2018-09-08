@@ -22,7 +22,7 @@
   <x:output indent="yes"/>
 
   <x:template match="osm">
-    <svg version="1.1" viewBox="0 0 {$width} {$height}" width="2000px" height="1500px" preserveAspectRatio="none" id="svgroot">
+    <svg version="1.1" viewBox="-100 -100 {$width + 200} {$height + 200}" width="2000px" height="1500px" preserveAspectRatio="none" id="svgroot">
       <style>
         @import url(style.css);
       </style>
@@ -49,18 +49,18 @@
                                                            @v='footway' or
                                                            @v='pedestrian')]]" mode="line"/>
 
-      <x:apply-templates select="way[tag[@k='railway' and @v='rail']]" mode="railway"/>
-
-
-      <x:apply-templates select="way[tag[@k='leisure' and (@v='park' or
-                                                           @v='pitch' or
-                                                           @v='playground')]]" mode="polygon"/>
+      <x:apply-templates select="way[tag[@k='leisure' and (@v='park')]]" mode="polygon"/>
 
       <x:apply-templates select="way[tag[@k='building']]" mode="polygon"/>
 
-      <x:apply-templates select="way[tag[@k='amenity' and (@v='school')]]" mode="polygon"/>
 
+
+      <x:apply-templates select="way[tag[@k='railway' and @v='rail']]" mode="railway"/>
       <x:apply-templates select="node[tag[@k='railway' and @v='station']]" mode="suburb-name"/>
+
+
+      <rect x="-100" y="-100" width="{$width + 200}" height="{$height + 200}" class="frame"/>
+      <rect x="0" y="0" width="{$width}" height="{$height}" class="border"/>
 
       <!-- and now transform all road paths into splines -->
       <script>
