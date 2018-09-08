@@ -14,7 +14,7 @@
   <x:variable name="maxlat" select="/osm/bounds/@maxlat * $scaling-factor"/>
   <x:variable name="maxlon" select="/osm/bounds/@maxlon * $scaling-factor"/>
 
-  <x:variable name="width" select="($maxlon - $minlon)"/>
+  <x:variable name="width" select="$maxlon - $minlon"/>
   <x:variable name="height" select="$maxlat - $minlat"/>
 
   <x:template match="/"><x:apply-templates/></x:template>
@@ -22,7 +22,7 @@
   <x:output indent="yes"/>
 
   <x:template match="osm">
-    <svg version="1.1" viewBox="-100 -100 {$width + 200} {$height + 200}" width="2000px" height="1500px" preserveAspectRatio="none" id="svgroot">
+    <svg version="1.1" viewBox="-100 -60 1600 1000" width="1800px" height="1600px" preserveAspectRatio="none" id="svgroot">
       <style>
         @import url(style.css);
       </style>
@@ -56,11 +56,17 @@
 
 
       <x:apply-templates select="way[tag[@k='railway' and @v='rail']]" mode="railway"/>
-      <x:apply-templates select="node[tag[@k='railway' and @v='station']]" mode="suburb-name"/>
+<!--
+    <x:apply-templates select="node[tag[@k='railway' and @v='station']]" mode="suburb-name"/>
+-->
 
 
       <rect x="-100" y="-100" width="{$width + 200}" height="{$height + 200}" class="frame"/>
       <rect x="0" y="0" width="{$width}" height="{$height}" class="border"/>
+      <text
+            transform="scale(1.5,1) translate(0, {$height + 100})"
+            class="title">M O N T P E L I E R</text>
+
 
       <!-- and now transform all road paths into splines -->
       <script>

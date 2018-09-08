@@ -21,7 +21,7 @@
 }
 
 .rail {
-    filter: drop-shadow(5px 5px 2px black);
+    filter: drop-shadow(7px 7px 3px black);
     stroke: #fa6900;
     fill: none;
     stroke-width: 10px;
@@ -50,4 +50,12 @@
     fill: none;
     stroke: black;
     stroke-width: 1px;
+}
+
+.title {
+    fill: black;
+    stroke: black;
+    font-family: DejaVu Sans;
+    font-weight: 100;
+    font-size: 100px;
 }
