@@ -22,7 +22,7 @@
   <x:output indent="yes"/>
 
   <x:template match="osm">
-    <svg version="1.1" viewBox="-100 -60 1600 1000" width="1800px" height="1600px" preserveAspectRatio="none" id="svgroot">
+    <svg version="1.1" viewBox="-100 -60 3000 2000" width="1600px" height="1600px" preserveAspectRatio="none" id="svgroot">
       <style>
         @import url(style.css);
       </style>
@@ -36,8 +36,8 @@
 
       <rect x="0" y="0" width="{$width}" height="{$height}" class="background"/>
 
+<!--
 
-      // roads
       <x:apply-templates select="way[tag[@k='highway' and (@v='primary' or
                                                            @v='secondary' or
                                                            @v='tertiary' or
@@ -48,11 +48,13 @@
                                                            @v='service' or
                                                            @v='footway' or
                                                            @v='pedestrian')]]" mode="line"/>
-
+-->
+<!--
       <x:apply-templates select="way[tag[@k='leisure' and (@v='park')]]" mode="polygon"/>
-
+-->
+<!--
       <x:apply-templates select="way[tag[@k='building']]" mode="polygon"/>
-
+-->
 
 
       <x:apply-templates select="way[tag[@k='railway' and @v='rail']]" mode="railway"/>
@@ -64,8 +66,8 @@
       <rect x="-100" y="-100" width="{$width + 200}" height="{$height + 200}" class="frame"/>
       <rect x="0" y="0" width="{$width}" height="{$height}" class="border"/>
       <text
-            transform="scale(1.5,1) translate(0, {$height + 100})"
-            class="title">M O N T P E L I E R</text>
+            transform="scale(3.3,2) translate(0, {$height + 100})"
+            class="title">P E C K H A M</text>
 
 
       <!-- and now transform all road paths into splines -->
@@ -156,6 +158,7 @@
           <x:value-of select="concat($node/@lon * $scaling-factor - $minlon,',',-$node/@lat * $scaling-factor + $maxlat)"/>
         </x:for-each>
       </x:attribute>
+      <title><x:value-of select="@id"/></title>
     </path>
   </x:template>
 
