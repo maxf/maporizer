@@ -36,8 +36,8 @@
 
       <rect x="0" y="0" width="{$width}" height="{$height}" class="background"/>
 
-<!--
 
+<!--
       <x:apply-templates select="way[tag[@k='highway' and (@v='primary' or
                                                            @v='secondary' or
                                                            @v='tertiary' or
@@ -49,9 +49,11 @@
                                                            @v='footway' or
                                                            @v='pedestrian')]]" mode="line"/>
 -->
+
 <!--
       <x:apply-templates select="way[tag[@k='leisure' and (@v='park')]]" mode="polygon"/>
 -->
+
 <!--
       <x:apply-templates select="way[tag[@k='building']]" mode="polygon"/>
 -->
@@ -71,10 +73,13 @@
 
 
       <!-- and now transform all road paths into splines -->
-      <script>
+
+     <script>
         <![CDATA[
+                 console.log('HERE')
           const reg = /(?:M|L)([-\d.]+),([-\d.]+)/;
           document.querySelectorAll('.rail').forEach(way => {
+            console.log(way.getAttribute('d'));
             const path = way.getAttribute('d').split(' ').map(p => {
               const m = p.match(reg);
               return {x:parseFloat(m[1],10), y:parseFloat(m[2],10)};
@@ -87,7 +92,7 @@
             }
             way.setAttribute('d', beziers.join(''));
           });
-
+/*
           document.querySelectorAll('.way').forEach(way => {
             const path = way.getAttribute('d').split(' ').map(p => {
               const m = p.match(reg);
@@ -106,12 +111,11 @@
 
             way.setAttribute('d', beziers.join(''));
           });
-
+*/
         ]]>
       </script>
-    </svg>
+   </svg>
   </x:template>
-
 
   <x:template match="node" mode="suburb-name">
     <x:variable name="x" select="@lon * $scaling-factor - $minlon"/>
