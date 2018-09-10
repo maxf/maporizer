@@ -72,10 +72,10 @@
 
      <script>
         <![CDATA[
-                 console.log('HERE')
           const reg = /(?:M|L)([-\d.]+),([-\d.]+)/;
+
+/*
           document.querySelectorAll('.rail').forEach(way => {
-            console.log(way.getAttribute('d'));
             const path = way.getAttribute('d').split(' ').map(p => {
               const m = p.match(reg);
               return {x:parseFloat(m[1],10), y:parseFloat(m[2],10)};
@@ -88,8 +88,8 @@
             }
             way.setAttribute('d', beziers.join(''));
           });
-/*
-          document.querySelectorAll('.way').forEach(way => {
+*/
+          document.querySelectorAll('.rail').forEach(way => {
             const path = way.getAttribute('d').split(' ').map(p => {
               const m = p.match(reg);
               return {x:parseFloat(m[1],10), y:parseFloat(m[2],10)};
@@ -107,7 +107,6 @@
 
             way.setAttribute('d', beziers.join(''));
           });
-*/
         ]]>
       </script>
    </svg>
