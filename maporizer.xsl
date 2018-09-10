@@ -24,7 +24,7 @@
   <x:template match="osm">
     <svg version="1.1" viewBox="-100 -60 3000 2000" width="1600px" height="1600px" preserveAspectRatio="none" id="svgroot">
       <style>
-        @import url(style.css);
+        @import url(../style.css);
       </style>
       <filter id="hand-drawn">
         <feTurbulence type="turbulence" baseFrequency="0.02"
@@ -37,7 +37,6 @@
       <rect x="0" y="0" width="{$width}" height="{$height}" class="background"/>
 
 
-<!--
       <x:apply-templates select="way[tag[@k='highway' and (@v='primary' or
                                                            @v='secondary' or
                                                            @v='tertiary' or
@@ -48,15 +47,12 @@
                                                            @v='service' or
                                                            @v='footway' or
                                                            @v='pedestrian')]]" mode="line"/>
--->
 
 <!--
       <x:apply-templates select="way[tag[@k='leisure' and (@v='park')]]" mode="polygon"/>
 -->
 
-<!--
       <x:apply-templates select="way[tag[@k='building']]" mode="polygon"/>
--->
 
 
       <x:apply-templates select="way[tag[@k='railway' and @v='rail']]" mode="railway"/>
@@ -162,7 +158,6 @@
           <x:value-of select="concat($node/@lon * $scaling-factor - $minlon,',',-$node/@lat * $scaling-factor + $maxlat)"/>
         </x:for-each>
       </x:attribute>
-      <title><x:value-of select="@id"/></title>
     </path>
   </x:template>
 

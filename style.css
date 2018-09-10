@@ -28,10 +28,6 @@
 
 }
 
-.rail:hover {
-    stroke: red;
-}
-
 .station {
     filter: drop-shadow(5px 5px 2px black);
     font-family: 'BritishRailLightNormal', sans serif;
