@@ -27,8 +27,10 @@
         @import url(../style.css);
       </style>
       <filter id="hand-drawn">
-        <feTurbulence type="turbulence" baseFrequency="0.02"
-                      numOctaves="1" result="turbulence"/>
+        <feTurbulence type="turbulence" baseFrequency="0.03"
+                      numOctaves="1" result="turbulence" seed="1"
+                      stitchTiles="stitch"
+                      />
         <feDisplacementMap in2="turbulence" in="SourceGraphic"
                            scale="4" xChannelSelector="R" yChannelSelector="G"/>
       </filter>
