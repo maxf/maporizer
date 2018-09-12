@@ -125,17 +125,17 @@
   </x:template>
 
   <x:template match="way" mode="line">
-    <x:variable name="stroke-width">
+    <x:variable name="size">
       <x:choose>
-        <x:when test="tag[@k='highway' and (@v='primary' or @v='trunk')]">10px</x:when>
-        <x:when test="tag[@k='highway' and @v='secondary']">4px</x:when>
-        <x:when test="tag[@k='highway' and (@v='tertiary' or @v='unclassified')]">3px</x:when>
-        <x:when test="tag[@k='highway' and @v='residential']">2px</x:when>
-        <x:when test="tag[@k='highway' and @v='pedestrian']">2px</x:when>
-        <x:otherwise>0</x:otherwise>
+        <x:when test="tag[@k='highway' and (@v='primary' or @v='trunk')]">xl</x:when>
+        <x:when test="tag[@k='highway' and @v='secondary']">l</x:when>
+        <x:when test="tag[@k='highway' and (@v='tertiary' or @v='unclassified')]">m</x:when>
+        <x:when test="tag[@k='highway' and @v='residential']">s</x:when>
+        <x:when test="tag[@k='highway' and @v='pedestrian']">s</x:when>
+        <x:otherwise>xs</x:otherwise>
       </x:choose>
     </x:variable>
-    <path class="way" id="ID{@id}" stroke-width="{$stroke-width}" stroke-linejoin="round" stroke-linecap="round">
+    <path class="way {$size}" id="ID{@id}" stroke-linejoin="round" stroke-linecap="round">
       <x:attribute name="d">
         <x:for-each select="nd">
           <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
