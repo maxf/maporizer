@@ -9,16 +9,28 @@
     stroke-width: 200px;
 }
 
-.park {
+.building {
     filter: url('#hand-drawn');
     fill: #ccc;
 }
 
 .way {
-    filter: url(#hand-drawn);
+//    filter: url(#hand-drawn);
     stroke: #333;
     fill: none;
+    stroke-linejoin: round;
+    stroke-linecap: round;
 }
+
+.way:hover {
+    stroke: red;
+}
+
+.way.xl {stroke-width: 10px;}
+.way.l {stroke-width: 4px;}
+.way.m {stroke-width: 3px;}
+.way.s {stroke-width: 2px;}
+.way.xs {display: none;}
 
 .rail {
     filter: drop-shadow(7px 7px 3px black);

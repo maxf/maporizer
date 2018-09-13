@@ -26,6 +26,7 @@
       <style>
         @import url(../style.css);
       </style>
+
       <filter id="hand-drawn">
         <feTurbulence type="turbulence" baseFrequency="0.03"
                       numOctaves="1" result="turbulence" seed="1"
@@ -38,6 +39,11 @@
 
       <rect x="0" y="0" width="{$width}" height="{$height}" class="background"/>
 
+      <script xlink:href="../rough.min.js"></script>
+      <script>
+        const svg = document.getElementById('svgroot');
+        const rc = rough.svg(svg);
+        let g;
 
       <x:apply-templates select="way[tag[@k='highway' and (@v='primary' or
                                                            @v='secondary' or
@@ -49,13 +55,14 @@
                                                            @v='service' or
                                                            @v='footway' or
                                                            @v='pedestrian')]]" mode="line"/>
+      </script>
 
 <!--
-      <x:apply-templates select="way[tag[@k='leisure' and (@v='park')]]" mode="polygon"/>
+      <x:apply-templates select="way[tag[@k='leisure' and (@v='park')]]" mode="park"/>
 -->
-
-      <x:apply-templates select="way[tag[@k='building']]" mode="polygon"/>
-
+<!--
+      <x:apply-templates select="way[tag[@k='building']]" mode="building"/>
+-->
 
       <x:apply-templates select="way[tag[@k='railway' and @v='rail']]" mode="railway"/>
 <!--
@@ -94,23 +101,30 @@
           document.querySelectorAll('.rail').forEach(way => {
             const path = way.getAttribute('d').split(' ').map(p => {
               const m = p.match(reg);
-              return {x:parseFloat(m[1],10), y:parseFloat(m[2],10)};
-            });
-            const s = i => `${path[i].x},${path[i].y}`;
-            const m = (i, j) => `${(path[i].x+path[j].x)/2},${(path[i].y+path[j].y)/2}`;
+              if (m) {
+                return {x:parseFloat(m[1],10), y:parseFloat(m[2],10)};
+              } else {
+                return null;
+              }
+            })
+            .filter(p => p);
+            if (path.length>0) {
+              const s = i => `${path[i].x},${path[i].y}`;
+              const m = (i, j) => `${(path[i].x+path[j].x)/2},${(path[i].y+path[j].y)/2}`;
 
-            let beziers = [`M${s(0)}`];
-            beziers.push(` L${m(0,1)}`);
-            let i=1;
-            for (i=1; i<path.length-1; i++) {
-              beziers.push(` Q${s(i)} ${m(i,i+1)}`);
+              let beziers = [`M${s(0)}`];
+              beziers.push(` L${m(0,1)}`);
+              let i=1;
+              for (i=1; i<path.length-1; i++) {
+                beziers.push(` Q${s(i)} ${m(i,i+1)}`);
+              }
+              beziers.push(` L${s(i)}`);
+              way.setAttribute('d', beziers.join(''));
             }
-            beziers.push(` L${s(i)}`);
-
-            way.setAttribute('d', beziers.join(''));
           });
         ]]>
       </script>
+
    </svg>
   </x:template>
 
@@ -127,23 +141,30 @@
   <x:template match="way" mode="line">
     <x:variable name="size">
       <x:choose>
-        <x:when test="tag[@k='highway' and (@v='primary' or @v='trunk')]">xl</x:when>
-        <x:when test="tag[@k='highway' and @v='secondary']">l</x:when>
-        <x:when test="tag[@k='highway' and (@v='tertiary' or @v='unclassified')]">m</x:when>
-        <x:when test="tag[@k='highway' and @v='residential']">s</x:when>
-        <x:when test="tag[@k='highway' and @v='pedestrian']">s</x:when>
-        <x:otherwise>xs</x:otherwise>
+        <x:when test="tag[@k='highway' and (@v='primary' or @v='trunk')]">8</x:when>
+        <x:when test="tag[@k='highway' and @v='secondary']">4</x:when>
+        <x:when test="tag[@k='highway' and (@v='tertiary' or @v='unclassified')]">3</x:when>
+        <x:when test="tag[@k='highway' and @v='residential']">2</x:when>
+        <x:when test="tag[@k='highway' and @v='pedestrian']">2</x:when>
+        <x:otherwise>0</x:otherwise>
       </x:choose>
     </x:variable>
-    <path class="way {$size}" id="ID{@id}" stroke-linejoin="round" stroke-linecap="round">
-      <x:attribute name="d">
-        <x:for-each select="nd">
-          <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
-          <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
-          <x:value-of select="concat($node/@lon * $scaling-factor - $minlon,',',-$node/@lat * $scaling-factor + $maxlat)"/>
-        </x:for-each>
-      </x:attribute>
-    </path>
+
+    <x:variable name="d">
+      <x:for-each select="nd">
+        <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
+        <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
+        <x:value-of select="concat($node/@lon * $scaling-factor - $minlon,',',-$node/@lat * $scaling-factor + $maxlat)"/>
+      </x:for-each>
+    </x:variable>
+<!--
+    <path class="way {$size}" id="ID{@id}" d="{$d}"/>
+-->
+<x:if test="$size != 0">
+  g = rc.path('<x:value-of select="$d"/>', { strokeWidth: <x:value-of select="$size"/>, roughness: 0 });
+  svg.appendChild(g);
+</x:if>
+
   </x:template>
 
   <x:template match="way" mode="railway">
@@ -162,8 +183,8 @@
     </path>
   </x:template>
 
- <x:template match="way" mode="polygon">
-    <path class="park" id="ID{@id}">
+ <x:template match="way" mode="building">
+    <path class="building" id="ID{@id}">
       <x:attribute name="d">
         <x:for-each select="nd">
           <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
@@ -173,5 +194,4 @@
       </x:attribute>
     </path>
   </x:template>
-
 </x:transform>
