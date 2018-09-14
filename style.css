@@ -15,7 +15,7 @@
 }
 
 .way {
-//    filter: url(#hand-drawn);
+    filter: url(#hand-drawn);
     stroke: #333;
     fill: none;
     stroke-linejoin: round;
@@ -27,7 +27,7 @@
 }
 
 .way.xl {stroke-width: 10px;}
-.way.l {stroke-width: 4px;}
+.way.l {stroke-width: 6px;}
 .way.m {stroke-width: 3px;}
 .way.s {stroke-width: 2px;}
 .way.xs {display: none;}
