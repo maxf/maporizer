@@ -16,7 +16,7 @@
 
 .way {
     filter: url(#hand-drawn);
-    stroke: #333;
+    stroke: #777;
     fill: none;
     stroke-linejoin: round;
     stroke-linecap: round;
@@ -27,17 +27,16 @@
 }
 
 .way.xl {stroke-width: 10px;}
-.way.l {stroke-width: 6px;}
-.way.m {stroke-width: 3px;}
-.way.s {stroke-width: 2px;}
+.way.l {stroke-width: 8px;}
+.way.m {stroke-width: 6px;}
+.way.s {stroke-width: 4px;}
 .way.xs {display: none;}
 
 .rail {
     filter: drop-shadow(7px 7px 3px black);
     stroke: #fa6900;
     fill: none;
-    stroke-width: 15px;
-
+    stroke-width: 30px;
 }
 
 .station {
@@ -71,4 +70,8 @@
     font-family: DejaVu Sans;
     font-weight: 100;
     font-size: 100px;
+}
+
+.park {
+    fill: #88ff66;
 }

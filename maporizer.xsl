@@ -39,6 +39,14 @@
 
       <rect x="0" y="0" width="{$width}" height="{$height}" class="background"/>
 
+
+
+
+      <x:apply-templates
+          select="way[tag[@k='leisure' and @v='common']]"
+          mode="park"/>
+
+
 <!--
       <script xlink:href="../rough.min.js"></script>
       <script>
@@ -71,13 +79,8 @@
                                                            @v='pedestrian')]]" mode="line"/>
 
 
-
-<!--
-      <x:apply-templates select="way[tag[@k='leisure' and (@v='park')]]" mode="park"/>
--->
-<!--
       <x:apply-templates select="way[tag[@k='building']]" mode="building"/>
--->
+
 
       <x:apply-templates select="way[tag[@k='railway' and @v='rail']]" mode="railway"/>
 <!--
@@ -88,7 +91,7 @@
       <rect x="-100" y="-100" width="{$width + 200}" height="{$height + 200}" class="frame"/>
       <rect x="0" y="0" width="{$width}" height="{$height}" class="border"/>
       <text
-            transform="scale(3.3,2) translate(0, {$height + 100})"
+            transform="scale(3.3,2) translate(0, {$height - 625})"
             class="title">P E C K H A M</text>
 
 
@@ -218,6 +221,18 @@
 
  <x:template match="way" mode="building">
     <path class="building" id="ID{@id}">
+      <x:attribute name="d">
+        <x:for-each select="nd">
+          <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
+          <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
+          <x:value-of select="concat($node/@lon * $scaling-factor - $minlon,',',-$node/@lat * $scaling-factor + $maxlat)"/>
+        </x:for-each>
+      </x:attribute>
+    </path>
+  </x:template>
+
+ <x:template match="way" mode="park">
+    <path class="park" id="ID{@id}">
       <x:attribute name="d">
         <x:for-each select="nd">
           <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
