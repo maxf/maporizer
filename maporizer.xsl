@@ -39,6 +39,7 @@
 
       <rect x="0" y="0" width="{$width}" height="{$height}" class="background"/>
 
+<!--
       <script xlink:href="../rough.min.js"></script>
       <script>
         const svg = document.getElementById('svgroot');
@@ -54,8 +55,22 @@
                                                            @v='cycleway' or
                                                            @v='service' or
                                                            @v='footway' or
-                                                           @v='pedestrian')]]" mode="line"/>
+                                                           @v='pedestrian')]]" mode="rough"/>
       </script>
+-->
+
+      <x:apply-templates select="way[tag[@k='highway' and (@v='primary' or
+                                                           @v='secondary' or
+                                                           @v='tertiary' or
+                                                           @v='residential' or
+                                                           @v='trunk' or
+                                                           @v='unclassified' or
+                                                           @v='cycleway' or
+                                                           @v='service' or
+                                                           @v='footway' or
+                                                           @v='pedestrian')]]" mode="line"/>
+
+
 
 <!--
       <x:apply-templates select="way[tag[@k='leisure' and (@v='park')]]" mode="park"/>
@@ -138,7 +153,7 @@
     </text>
   </x:template>
 
-  <x:template match="way" mode="line">
+  <x:template match="way" mode="rough">
     <x:variable name="size">
       <x:choose>
         <x:when test="tag[@k='highway' and (@v='primary' or @v='trunk')]">8</x:when>
@@ -149,7 +164,6 @@
         <x:otherwise>0</x:otherwise>
       </x:choose>
     </x:variable>
-
     <x:variable name="d">
       <x:for-each select="nd">
         <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
@@ -157,15 +171,34 @@
         <x:value-of select="concat($node/@lon * $scaling-factor - $minlon,',',-$node/@lat * $scaling-factor + $maxlat)"/>
       </x:for-each>
     </x:variable>
-<!--
-    <path class="way {$size}" id="ID{@id}" d="{$d}"/>
--->
-<x:if test="$size != 0">
-  g = rc.path('<x:value-of select="$d"/>', { strokeWidth: <x:value-of select="$size"/>, roughness: 0 });
-  svg.appendChild(g);
-</x:if>
-
+    <x:if test="$size != 0">
+      g = rc.path('<x:value-of select="$d"/>', { strokeWidth: <x:value-of select="$size"/>, roughness: 0 });
+      svg.appendChild(g);
+    </x:if>
   </x:template>
+
+
+  <x:template match="way" mode="line">
+    <x:variable name="size">
+      <x:choose>
+        <x:when test="tag[@k='highway' and (@v='primary' or @v='trunk')]">xl</x:when>
+        <x:when test="tag[@k='highway' and @v='secondary']">l</x:when>
+        <x:when test="tag[@k='highway' and (@v='tertiary' or @v='unclassified')]">m</x:when>
+        <x:when test="tag[@k='highway' and @v='residential']">s</x:when>
+        <x:when test="tag[@k='highway' and @v='pedestrian']">s</x:when>
+        <x:otherwise>xs</x:otherwise>
+      </x:choose>
+    </x:variable>
+    <x:variable name="d">
+      <x:for-each select="nd">
+        <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
+        <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
+        <x:value-of select="concat($node/@lon * $scaling-factor - $minlon,',',-$node/@lat * $scaling-factor + $maxlat)"/>
+      </x:for-each>
+    </x:variable>
+    <path class="way {$size}" id="ID{@id}" d="{$d}"/>
+  </x:template>
+
 
   <x:template match="way" mode="railway">
      <path
