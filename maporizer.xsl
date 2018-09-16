@@ -2,31 +2,33 @@
            xmlns="http://www.w3.org/2000/svg"
            xmlns:xlink="http://www.w3.org/1999/xlink">
 
-  <!-- we could use fn:upper-case but trying to stay on xslt1.0 for performance -->
-  <x:variable name="lowercase" select="'abcdeéèfghijklmnopqrstuvwxyz'" />
-  <x:variable name="uppercase" select="'ABCDEÉÈFGHIJKLMNOPQRSTUVWXYZ'" />
+  <x:param name="W" select="500"/>
+  <x:param name="H" select="200"/>
+  <x:param name="border" select="20"/>
+  <x:param name="bottom-border" select="40"/>
+
+  <x:variable name="border-width" select="$W - (2 * $border)"/>
+  <x:variable name="border-height" select="$H - $border - $bottom-border"/>
+  <x:variable name="F" select="$border-width div $border-height"/>
 
 
-  <x:variable name="scaling-factor" select="100000"/>
 
-  <x:variable name="minlat" select="/osm/bounds/@minlat * $scaling-factor"/>
-  <x:variable name="minlon" select="/osm/bounds/@minlon * $scaling-factor"/>
-  <x:variable name="maxlat" select="/osm/bounds/@maxlat * $scaling-factor"/>
-  <x:variable name="maxlon" select="/osm/bounds/@maxlon * $scaling-factor"/>
+  <x:variable name="minLat" select="/osm/bounds/@minlat"/>
+  <x:variable name="minLon" select="/osm/bounds/@minlon"/>
+  <x:variable name="maxLat" select="/osm/bounds/@maxlat"/>
+  <x:variable name="maxLon" select="/osm/bounds/@maxlon"/>
 
-  <x:variable name="width" select="$maxlon - $minlon"/>
-  <x:variable name="height" select="$maxlat - $minlat"/>
 
   <x:template match="/"><x:apply-templates/></x:template>
 
   <x:output indent="yes"/>
 
   <x:template match="osm">
-    <svg version="1.1" viewBox="-100 -60 3000 2000" width="1600px" height="1600px" preserveAspectRatio="none" id="svgroot">
+    <svg version="1.1" viewBox="0 0 {$W} {$H}" width="1000px" id="svgroot">
       <style>
-        @import url(../style.css);
+        @import url(style.css);
       </style>
-
+<!--
       <filter id="hand-drawn">
         <feTurbulence type="turbulence" baseFrequency="0.03"
                       numOctaves="1" result="turbulence" seed="1"
@@ -35,17 +37,15 @@
         <feDisplacementMap in2="turbulence" in="SourceGraphic"
                            scale="4" xChannelSelector="R" yChannelSelector="G"/>
       </filter>
+-->
 
+      <rect x="0" y="0" width="{$W}" height="{$H}" class="background"/>
 
-      <rect x="0" y="0" width="{$width}" height="{$height}" class="background"/>
-
-
-
-
+<!--
       <x:apply-templates
           select="way[tag[@k='leisure' and @v='common']]"
           mode="park"/>
-
+-->
 
 <!--
       <script xlink:href="../rough.min.js"></script>
@@ -67,6 +67,7 @@
       </script>
 -->
 
+<!--
       <x:apply-templates select="way[tag[@k='highway' and (@v='primary' or
                                                            @v='secondary' or
                                                            @v='tertiary' or
@@ -77,26 +78,87 @@
                                                            @v='service' or
                                                            @v='footway' or
                                                            @v='pedestrian')]]" mode="line"/>
-
-
+-->
+<!--
       <x:apply-templates select="way[tag[@k='building']]" mode="building"/>
+-->
+<!--
 
-
-      <x:apply-templates select="way[tag[@k='railway' and @v='rail']]" mode="railway"/>
+-->
 <!--
     <x:apply-templates select="node[tag[@k='railway' and @v='station']]" mode="suburb-name"/>
 -->
 
-
+<!--
       <rect x="-100" y="-100" width="{$width + 200}" height="{$height + 200}" class="frame"/>
-      <rect x="0" y="0" width="{$width}" height="{$height}" class="border"/>
-      <text
-            transform="scale(3.3,2) translate(0, {$height - 625})"
-            class="title">P E C K H A M</text>
+-->
 
+      <g transform="matrix({($W - 2 * $border) div $F}, 0, 0, {$H - $border - $bottom-border}, {$border}, {$border})">
+
+        <x:variable name="deltaLon" select="$maxLon - $minLon"/>
+        <x:variable name="deltaLat" select="$maxLat - $minLat"/>
+        <x:variable name="Ao" select="$deltaLon div $deltaLat"/>
+
+        <x:variable name="trans2">
+          <x:choose>
+            <x:when test="$Ao &lt; $F">
+              <x:message>1</x:message>
+              <x:variable name="alphaX" select="$minLon + ($deltaLon - $deltaLat * $F) div 2"/>
+              <x:variable name="alphaY" select="$maxLat"/>
+              <x:variable name="betaX" select="$maxLon - ($deltaLon - $deltaLat * $F) div 2"/>
+              <x:variable name="betaY" select="$minLat"/>
+
+              <x:variable name="sx" select="$F div ($betaX - $alphaX)"/>
+              <x:variable name="sy" select="1 div ($betaY - $alphaY)"/>
+              <x:variable name="tx" select="- $sx * $alphaX"/>
+              <x:variable name="ty" select="- $sy * $alphaY"/>
+
+              <x:value-of select="concat('matrix(',$sx,',0,0,',$sy,',',$tx,',',$ty,')')"/>
+
+            </x:when>
+            <x:otherwise>
+              <x:message>2</x:message>
+              <x:variable name="alphaX" select="$minLon"/>
+              <x:variable name="alphaY" select="$maxLat - ($deltaLat - $deltaLon div $F) div 2"/>
+              <x:variable name="betaX" select="$maxLon"/>
+              <x:variable name="betaY" select="$minLat + ($deltaLat - $deltaLon div $F) div 2"/>
+
+              <x:variable name="sx" select="$F div ($betaX - $alphaX)"/>
+              <x:variable name="sy" select="1 div ($betaY - $alphaY)"/>
+              <x:variable name="tx" select="- $sx * $alphaX"/>
+              <x:variable name="ty" select="- $sy * $alphaY"/>
+
+              <x:value-of select="concat('matrix(',$sx,',0,0,',$sy,',',$tx,',',$ty,')')"/>
+
+            </x:otherwise>
+          </x:choose>
+        </x:variable>
+
+        <g transform="{$trans2}">
+          <x:apply-templates
+              select="way[tag[@k='leisure' and @v='common']]"
+              mode="park"/>
+
+          <x:apply-templates select="way[tag[@k='railway' and @v='rail']]" mode="railway"/>
+
+        </g>
+
+      </g>
+
+      <!-- thin border around map -->
+      <rect x="{$border}" y="{$border}"
+            width="{$border-width}"
+            height="{$border-height}"
+            class="border"/>
+<!--
+      <text
+            x="{$border}" y="{$H - $bottom-border - 6}"
+            font-size="16.3"
+            class="title">P E C K H A M</text>
+-->
 
       <!-- and now transform all road paths into splines -->
-
+<!--
      <script>
         <![CDATA[
           const reg = /(?:M|L)([-\d.]+),([-\d.]+)/;
@@ -142,13 +204,13 @@
           });
         ]]>
       </script>
-
+-->
    </svg>
   </x:template>
 
   <x:template match="node" mode="suburb-name">
-    <x:variable name="x" select="@lon * $scaling-factor - $minlon"/>
-    <x:variable name="y" select="-@lat * $scaling-factor + $maxlat"/>
+    <x:variable name="x" select="@lon"/>
+    <x:variable name="y" select="@lat"/>
     <text class="station"
           transform=" translate({$x},{$y + 43}) scale(1.5, 1.0)"
           text-anchor="middle">
@@ -171,7 +233,7 @@
       <x:for-each select="nd">
         <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
         <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
-        <x:value-of select="concat($node/@lon * $scaling-factor - $minlon,',',-$node/@lat * $scaling-factor + $maxlat)"/>
+        <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
       </x:for-each>
     </x:variable>
     <x:if test="$size != 0">
@@ -196,7 +258,7 @@
       <x:for-each select="nd">
         <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
         <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
-        <x:value-of select="concat($node/@lon * $scaling-factor - $minlon,',',-$node/@lat * $scaling-factor + $maxlat)"/>
+        <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
       </x:for-each>
     </x:variable>
     <path class="way {$size}" id="ID{@id}" d="{$d}"/>
@@ -213,7 +275,7 @@
         <x:for-each select="nd">
           <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
           <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
-          <x:value-of select="concat($node/@lon * $scaling-factor - $minlon,',',-$node/@lat * $scaling-factor + $maxlat)"/>
+          <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
         </x:for-each>
       </x:attribute>
     </path>
@@ -225,7 +287,7 @@
         <x:for-each select="nd">
           <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
           <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
-          <x:value-of select="concat($node/@lon * $scaling-factor - $minlon,',',-$node/@lat * $scaling-factor + $maxlat)"/>
+          <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
         </x:for-each>
       </x:attribute>
     </path>
@@ -237,7 +299,7 @@
         <x:for-each select="nd">
           <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
           <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
-          <x:value-of select="concat($node/@lon * $scaling-factor - $minlon,',',-$node/@lat * $scaling-factor + $maxlat)"/>
+          <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
         </x:for-each>
       </x:attribute>
     </path>

@@ -36,7 +36,7 @@
     filter: drop-shadow(7px 7px 3px black);
     stroke: #fa6900;
     fill: none;
-    stroke-width: 20px;
+    stroke-width: 0.0001;
 }
 
 .station {
@@ -61,7 +61,7 @@
 .border {
     fill: none;
     stroke: black;
-    stroke-width: 1px;
+    stroke-width: .5;
 }
 
 .title {
@@ -69,7 +69,7 @@
     stroke: black;
     font-family: DejaVu Sans;
     font-weight: 100;
-    font-size: 100px;
+//    font-size: 20;
 }
 
 .park {
