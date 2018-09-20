@@ -95,6 +95,8 @@
 
       <g transform="matrix({($W - 2 * $border) div $F}, 0, 0, {$H - $border - $bottom-border}, {$border}, {$border})">
 
+        <rect x="0" y="0" width="{$F}" height="1" stroke="red" stroke-width="0.1px" fill="none"/>
+
         <x:variable name="deltaLon" select="$maxLon - $minLon"/>
         <x:variable name="deltaLat" select="$maxLat - $minLat"/>
         <x:variable name="Ao" select="$deltaLon div $deltaLat"/>
@@ -135,6 +137,9 @@
         </x:variable>
 
         <g transform="{$trans2}">
+
+          <rect x="{$minLon}" y="{$minLat}" width="{$deltaLon}" height="{$deltaLat}" stroke="green" stroke-width="0.001px" fill="none"/>
+
           <x:apply-templates
               select="way[tag[@k='leisure' and @v='common']]"
               mode="park"/>
