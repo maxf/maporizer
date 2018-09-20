@@ -1,5 +1,4 @@
 .background {
-//    fill: #571845;
     fill: #e0e4cc;
 }
 
@@ -15,7 +14,7 @@
 }
 
 .way {
-    filter: url(#hand-drawn);
+//    filter: url(#hand-drawn);
     stroke: #777;
     fill: none;
     stroke-linejoin: round;
@@ -26,14 +25,14 @@
     stroke: red;
 }
 
-.way.xl {stroke-width: 10px;}
-.way.l {stroke-width: 8px;}
-.way.m {stroke-width: 6px;}
-.way.s {stroke-width: 4px;}
+.way.xl {stroke-width: 0.0001;}
+.way.l {stroke-width: 0.00008;}
+.way.m {stroke-width: 0.00006;}
+.way.s {stroke-width: 0.00004;;}
 .way.xs {display: none;}
 
 .rail {
-    filter: drop-shadow(7px 7px 3px black);
+    filter: drop-shadow(0.0007 0.0007 0.0003 black);
     stroke: #fa6900;
     fill: none;
     stroke-width: 0.0001;

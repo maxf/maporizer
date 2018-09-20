@@ -2,14 +2,14 @@
            xmlns="http://www.w3.org/2000/svg"
            xmlns:xlink="http://www.w3.org/1999/xlink">
 
-  <x:param name="W" select="500"/>
-  <x:param name="H" select="200"/>
+  <x:param name="W" select="400"/>
+  <x:param name="H" select="400"/>
   <x:param name="border" select="20"/>
   <x:param name="bottom-border" select="40"/>
 
   <x:variable name="border-width" select="$W - (2 * $border)"/>
   <x:variable name="border-height" select="$H - $border - $bottom-border"/>
-  <x:variable name="F" select="$border-width div $border-height"/>
+  <x:variable name="F" select="($border-width div $border-height) * 1.2"/>
 
 
 
@@ -28,7 +28,7 @@
       <style>
         @import url(style.css);
       </style>
-<!--
+
       <filter id="hand-drawn">
         <feTurbulence type="turbulence" baseFrequency="0.03"
                       numOctaves="1" result="turbulence" seed="1"
@@ -37,15 +37,10 @@
         <feDisplacementMap in2="turbulence" in="SourceGraphic"
                            scale="4" xChannelSelector="R" yChannelSelector="G"/>
       </filter>
--->
+
 
       <rect x="0" y="0" width="{$W}" height="{$H}" class="background"/>
 
-<!--
-      <x:apply-templates
-          select="way[tag[@k='leisure' and @v='common']]"
-          mode="park"/>
--->
 
 <!--
       <script xlink:href="../rough.min.js"></script>
@@ -68,16 +63,6 @@
 -->
 
 <!--
-      <x:apply-templates select="way[tag[@k='highway' and (@v='primary' or
-                                                           @v='secondary' or
-                                                           @v='tertiary' or
-                                                           @v='residential' or
-                                                           @v='trunk' or
-                                                           @v='unclassified' or
-                                                           @v='cycleway' or
-                                                           @v='service' or
-                                                           @v='footway' or
-                                                           @v='pedestrian')]]" mode="line"/>
 -->
 <!--
       <x:apply-templates select="way[tag[@k='building']]" mode="building"/>
@@ -95,16 +80,13 @@
 
       <g transform="matrix({($W - 2 * $border) div $F}, 0, 0, {$H - $border - $bottom-border}, {$border}, {$border})">
 
-        <rect x="0" y="0" width="{$F}" height="1" stroke="red" stroke-width="0.1px" fill="none"/>
-
         <x:variable name="deltaLon" select="$maxLon - $minLon"/>
         <x:variable name="deltaLat" select="$maxLat - $minLat"/>
         <x:variable name="Ao" select="$deltaLon div $deltaLat"/>
 
         <x:variable name="trans2">
           <x:choose>
-            <x:when test="$Ao &lt; $F">
-              <x:message>1</x:message>
+            <x:when test="$Ao > $F">
               <x:variable name="alphaX" select="$minLon + ($deltaLon - $deltaLat * $F) div 2"/>
               <x:variable name="alphaY" select="$maxLat"/>
               <x:variable name="betaX" select="$maxLon - ($deltaLon - $deltaLat * $F) div 2"/>
@@ -119,7 +101,6 @@
 
             </x:when>
             <x:otherwise>
-              <x:message>2</x:message>
               <x:variable name="alphaX" select="$minLon"/>
               <x:variable name="alphaY" select="$maxLat - ($deltaLat - $deltaLon div $F) div 2"/>
               <x:variable name="betaX" select="$maxLon"/>
@@ -138,17 +119,41 @@
 
         <g transform="{$trans2}">
 
-          <rect x="{$minLon}" y="{$minLat}" width="{$deltaLon}" height="{$deltaLat}" stroke="green" stroke-width="0.001px" fill="none"/>
-
           <x:apply-templates
               select="way[tag[@k='leisure' and @v='common']]"
               mode="park"/>
 
           <x:apply-templates select="way[tag[@k='railway' and @v='rail']]" mode="railway"/>
 
+          <x:apply-templates select="way[tag[@k='highway' and (@v='primary' or
+                                     @v='secondary' or
+                                     @v='tertiary' or
+                                     @v='residential' or
+                                     @v='trunk' or
+                                     @v='unclassified' or
+                                     @v='cycleway' or
+                                     @v='service' or
+                                     @v='footway' or
+                                     @v='pedestrian')]]" mode="line"/>
+
         </g>
 
       </g>
+
+
+      <!-- clipping rectangles -->
+      <rect x="{$border div 2}" y="{$border div 2}"
+            width="{$W - $border}" height="{$H - $bottom-border}"
+            fill="none" stroke="#e0e4cc" stroke-width="{$border}"/>
+
+      <rect x="0" y="{$H - $bottom-border}"
+            width="{$W}" height="{$bottom-border}"
+            fill="#e0e4cc" />
+
+      <x:variable name="Z" select="20000"/>
+      <rect x="{-$Z div 2}" y="{-$Z div 2}"
+            width="{$W + $Z}" height="{$H + $Z}"
+            fill="none" stroke="white" stroke-width="{$Z}"/>
 
       <!-- thin border around map -->
       <rect x="{$border}" y="{$border}"
@@ -157,13 +162,14 @@
             class="border"/>
 <!--
       <text
-            x="{$border}" y="{$H - $bottom-border - 6}"
-            font-size="16.3"
-            class="title">P E C K H A M</text>
+          x="{$border}" y="{$H}"
+          font-size="52"
+          class="title">P E C K H A M</text>
 -->
 
+
       <!-- and now transform all road paths into splines -->
-<!--
+
      <script>
         <![CDATA[
           const reg = /(?:M|L)([-\d.]+),([-\d.]+)/;
@@ -209,7 +215,9 @@
           });
         ]]>
       </script>
--->
+
+
+
    </svg>
   </x:template>
 
