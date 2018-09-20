@@ -3,9 +3,9 @@
            xmlns:xlink="http://www.w3.org/1999/xlink">
 
   <x:param name="W" select="400"/>
-  <x:param name="H" select="400"/>
+  <x:param name="H" select="500"/>
   <x:param name="border" select="20"/>
-  <x:param name="bottom-border" select="40"/>
+  <x:param name="bottom-border" select="80"/>
 
   <x:variable name="border-width" select="$W - (2 * $border)"/>
   <x:variable name="border-height" select="$H - $border - $bottom-border"/>
@@ -28,18 +28,18 @@
     <svg version="1.1" viewBox="0 0 {$W} {$H}" width="1000px" id="svgroot">
       <style>@import url(style.css);</style>
       <defs>
-        <filter id="hand-drawn" filterUnits="objectBoundingBox" primitiveUnits="objectBoundingBox">
-          <feTurbulence type="turbulence" baseFrequency="0.3"
+        <filter id="hand-drawn">
+          <feTurbulence type="turbulence" baseFrequency="5000"
                         numOctaves="1" result="turbulence" seed="1"
                         stitchTiles="stitch" />
           <feDisplacementMap in2="turbulence" in="SourceGraphic"
-                             scale="0.0004" xChannelSelector="R" yChannelSelector="G"/>
+                             scale="0.00005" xChannelSelector="R" yChannelSelector="G"/>
         </filter>
+
         <filter id="shadow" filterUnits="objectBoundingBox" primitiveUnits="objectBoundingBox">
           <feDropShadow dx=".008" dy="-.008" stdDeviation=".005" flood-color="black"></feDropShadow>
         </filter>
       </defs>
-
 
       <rect x="0" y="0" width="{$W}" height="{$H}" class="background"/>
 
@@ -84,8 +84,11 @@
 
         <g transform="{$trans2}">
 
+          <x:apply-templates
+              select="way[tag[@k='leisure' and @v='common']]"
+              mode="park"/>
 
-         <x:apply-templates select="way[tag[@k='highway' and (@v='primary' or
+          <x:apply-templates select="way[tag[@k='highway' and (@v='primary' or
                                      @v='secondary' or
                                      @v='tertiary' or
                                      @v='residential' or
@@ -98,9 +101,6 @@
 
           <x:apply-templates select="way[tag[@k='railway' and @v='rail']]" mode="railway"/>
 
-          <x:apply-templates
-              select="way[tag[@k='leisure' and @v='common']]"
-              mode="park"/>
 
 
 <!--
@@ -132,12 +132,12 @@
             width="{$border-width}"
             height="{$border-height}"
             class="border"/>
-<!--
+
       <text
-          x="{$border}" y="{$H}"
-          font-size="52"
+          x="{$border}" y="{$H - 30}"
+          font-size="53"
           class="title">P E C K H A M</text>
--->
+
 
 
       <!-- and now make some polylines smooth -->

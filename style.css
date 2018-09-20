@@ -14,7 +14,7 @@
 }
 
 .way {
-//    filter: url('#hand-drawn');
+    filter: url('#hand-drawn');
     stroke: #777;
     fill: none;
     stroke-linejoin: round;
@@ -34,26 +34,8 @@
 .rail {
     stroke: #fa6900;
     fill: none;
-    stroke-width: 0.0003;
+    stroke-width: 0.0002;
 }
-
-.station {
-    font-family: 'BritishRailLightNormal', sans serif;
-    font-size: 40px;
-    font-weight: bold;
-    fill: #fa6900;
-}
-
-.filtered{
-    filter: url(#filter);
-    -webkit-filter: url(#filter);
-    fill: #9673FF;
-    color: #9673FF;
-    font-family: 'Alfa Slab One', cursive;
-    text-transform: uppercase;
-    font-size: 40px;
-}
-
 
 .border {
     fill: none;
@@ -66,8 +48,6 @@
     stroke: black;
     font-family: DejaVu Sans;
     font-weight: 100;
-//    font-size: 20;
-    filter: drop-shadow(3px 3px 3px blue);
 }
 
 .park {
