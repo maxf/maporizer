@@ -19,64 +19,29 @@
   <x:variable name="maxLon" select="/osm/bounds/@maxlon"/>
 
 
-  <x:template match="/"><x:apply-templates/></x:template>
-
   <x:output indent="yes"/>
+
+
+  <x:template match="/"><x:apply-templates/></x:template>
 
   <x:template match="osm">
     <svg version="1.1" viewBox="0 0 {$W} {$H}" width="1000px" id="svgroot">
-      <style>
-        @import url(style.css);
-      </style>
-
-      <filter id="hand-drawn">
-        <feTurbulence type="turbulence" baseFrequency="0.03"
-                      numOctaves="1" result="turbulence" seed="1"
-                      stitchTiles="stitch"
-                      />
-        <feDisplacementMap in2="turbulence" in="SourceGraphic"
-                           scale="4" xChannelSelector="R" yChannelSelector="G"/>
-      </filter>
+      <style>@import url(style.css);</style>
+      <defs>
+        <filter id="hand-drawn" filterUnits="objectBoundingBox" primitiveUnits="objectBoundingBox">
+          <feTurbulence type="turbulence" baseFrequency="0.3"
+                        numOctaves="1" result="turbulence" seed="1"
+                        stitchTiles="stitch" />
+          <feDisplacementMap in2="turbulence" in="SourceGraphic"
+                             scale="0.0004" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+        <filter id="shadow" filterUnits="objectBoundingBox" primitiveUnits="objectBoundingBox">
+          <feDropShadow dx=".008" dy="-.008" stdDeviation=".005" flood-color="black"></feDropShadow>
+        </filter>
+      </defs>
 
 
       <rect x="0" y="0" width="{$W}" height="{$H}" class="background"/>
-
-
-<!--
-      <script xlink:href="../rough.min.js"></script>
-      <script>
-        const svg = document.getElementById('svgroot');
-        const rc = rough.svg(svg);
-        let g;
-
-      <x:apply-templates select="way[tag[@k='highway' and (@v='primary' or
-                                                           @v='secondary' or
-                                                           @v='tertiary' or
-                                                           @v='residential' or
-                                                           @v='trunk' or
-                                                           @v='unclassified' or
-                                                           @v='cycleway' or
-                                                           @v='service' or
-                                                           @v='footway' or
-                                                           @v='pedestrian')]]" mode="rough"/>
-      </script>
--->
-
-<!--
--->
-<!--
-      <x:apply-templates select="way[tag[@k='building']]" mode="building"/>
--->
-<!--
-
--->
-<!--
-    <x:apply-templates select="node[tag[@k='railway' and @v='station']]" mode="suburb-name"/>
--->
-
-<!--
-      <rect x="-100" y="-100" width="{$width + 200}" height="{$height + 200}" class="frame"/>
--->
 
       <g transform="matrix({($W - 2 * $border) div $F}, 0, 0, {$H - $border - $bottom-border}, {$border}, {$border})">
 
@@ -119,13 +84,8 @@
 
         <g transform="{$trans2}">
 
-          <x:apply-templates
-              select="way[tag[@k='leisure' and @v='common']]"
-              mode="park"/>
 
-          <x:apply-templates select="way[tag[@k='railway' and @v='rail']]" mode="railway"/>
-
-          <x:apply-templates select="way[tag[@k='highway' and (@v='primary' or
+         <x:apply-templates select="way[tag[@k='highway' and (@v='primary' or
                                      @v='secondary' or
                                      @v='tertiary' or
                                      @v='residential' or
@@ -135,6 +95,18 @@
                                      @v='service' or
                                      @v='footway' or
                                      @v='pedestrian')]]" mode="line"/>
+
+          <x:apply-templates select="way[tag[@k='railway' and @v='rail']]" mode="railway"/>
+
+          <x:apply-templates
+              select="way[tag[@k='leisure' and @v='common']]"
+              mode="park"/>
+
+
+<!--
+      <x:apply-templates select="way[tag[@k='building']]" mode="building"/>
+-->
+
 
         </g>
 
@@ -168,10 +140,79 @@
 -->
 
 
-      <!-- and now transform all road paths into splines -->
+      <!-- and now make some polylines smooth -->
+      <x:call-template name="smoothify"/>
+   </svg>
+  </x:template>
 
-     <script>
-        <![CDATA[
+
+
+  <x:template match="way" mode="line">
+    <x:variable name="size">
+      <x:choose>
+        <x:when test="tag[@k='highway' and (@v='primary' or @v='trunk')]">xl</x:when>
+        <x:when test="tag[@k='highway' and @v='secondary']">l</x:when>
+        <x:when test="tag[@k='highway' and (@v='tertiary' or @v='unclassified')]">m</x:when>
+        <x:when test="tag[@k='highway' and @v='residential']">s</x:when>
+        <x:when test="tag[@k='highway' and @v='pedestrian']">s</x:when>
+        <x:otherwise>xs</x:otherwise>
+      </x:choose>
+    </x:variable>
+    <x:variable name="d">
+      <x:for-each select="nd">
+        <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
+        <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
+        <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
+      </x:for-each>
+    </x:variable>
+    <path class="way {$size}" id="ID{@id}" d="{$d}"/>
+  </x:template>
+
+
+  <x:template match="way" mode="railway">
+     <path
+         class="rail"
+         style="filter: url(#shadow)"
+         id="ID{@id}"
+         stroke-linejoin="round"
+         stroke-linecap="round">
+      <x:attribute name="d">
+        <x:for-each select="nd">
+          <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
+          <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
+          <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
+        </x:for-each>
+      </x:attribute>
+    </path>
+  </x:template>
+
+ <x:template match="way" mode="building">
+    <path class="building" id="ID{@id}">
+      <x:attribute name="d">
+        <x:for-each select="nd">
+          <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
+          <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
+          <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
+        </x:for-each>
+      </x:attribute>
+    </path>
+  </x:template>
+
+ <x:template match="way" mode="park">
+    <path class="park" id="ID{@id}">
+      <x:attribute name="d">
+        <x:for-each select="nd">
+          <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
+          <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
+          <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
+        </x:for-each>
+      </x:attribute>
+    </path>
+  </x:template>
+
+  <x:template name="smoothify">
+    <script>
+      <![CDATA[
           const reg = /(?:M|L)([-\d.]+),([-\d.]+)/;
 
 /*
@@ -213,24 +254,30 @@
               way.setAttribute('d', beziers.join(''));
             }
           });
-        ]]>
+      ]]>
+    </script>
+  </x:template>
+
+<!--
+    Use rough.js instead of filter to simulate hand-drawn strokes
+
+      <script xlink:href="../rough.min.js"></script>
+      <script>
+        const svg = document.getElementById('svgroot');
+        const rc = rough.svg(svg);
+        let g;
+
+      <x:apply-templates select="way[tag[@k='highway' and (@v='primary' or
+                                                           @v='secondary' or
+                                                           @v='tertiary' or
+                                                           @v='residential' or
+                                                           @v='trunk' or
+                                                           @v='unclassified' or
+                                                           @v='cycleway' or
+                                                           @v='service' or
+                                                           @v='footway' or
+                                                           @v='pedestrian')]]" mode="rough"/>
       </script>
-
-
-
-   </svg>
-  </x:template>
-
-  <x:template match="node" mode="suburb-name">
-    <x:variable name="x" select="@lon"/>
-    <x:variable name="y" select="@lat"/>
-    <text class="station"
-          transform=" translate({$x},{$y + 43}) scale(1.5, 1.0)"
-          text-anchor="middle">
-      <x:value-of select="tag[@k='name']/@v"/>
-    </text>
-  </x:template>
-
   <x:template match="way" mode="rough">
     <x:variable name="size">
       <x:choose>
@@ -254,67 +301,6 @@
       svg.appendChild(g);
     </x:if>
   </x:template>
+-->
 
-
-  <x:template match="way" mode="line">
-    <x:variable name="size">
-      <x:choose>
-        <x:when test="tag[@k='highway' and (@v='primary' or @v='trunk')]">xl</x:when>
-        <x:when test="tag[@k='highway' and @v='secondary']">l</x:when>
-        <x:when test="tag[@k='highway' and (@v='tertiary' or @v='unclassified')]">m</x:when>
-        <x:when test="tag[@k='highway' and @v='residential']">s</x:when>
-        <x:when test="tag[@k='highway' and @v='pedestrian']">s</x:when>
-        <x:otherwise>xs</x:otherwise>
-      </x:choose>
-    </x:variable>
-    <x:variable name="d">
-      <x:for-each select="nd">
-        <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
-        <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
-        <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
-      </x:for-each>
-    </x:variable>
-    <path class="way {$size}" id="ID{@id}" d="{$d}"/>
-  </x:template>
-
-
-  <x:template match="way" mode="railway">
-     <path
-         class="rail"
-         id="ID{@id}"
-         stroke-linejoin="round"
-         stroke-linecap="round">
-      <x:attribute name="d">
-        <x:for-each select="nd">
-          <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
-          <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
-          <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
-        </x:for-each>
-      </x:attribute>
-    </path>
-  </x:template>
-
- <x:template match="way" mode="building">
-    <path class="building" id="ID{@id}">
-      <x:attribute name="d">
-        <x:for-each select="nd">
-          <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
-          <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
-          <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
-        </x:for-each>
-      </x:attribute>
-    </path>
-  </x:template>
-
- <x:template match="way" mode="park">
-    <path class="park" id="ID{@id}">
-      <x:attribute name="d">
-        <x:for-each select="nd">
-          <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
-          <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
-          <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
-        </x:for-each>
-      </x:attribute>
-    </path>
-  </x:template>
 </x:transform>

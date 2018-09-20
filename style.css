@@ -14,7 +14,7 @@
 }
 
 .way {
-//    filter: url(#hand-drawn);
+//    filter: url('#hand-drawn');
     stroke: #777;
     fill: none;
     stroke-linejoin: round;
@@ -28,18 +28,16 @@
 .way.xl {stroke-width: 0.0001;}
 .way.l {stroke-width: 0.00008;}
 .way.m {stroke-width: 0.00006;}
-.way.s {stroke-width: 0.00004;;}
+.way.s {stroke-width: 0.00004;}
 .way.xs {display: none;}
 
 .rail {
-    filter: drop-shadow(0.0007 0.0007 0.0003 black);
     stroke: #fa6900;
     fill: none;
-    stroke-width: 0.0001;
+    stroke-width: 0.0003;
 }
 
 .station {
-    filter: drop-shadow(5px 5px 2px black);
     font-family: 'BritishRailLightNormal', sans serif;
     font-size: 40px;
     font-weight: bold;
@@ -69,6 +67,7 @@
     font-family: DejaVu Sans;
     font-weight: 100;
 //    font-size: 20;
+    filter: drop-shadow(3px 3px 3px blue);
 }
 
 .park {
