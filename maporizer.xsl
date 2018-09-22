@@ -2,10 +2,10 @@
            xmlns="http://www.w3.org/2000/svg"
            xmlns:xlink="http://www.w3.org/1999/xlink">
 
-  <x:param name="W" select="400"/>
-  <x:param name="H" select="500"/>
-  <x:param name="border" select="20"/>
-  <x:param name="bottom-border" select="80"/>
+  <x:param name="W" select="4000"/>
+  <x:param name="H" select="5000"/>
+  <x:param name="border" select="200"/>
+  <x:param name="bottom-border" select="800"/>
 
   <x:variable name="border-width" select="$W - (2 * $border)"/>
   <x:variable name="border-height" select="$H - $border - $bottom-border"/>
@@ -25,7 +25,7 @@
   <x:template match="/"><x:apply-templates/></x:template>
 
   <x:template match="osm">
-    <svg version="1.1" viewBox="0 0 {$W} {$H}" width="1000px" id="svgroot">
+    <svg version="1.1" viewBox="0 0 {$W} {$H}" width="2000px" height="2500px" id="svgroot">
       <style>@import url(style.css);</style>
       <defs>
         <filter id="hand-drawn">
@@ -133,8 +133,8 @@
             class="border"/>
 
       <text
-          x="{$border}" y="{$H - 30}"
-          font-size="53"
+          x="{$border}" y="{$H - 300}"
+          font-size="530"
           class="title">P E C K H A M</text>
 
 
