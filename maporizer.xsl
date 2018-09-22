@@ -13,10 +13,10 @@
 
 
 
-  <x:variable name="minLat" select="/osm/bounds/@minlat"/>
-  <x:variable name="minLon" select="/osm/bounds/@minlon"/>
-  <x:variable name="maxLat" select="/osm/bounds/@maxlat"/>
-  <x:variable name="maxLon" select="/osm/bounds/@maxlon"/>
+  <x:variable name="minLon" select="/osm/bounds/@minlon - 0.003"/>
+  <x:variable name="maxLon" select="/osm/bounds/@maxlon - 0.001"/>
+  <x:variable name="minLat" select="/osm/bounds/@minlat - 0.001"/>
+  <x:variable name="maxLat" select="/osm/bounds/@maxlat + 0.001"/>
 
 
   <x:output indent="yes"/>
@@ -33,7 +33,7 @@
                         numOctaves="1" result="turbulence" seed="1"
                         stitchTiles="stitch" />
           <feDisplacementMap in2="turbulence" in="SourceGraphic"
-                             scale="0.00005" xChannelSelector="R" yChannelSelector="G"/>
+                             scale="0.00002" xChannelSelector="R" yChannelSelector="G"/>
         </filter>
 
         <filter id="shadow" filterUnits="objectBoundingBox" primitiveUnits="objectBoundingBox">
@@ -88,28 +88,27 @@
               select="way[tag[@k='leisure' and @v='common']]"
               mode="park"/>
 
-          <x:apply-templates select="way[tag[@k='highway' and (@v='primary' or
-                                     @v='secondary' or
-                                     @v='tertiary' or
-                                     @v='residential' or
-                                     @v='trunk' or
-                                     @v='unclassified' or
-                                     @v='cycleway' or
-                                     @v='service' or
-                                     @v='footway' or
-                                     @v='pedestrian')]]" mode="line"/>
+          <x:apply-templates
+              select="way[tag[@k='highway' and (@v='primary' or
+                      @v='secondary' or
+                      @v='tertiary' or
+                      @v='residential' or
+                      @v='trunk' or
+                      @v='unclassified' or
+                      @v='cycleway' or
+                      @v='service' or
+                      @v='footway' or
+                      @v='pedestrian')]]"
+              mode="line"/>
 
-          <x:apply-templates select="way[tag[@k='railway' and @v='rail']]" mode="railway"/>
+          <x:apply-templates
+              select="way[tag[@k='building']]"
+              mode="building"/>
 
-
-
-<!--
-      <x:apply-templates select="way[tag[@k='building']]" mode="building"/>
--->
-
-
+          <x:apply-templates
+              select="way[tag[@k='railway' and @v='rail']]"
+              mode="railway"/>
         </g>
-
       </g>
 
 
