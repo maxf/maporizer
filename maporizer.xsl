@@ -2,8 +2,8 @@
            xmlns="http://www.w3.org/2000/svg"
            xmlns:xlink="http://www.w3.org/1999/xlink">
 
-  <x:param name="W" select="4000"/>
-  <x:param name="H" select="5000"/>
+  <x:param name="W" select="5000"/>
+  <x:param name="H" select="4000"/>
   <x:param name="border" select="200"/>
   <x:param name="bottom-border" select="800"/>
 
@@ -13,10 +13,10 @@
 
 
 
-  <x:variable name="minLon" select="/osm/bounds/@minlon - 0.003"/>
-  <x:variable name="maxLon" select="/osm/bounds/@maxlon - 0.001"/>
-  <x:variable name="minLat" select="/osm/bounds/@minlat - 0.001"/>
-  <x:variable name="maxLat" select="/osm/bounds/@maxlat + 0.001"/>
+  <x:variable name="minLon" select="/osm/bounds/@minlon"/>
+  <x:variable name="maxLon" select="/osm/bounds/@maxlon"/>
+  <x:variable name="minLat" select="/osm/bounds/@minlat"/>
+  <x:variable name="maxLat" select="/osm/bounds/@maxlat"/>
 
 
   <x:output indent="yes"/>
@@ -85,7 +85,7 @@
         <g transform="{$trans2}">
 
           <x:apply-templates
-              select="way[tag[@k='leisure' and @v='common']]"
+              select="way[tag[@k='leisure' and (@v='common' or @v='park')]]"
               mode="park"/>
 
           <x:apply-templates
@@ -133,9 +133,10 @@
             class="border"/>
 
       <text
-          x="{$border}" y="{$H - 300}"
-          font-size="530"
-          class="title">P E C K H A M</text>
+          x="{$W div 2}" y="{$H - 300}"
+          font-size="500"
+          text-anchor="middle"
+          class="title">M O N T P E L I E R</text>
 
 
 
@@ -277,6 +278,8 @@
                                                            @v='footway' or
                                                            @v='pedestrian')]]" mode="rough"/>
       </script>
+-->
+
   <x:template match="way" mode="rough">
     <x:variable name="size">
       <x:choose>
@@ -300,6 +303,6 @@
       svg.appendChild(g);
     </x:if>
   </x:template>
--->
+
 
 </x:transform>
