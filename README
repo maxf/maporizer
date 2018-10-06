@@ -33,6 +33,10 @@ https://api.openstreetmap.org/api/0.6/map?bbox=-2.594223,51.463989,-2.579204,51.
 Peckham
 https://api.openstreetmap.org/api/0.6/map?bbox=-0.079277,51.460888,-0.057133,51.475044
 
+Bristol:
+
+https://api.openstreetmap.org/api/0.6/map?bbox=-2.607848,51.444517,-2.573047,51.470115
+
 Run:
 
     java -jar saxon.jar -s:montpelier.xml -xsl:maporizer.xsl -o:montpelier.svg

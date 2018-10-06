@@ -9,7 +9,7 @@
 
   <x:variable name="border-width" select="$W - (2 * $border)"/>
   <x:variable name="border-height" select="$H - $border - $bottom-border"/>
-  <x:variable name="F" select="($border-width div $border-height) * 1.2"/>
+  <x:variable name="F" select="($border-width div $border-height) * 1.5"/>
 
 
 
@@ -32,7 +32,7 @@
           <feTurbulence type="turbulence" baseFrequency="5000"
                         numOctaves="1" result="turbulence" seed="1"
                         stitchTiles="stitch" />
-          <feDisplacementMap in2="turbulence" in="SourceGraphic"
+          <feDisplacementMap in2="turbulence" in="SourceGraphic" result="displaced"
                              scale="0.00002" xChannelSelector="R" yChannelSelector="G"/>
         </filter>
 
@@ -82,11 +82,7 @@
           </x:choose>
         </x:variable>
 
-        <g transform="{$trans2}">
-
-          <x:apply-templates
-              select="way[tag[@k='leisure' and (@v='common' or @v='park')]]"
-              mode="park"/>
+        <g transform="{$trans2}" id="trans2">
 
           <x:apply-templates
               select="way[tag[@k='highway' and (@v='primary' or
@@ -100,14 +96,16 @@
                       @v='footway' or
                       @v='pedestrian')]]"
               mode="line"/>
-
+<!--
           <x:apply-templates
               select="way[tag[@k='building']]"
               mode="building"/>
+-->
 
           <x:apply-templates
               select="way[tag[@k='railway' and @v='rail']]"
               mode="railway"/>
+
         </g>
       </g>
 
@@ -210,26 +208,25 @@
     </path>
   </x:template>
 
+ <x:template match="way" mode="park-rough">
+   <x:variable name="d">
+     <x:for-each select="nd">
+       <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
+       <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
+       <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
+     </x:for-each>
+   </x:variable>
+
+     g = rc.path('<x:value-of select="$d"/>', { strokeWidth: 0.00002, roughness: 1.5, fill: 'green', fillStyle: 'solid' });
+     svg.appendChild(g);
+
+  </x:template>
+
   <x:template name="smoothify">
+    <script xlink:href="rough.min.js"></script>
     <script>
       <![CDATA[
           const reg = /(?:M|L)([-\d.]+),([-\d.]+)/;
-
-/*
-          document.querySelectorAll('.rail').forEach(way => {
-            const path = way.getAttribute('d').split(' ').map(p => {
-              const m = p.match(reg);
-              return {x:parseFloat(m[1],10), y:parseFloat(m[2],10)};
-            });
-            let beziers = [`M${path[0].x},${path[0].y}`];
-            beziers.push(` Q${(path[0].x+path[1].x)/2},${(path[0].y+path[1].y)/2}`);
-            beziers.push(` ${path[1].x},${path[1].y}`);
-            for (i=2; i<path.length; i++) {
-              beziers.push(` T${path[i].x},${path[i].y}`);
-            }
-            way.setAttribute('d', beziers.join(''));
-          });
-*/
           document.querySelectorAll('.rail').forEach(way => {
             const path = way.getAttribute('d').split(' ').map(p => {
               const m = p.match(reg);
@@ -254,40 +251,27 @@
               way.setAttribute('d', beziers.join(''));
             }
           });
-      ]]>
+
+          const svg = document.getElementById('trans2');
+          const rc = rough.svg(svg);
+          let g; ]]>
+
+<!--
+            <x:apply-templates select="way[tag[@k='highway' and (@v='primary' or @v='secondary')]]" mode="rough"/>
+-->
+
+            <x:apply-templates
+                select="way[tag[@k='leisure' and (@v='common' or @v='park')]]"
+                mode="park-rough"/>
     </script>
   </x:template>
 
-<!--
-    Use rough.js instead of filter to simulate hand-drawn strokes
-
-      <script xlink:href="../rough.min.js"></script>
-      <script>
-        const svg = document.getElementById('svgroot');
-        const rc = rough.svg(svg);
-        let g;
-
-      <x:apply-templates select="way[tag[@k='highway' and (@v='primary' or
-                                                           @v='secondary' or
-                                                           @v='tertiary' or
-                                                           @v='residential' or
-                                                           @v='trunk' or
-                                                           @v='unclassified' or
-                                                           @v='cycleway' or
-                                                           @v='service' or
-                                                           @v='footway' or
-                                                           @v='pedestrian')]]" mode="rough"/>
-      </script>
--->
 
   <x:template match="way" mode="rough">
     <x:variable name="size">
       <x:choose>
-        <x:when test="tag[@k='highway' and (@v='primary' or @v='trunk')]">8</x:when>
-        <x:when test="tag[@k='highway' and @v='secondary']">4</x:when>
-        <x:when test="tag[@k='highway' and (@v='tertiary' or @v='unclassified')]">3</x:when>
-        <x:when test="tag[@k='highway' and @v='residential']">2</x:when>
-        <x:when test="tag[@k='highway' and @v='pedestrian']">2</x:when>
+        <x:when test="tag[@k='highway' and (@v='primary' or @v='trunk')]">0.00025</x:when>
+        <x:when test="tag[@k='highway' and @v='secondary']">0.00020</x:when>
         <x:otherwise>0</x:otherwise>
       </x:choose>
     </x:variable>
@@ -299,10 +283,8 @@
       </x:for-each>
     </x:variable>
     <x:if test="$size != 0">
-      g = rc.path('<x:value-of select="$d"/>', { strokeWidth: <x:value-of select="$size"/>, roughness: 0 });
+      g = rc.path('<x:value-of select="$d"/>', { strokeWidth: <x:value-of select="$size"/>, roughness: 2.8, stroke: 'rgba(50,255,50,0.5)' });
       svg.appendChild(g);
     </x:if>
   </x:template>
-
-
 </x:transform>
