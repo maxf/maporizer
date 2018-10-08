@@ -83,7 +83,7 @@
         </x:variable>
 
         <g transform="{$trans2}" id="trans2">
-
+<!--
           <x:apply-templates
               select="way[tag[@k='highway' and (@v='primary' or
                       @v='secondary' or
@@ -96,12 +96,12 @@
                       @v='footway' or
                       @v='pedestrian')]]"
               mode="line"/>
+-->
 <!--
           <x:apply-templates
               select="way[tag[@k='building']]"
               mode="building"/>
 -->
-
           <x:apply-templates
               select="way[tag[@k='railway' and @v='rail']]"
               mode="railway"/>
@@ -184,7 +184,7 @@
     </path>
   </x:template>
 
- <x:template match="way" mode="building">
+  <x:template match="way" mode="building">
     <path class="building" id="ID{@id}">
       <x:attribute name="d">
         <x:for-each select="nd">
@@ -196,7 +196,7 @@
     </path>
   </x:template>
 
- <x:template match="way" mode="park">
+  <x:template match="way" mode="park">
     <path class="park" id="ID{@id}">
       <x:attribute name="d">
         <x:for-each select="nd">
@@ -208,16 +208,16 @@
     </path>
   </x:template>
 
- <x:template match="way" mode="park-rough">
-   <x:variable name="d">
-     <x:for-each select="nd">
-       <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
-       <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
-       <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
-     </x:for-each>
-   </x:variable>
+  <x:template match="way" mode="park-rough">
+    <x:variable name="d">
+      <x:for-each select="nd">
+        <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
+        <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
+        <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
+      </x:for-each>
+    </x:variable>
 
-     g = rc.path('<x:value-of select="$d"/>', { strokeWidth: 0.00002, roughness: 1.5, fill: 'green', fillStyle: 'solid' });
+     g = rc.path('<x:value-of select="$d"/>', { strokeWidth: 0.00002, roughness: 0, fill: 'green', fillStyle: 'solid' });
      svg.appendChild(g);
 
   </x:template>
@@ -266,7 +266,6 @@
     </script>
   </x:template>
 
-
   <x:template match="way" mode="rough">
     <x:variable name="size">
       <x:choose>
@@ -283,8 +282,10 @@
       </x:for-each>
     </x:variable>
     <x:if test="$size != 0">
-      g = rc.path('<x:value-of select="$d"/>', { strokeWidth: <x:value-of select="$size"/>, roughness: 2.8, stroke: 'rgba(50,255,50,0.5)' });
+      g = rc.path('<x:value-of select="$d"/>', { strokeWidth: <x:value-of select="$size * 10"/>, roughness: 2.8, stroke: 'rgba(50,255,50,0.5)' });
       svg.appendChild(g);
     </x:if>
   </x:template>
+
+
 </x:transform>
