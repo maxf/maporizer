@@ -39,6 +39,7 @@
         <filter id="shadow" filterUnits="objectBoundingBox" primitiveUnits="objectBoundingBox">
           <feDropShadow dx=".008" dy="-.008" stdDeviation=".005" flood-color="black"></feDropShadow>
         </filter>
+
       </defs>
 
       <rect x="0" y="0" width="{$W}" height="{$H}" class="background"/>
@@ -83,7 +84,7 @@
         </x:variable>
 
         <g transform="{$trans2}" id="trans2">
-<!--
+
           <x:apply-templates
               select="way[tag[@k='highway' and (@v='primary' or
                       @v='secondary' or
@@ -96,12 +97,19 @@
                       @v='footway' or
                       @v='pedestrian')]]"
               mode="line"/>
--->
-<!--
+
           <x:apply-templates
               select="way[tag[@k='building']]"
               mode="building"/>
--->
+
+          <x:apply-templates
+              select="way[tag[@k='leisure' and (@v='common' or @v='park')]]"
+              mode="park"/>
+
+          <x:apply-templates
+              select="way[@id=209391138]"
+              mode="station"/>
+
           <x:apply-templates
               select="way[tag[@k='railway' and @v='rail']]"
               mode="railway"/>
@@ -140,6 +148,7 @@
 
       <!-- and now make some polylines smooth -->
       <x:call-template name="smoothify"/>
+
    </svg>
   </x:template>
 
@@ -184,6 +193,27 @@
     </path>
   </x:template>
 
+
+  <x:template match="way" mode="station">
+    <rect x="-2.5886228" y="51.4680070" width="0.0010" height="0.0003" class="station"/>
+<!--
+    <path class="station" id="ID{@id}" transform="translate(-2.5886184,51.4682770) scale(2, 2) translate(2.5886184,-51.4682770)">
+      <x:attribute name="d">
+        <x:for-each select="nd">
+          <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
+          <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
+          <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
+        </x:for-each>
+      </x:attribute>
+    </path>
+-->
+  </x:template>
+
+  <x:template match="tag" mode="station">
+    <circle cx="{parent::node/@lon}" cy="{parent::node/@lat}" r="0.001" class="station"/>
+  </x:template>
+
+
   <x:template match="way" mode="building">
     <path class="building" id="ID{@id}">
       <x:attribute name="d">
@@ -223,7 +253,9 @@
   </x:template>
 
   <x:template name="smoothify">
+<!--
     <script xlink:href="rough.min.js"></script>
+-->
     <script>
       <![CDATA[
           const reg = /(?:M|L)([-\d.]+),([-\d.]+)/;
@@ -252,17 +284,19 @@
             }
           });
 
-          const svg = document.getElementById('trans2');
-          const rc = rough.svg(svg);
-          let g; ]]>
+//          const svg = document.getElementById('trans2');
+//          const rc = rough.svg(svg);
+//          let g;
+      ]]>
 
 <!--
             <x:apply-templates select="way[tag[@k='highway' and (@v='primary' or @v='secondary')]]" mode="rough"/>
 -->
-
+<!--
             <x:apply-templates
                 select="way[tag[@k='leisure' and (@v='common' or @v='park')]]"
                 mode="park-rough"/>
+-->
     </script>
   </x:template>
 

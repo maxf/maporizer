@@ -9,12 +9,12 @@
 }
 
 .building {
-    filter: url('#hand-drawn');
+//    filter: url('#hand-drawn');
     fill: #ccc;
 }
 
 .way {
-    filter: url('#hand-drawn');
+//    filter: url('#hand-drawn');
     stroke: #777;
     fill: none;
     stroke-linejoin: round;
@@ -51,5 +51,14 @@
 }
 
 .park {
-    fill: #88ff66;
+    fill: green;
+    stroke: black;
+    stroke-width: 0.00002;
+}
+
+.station {
+  fill: #fa6900;
+  stroke: black;
+  stroke-width: 0.000002;
+  filter: url(#shadow);
 }
