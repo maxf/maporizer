@@ -25,7 +25,7 @@
   <x:template match="/"><x:apply-templates/></x:template>
 
   <x:template match="osm">
-    <svg version="1.1" viewBox="0 0 {$W} {$H}" width="2000px" height="2500px" id="svgroot">
+    <svg version="1.1" viewBox="0 0 {$W} {$H}" width="2000px" height="1600px" id="svgroot">
       <style>@import url(style.css);</style>
       <defs>
         <filter id="hand-drawn">
