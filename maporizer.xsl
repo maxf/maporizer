@@ -3,15 +3,16 @@
            xmlns:xlink="http://www.w3.org/1999/xlink">
 
   <x:param name="W" select="5000"/>
-  <x:param name="H" select="4000"/>
+  <x:param name="H" select="5000"/>
+  <x:param name="pxWidth" select="'1000px'"/>
+  <x:param name="pxHeight" select="'1000px'"/>
   <x:param name="border" select="200"/>
   <x:param name="bottom-border" select="800"/>
+  <x:param name="title" select="''"/>
 
   <x:variable name="border-width" select="$W - (2 * $border)"/>
   <x:variable name="border-height" select="$H - $border - $bottom-border"/>
   <x:variable name="F" select="($border-width div $border-height) * 1.5"/>
-
-
 
   <x:variable name="minLon" select="/osm/bounds/@minlon"/>
   <x:variable name="maxLon" select="/osm/bounds/@maxlon"/>
@@ -25,7 +26,7 @@
   <x:template match="/"><x:apply-templates/></x:template>
 
   <x:template match="osm">
-    <svg version="1.1" viewBox="0 0 {$W} {$H}" width="2000px" height="1600px" id="svgroot">
+    <svg version="1.1" viewBox="0 0 {$W} {$H}" width="{$pxWidth}" height="{$pxHeight}" id="svgroot">
       <style>@import url(style.css);</style>
       <defs>
         <filter id="hand-drawn">
@@ -97,19 +98,19 @@
                       @v='footway' or
                       @v='pedestrian')]]"
               mode="line"/>
-
+<!--
           <x:apply-templates
               select="way[tag[@k='building']]"
               mode="building"/>
-
+-->
           <x:apply-templates
               select="way[tag[@k='leisure' and (@v='common' or @v='park')]]"
               mode="park"/>
-
+<!--
           <x:apply-templates
               select="way[@id=209391138]"
               mode="station"/>
-
+-->
           <x:apply-templates
               select="way[tag[@k='railway' and @v='rail']]"
               mode="railway"/>
@@ -142,7 +143,7 @@
           x="{$W div 2}" y="{$H - 300}"
           font-size="500"
           text-anchor="middle"
-          class="title">M O N T P E L I E R</text>
+          class="title"><x:value-of select="$title"/></text>
 
 
 

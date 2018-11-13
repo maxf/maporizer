@@ -5,5 +5,5 @@ windows:
   - main:
       layout: even-horizontal
       panes:
-        - ls maporizer.xsl | entr -cr bash -c "java -jar saxon.jar -s:map.xml -xsl:maporizer.xsl -o:map.svg && echo done"
+        - ls maporizer.xsl | entr -cr bash -c "java -jar saxon.jar -s:map.xml -xsl:maporizer.xsl -o:map.svg title='P E C K H A M' && echo done"
         -
