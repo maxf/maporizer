@@ -32,9 +32,11 @@
 .way.xs {display: none;}
 
 .rail {
-    stroke: #fa6900;
+//    stroke: #fa6900;
+    stroke: #777;
     fill: none;
-    stroke-width: 0.0002;
+//    filter: url(#shadow);
+    stroke-width: 0.00008;
 }
 
 .border {
@@ -56,9 +58,15 @@
     stroke-width: 0.00002;
 }
 
+.park2 {
+    fill: red;
+    stroke: black;
+    stroke-width: 0.00002;
+}
+
 .station {
   fill: #fa6900;
   stroke: black;
   stroke-width: 0.000002;
-  filter: url(#shadow);
+//  filter: url(#shadow);
 }

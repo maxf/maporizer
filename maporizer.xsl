@@ -28,6 +28,8 @@
   <x:template match="osm">
     <svg version="1.1" viewBox="0 0 {$W} {$H}" width="{$pxWidth}" height="{$pxHeight}" id="svgroot">
       <style>@import url(style.css);</style>
+
+<!--
       <defs>
         <filter id="hand-drawn">
           <feTurbulence type="turbulence" baseFrequency="5000"
@@ -40,8 +42,8 @@
         <filter id="shadow" filterUnits="objectBoundingBox" primitiveUnits="objectBoundingBox">
           <feDropShadow dx=".008" dy="-.008" stdDeviation=".005" flood-color="black"></feDropShadow>
         </filter>
-
       </defs>
+-->
 
       <rect x="0" y="0" width="{$W}" height="{$H}" class="background"/>
 
@@ -104,8 +106,17 @@
               mode="building"/>
 -->
           <x:apply-templates
-              select="way[tag[@k='leisure' and (@v='common' or @v='park')]]"
+              select="way[tag[@k='leisure' and (@v='common' or @v='park' or @v='golf_course')]]"
               mode="park"/>
+
+          <x:apply-templates
+              select="way[tag[@k='landuse' and @v='cemetery']]"
+              mode="park"/>
+
+          <x:apply-templates
+              select="relation[tag[@k='leisure' and (@v='common' or @v='park' or @v='golf_course')]]"
+              mode="park"/>
+
 <!--
           <x:apply-templates
               select="way[@id=209391138]"
@@ -153,6 +164,24 @@
    </svg>
   </x:template>
 
+  <x:template match="relation" mode="park">
+    <x:message><x:value-of select="tag[@k='name']/@v"/> - <x:value-of select="@id"/></x:message>
+    <x:apply-templates select="member" mode="park"/>
+  </x:template>
+
+  <x:template match="member" mode="park">
+    <x:message>===<x:value-of select="current()/@ref"/></x:message>
+    <x:variable name="way" select="/osm/way[@id=current()/@ref]"/>
+    <path class="park" id="ID{@id}">
+      <x:attribute name="d">
+        <x:for-each select="$way/node">
+          <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
+          <x:value-of select="concat(@lon,',',@lat)"/>
+        </x:for-each>
+      </x:attribute>
+    </path>
+  </x:template>
+
 
 
   <x:template match="way" mode="line">
@@ -167,28 +196,24 @@
       </x:choose>
     </x:variable>
     <x:variable name="d">
-      <x:for-each select="nd">
+      <x:for-each select="node">
         <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
-        <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
-        <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
+        <x:value-of select="concat(@lon,',',@lat)"/>
       </x:for-each>
     </x:variable>
     <path class="way {$size}" id="ID{@id}" d="{$d}"/>
   </x:template>
 
-
   <x:template match="way" mode="railway">
      <path
          class="rail"
-         style="filter: url(#shadow)"
          id="ID{@id}"
          stroke-linejoin="round"
          stroke-linecap="round">
       <x:attribute name="d">
-        <x:for-each select="nd">
+        <x:for-each select="node">
           <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
-          <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
-          <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
+          <x:value-of select="concat(@lon,',',@lat)"/>
         </x:for-each>
       </x:attribute>
     </path>
@@ -200,10 +225,9 @@
 <!--
     <path class="station" id="ID{@id}" transform="translate(-2.5886184,51.4682770) scale(2, 2) translate(2.5886184,-51.4682770)">
       <x:attribute name="d">
-        <x:for-each select="nd">
+        <x:for-each select="node">
           <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
-          <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
-          <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
+          <x:value-of select="concat(@lon,',',@lat)"/>
         </x:for-each>
       </x:attribute>
     </path>
@@ -220,8 +244,7 @@
       <x:attribute name="d">
         <x:for-each select="nd">
           <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
-          <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
-          <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
+          <x:value-of select="concat(@lon,',',@lat)"/>
         </x:for-each>
       </x:attribute>
     </path>
@@ -230,10 +253,9 @@
   <x:template match="way" mode="park">
     <path class="park" id="ID{@id}">
       <x:attribute name="d">
-        <x:for-each select="nd">
+        <x:for-each select="node">
           <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
-          <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
-          <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
+          <x:value-of select="concat(@lon,',',@lat)"/>
         </x:for-each>
       </x:attribute>
     </path>
@@ -243,8 +265,7 @@
     <x:variable name="d">
       <x:for-each select="nd">
         <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
-        <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
-        <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
+        <x:value-of select="concat(@lon,',',@lat)"/>
       </x:for-each>
     </x:variable>
 
@@ -312,8 +333,7 @@
     <x:variable name="d">
       <x:for-each select="nd">
         <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
-        <x:variable name="node" select="/osm/node[@id=current()/@ref]"/>
-        <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
+        <x:value-of select="concat(@lon,',',@lat)"/>
       </x:for-each>
     </x:variable>
     <x:if test="$size != 0">

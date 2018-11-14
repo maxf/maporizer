@@ -21,8 +21,6 @@
                            (@k='highway' and @v='bus_stop')]"/>
 
   <xsl:template match="@*|node()">
-    <xsl:copy>
-      <xsl:apply-templates select="@*|node()"/>
-    </xsl:copy>
+    <xsl:copy><xsl:apply-templates select="@*|node()"/></xsl:copy>
   </xsl:template>
 </xsl:transform>
