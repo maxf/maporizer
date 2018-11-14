@@ -10,14 +10,17 @@
   <x:param name="bottom-border" select="800"/>
   <x:param name="title" select="''"/>
 
+<!--  <x:param name="bgCol" select="'#e0e4cc'"/> -->
+  <x:param name="bgCol" select="'black'"/>
+
   <x:variable name="border-width" select="$W - (2 * $border)"/>
   <x:variable name="border-height" select="$H - $border - $bottom-border"/>
   <x:variable name="F" select="($border-width div $border-height) * 1.5"/>
 
-  <x:variable name="minLon" select="/osm/bounds/@minlon"/>
-  <x:variable name="maxLon" select="/osm/bounds/@maxlon"/>
-  <x:variable name="minLat" select="/osm/bounds/@minlat"/>
-  <x:variable name="maxLat" select="/osm/bounds/@maxlat"/>
+  <x:variable name="minLon" select="/osm/bounds/@minlon + 0.0005"/>
+  <x:variable name="maxLon" select="/osm/bounds/@maxlon - 0.0005"/>
+  <x:variable name="minLat" select="/osm/bounds/@minlat + 0.0005"/>
+  <x:variable name="maxLat" select="/osm/bounds/@maxlat - 0.0005"/>
 
 
   <x:output indent="yes"/>
@@ -133,11 +136,11 @@
       <!-- clipping rectangles -->
       <rect x="{$border div 2}" y="{$border div 2}"
             width="{$W - $border}" height="{$H - $bottom-border}"
-            fill="none" stroke="#e0e4cc" stroke-width="{$border}"/>
+            fill="none" stroke="{$bgCol}" stroke-width="{$border}"/>
 
       <rect x="0" y="{$H - $bottom-border}"
             width="{$W}" height="{$bottom-border}"
-            fill="#e0e4cc" />
+            fill="{$bgCol}" />
 
       <x:variable name="Z" select="20000"/>
       <rect x="{-$Z div 2}" y="{-$Z div 2}"
@@ -159,18 +162,17 @@
 
 
       <!-- and now make some polylines smooth -->
+<!--
       <x:call-template name="smoothify"/>
-
+-->
    </svg>
   </x:template>
 
   <x:template match="relation" mode="park">
-    <x:message><x:value-of select="tag[@k='name']/@v"/> - <x:value-of select="@id"/></x:message>
     <x:apply-templates select="member" mode="park"/>
   </x:template>
 
   <x:template match="member" mode="park">
-    <x:message>===<x:value-of select="current()/@ref"/></x:message>
     <x:variable name="way" select="/osm/way[@id=current()/@ref]"/>
     <path class="park" id="ID{@id}">
       <x:attribute name="d">

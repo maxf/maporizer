@@ -1,10 +1,12 @@
 .background {
-    fill: #e0e4cc;
+//    fill: #e0e4cc;
+fill: black;
 }
 
 .frame {
     fill: none;
-    stroke: #e0e4cc;
+//    stroke: #e0e4cc;
+stroke: black;
     stroke-width: 200px;
 }
 
@@ -21,15 +23,11 @@
     stroke-linecap: round;
 }
 
-.way:hover {
-    stroke: red;
-}
-
-.way.xl {stroke-width: 0.0001;}
-.way.l {stroke-width: 0.00008;}
-.way.m {stroke-width: 0.00006;}
-.way.s {stroke-width: 0.00004;}
-.way.xs {display: none;}
+.way.xl {stroke-width: 0.00012;}
+.way.l {stroke-width: 0.00010;}
+.way.m {stroke-width: 0.00008;}
+.way.s {stroke-width: 0.00006;}
+.way.xs {stroke-width: 0.00004;}
 
 .rail {
 //    stroke: #fa6900;
@@ -41,12 +39,12 @@
 
 .border {
     fill: none;
-    stroke: black;
+    stroke: #777;
     stroke-width: 5;
 }
 
 .title {
-    fill: black;
+    fill: #777;
     stroke: black;
     font-family: DejaVu Sans;
     font-weight: 100;
