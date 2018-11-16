@@ -3,7 +3,8 @@ root: ~/dev/maporizer
 
 windows:
   - main:
-      layout: even-horizontal
+      layout: main-vertical
       panes:
+        - emacs .
         - ls maporizer.xsl | entr -cr bash -c "time java -jar saxon.jar -s:peckhamXL3.xml -xsl:maporizer.xsl -o:peckham.svg title='P E C K H A M' && echo done"
         -
