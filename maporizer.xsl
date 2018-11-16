@@ -32,22 +32,6 @@
     <svg version="1.1" viewBox="0 0 {$W} {$H}" width="{$pxWidth}" height="{$pxHeight}" id="svgroot">
       <style>@import url(style.css);</style>
 
-<!--
-      <defs>
-        <filter id="hand-drawn">
-          <feTurbulence type="turbulence" baseFrequency="5000"
-                        numOctaves="1" result="turbulence" seed="1"
-                        stitchTiles="stitch" />
-          <feDisplacementMap in2="turbulence" in="SourceGraphic" result="displaced"
-                             scale="0.00002" xChannelSelector="R" yChannelSelector="G"/>
-        </filter>
-
-        <filter id="shadow" filterUnits="objectBoundingBox" primitiveUnits="objectBoundingBox">
-          <feDropShadow dx=".008" dy="-.008" stdDeviation=".005" flood-color="black"></feDropShadow>
-        </filter>
-      </defs>
--->
-
       <rect x="0" y="0" width="{$W}" height="{$H}" class="background"/>
 
       <g transform="matrix({($W - 2 * $border) div $F}, 0, 0, {$H - $border - $bottom-border}, {$border}, {$border})">
