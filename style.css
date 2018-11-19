@@ -17,7 +17,7 @@ stroke: black;
 
 .way {
 //    filter: url('#hand-drawn');
-    stroke: #777;
+    stroke: #888;
     fill: none;
     stroke-linejoin: round;
     stroke-linecap: round;
@@ -31,7 +31,7 @@ stroke: black;
 
 .rail {
 //    stroke: #fa6900;
-    stroke: #777;
+    stroke: #888;
     fill: none;
 //    filter: url(#shadow);
     stroke-width: 0.00008;
@@ -39,19 +39,20 @@ stroke: black;
 
 .border {
     fill: none;
-    stroke: #777;
+    stroke: #BBB;
     stroke-width: 5;
 }
 
 .title {
-    fill: #777;
+    fill: #BBB;
     stroke: black;
     font-family: DejaVu Sans;
     font-weight: 100;
 }
 
 .park {
-    fill: green;
+//    fill: green;
+    fill: #262;
     stroke: black;
     stroke-width: 0.00002;
 }

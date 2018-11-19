@@ -15,16 +15,14 @@
 
   <x:variable name="border-width" select="$W - (2 * $border)"/>
   <x:variable name="border-height" select="$H - $border - $bottom-border"/>
-  <x:variable name="F" select="($border-width div $border-height) * 1.5"/>
+  <x:variable name="F" select="($border-width div $border-height) * 1.3"/>
 
   <x:variable name="minLon" select="/osm/bounds/@minlon + 0.0005"/>
   <x:variable name="maxLon" select="/osm/bounds/@maxlon - 0.0005"/>
   <x:variable name="minLat" select="/osm/bounds/@minlat + 0.0005"/>
   <x:variable name="maxLat" select="/osm/bounds/@maxlat - 0.0005"/>
 
-
   <x:output indent="yes"/>
-
 
   <x:template match="/"><x:apply-templates/></x:template>
 
@@ -138,8 +136,8 @@
             class="border"/>
 
       <text
-          x="{$W div 2}" y="{$H - 300}"
-          font-size="500"
+          x="{$W div 2}" y="{$H - 170}"
+          font-size="670"
           text-anchor="middle"
           class="title"><x:value-of select="$title"/></text>
 

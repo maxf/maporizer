@@ -266743,126 +266743,3204 @@
 		<tag k="attribution" v="Office of Geographic and Environmental Information (MassGIS)"/>
 		<tag k="massgis:way_id" v="212211; 35"/>
 	</way>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	<relation id="64045" version="1">
+		<member type="way" ref="29647533" role="outer"/>
+		<member type="way" ref="29647534" role="inner"/>
+		<tag k="type" v="multipolygon"/>
+		<tag k="building" v="yes"/>
+	</relation>
+	<relation id="64153" version="1">
+		<member type="way" ref="29678824" role="outer"/>
+		<member type="way" ref="29678825" role="inner"/>
+		<member type="way" ref="29678826" role="inner"/>
+		<tag k="type" v="multipolygon"/>
+		<tag k="building" v="school"/>
+	</relation>
+	<relation id="64688" version="1">
+		<member type="way" ref="29777934" role="outer"/>
+		<member type="way" ref="29777937" role="inner"/>
+		<tag k="name" v="Temple Emeth"/>
+		<tag k="type" v="multipolygon"/>
+		<tag k="building" v="yes"/>
+		<tag k="designation" v="Temple"/>
+	</relation>
+	<relation id="64808" version="1">
+		<member type="way" ref="29817301" role="outer"/>
+		<member type="way" ref="29817302" role="inner"/>
+		<tag k="type" v="multipolygon"/>
+		<tag k="building" v="yes"/>
+	</relation>
+	<relation id="64871" version="1">
+		<member type="way" ref="29898204" role="outer"/>
+		<member type="way" ref="139333658" role="outer"/>
+		<member type="way" ref="139333686" role="outer"/>
+		<member type="way" ref="139333659" role="outer"/>
+		<member type="way" ref="139333683" role="outer"/>
+		<member type="way" ref="29830165" role="outer"/>
+		<member type="way" ref="139333655" role="outer"/>
+		<member type="way" ref="139333688" role="outer"/>
+		<tag k="name" v="Arnold Arboretum"/>
+		<tag k="type" v="multipolygon"/>
+		<tag k="owner" v="Harvard University"/>
+		<tag k="access" v="yes"/>
+		<tag k="source" v="local knowledge"/>
+		<tag k="leisure" v="park"/>
+		<tag k="boundary" v="protected_area"/>
+		<tag k="wikidata" v="Q568666"/>
+		<tag k="ownership" v="private"/>
+		<tag k="protected" v="perpetuity"/>
+		<tag k="massgis:OS_ID" v="35-523"/>
+		<tag k="massgis:FEESYM" v="P"/>
+		<tag k="massgis:DCAM_ID" v="0"/>
+		<tag k="massgis:MANAGER" v="City of Boston Parks Department"/>
+		<tag k="massgis:POLY_ID" v="523"/>
+		<tag k="massgis:TOWN_ID" v="35"/>
+		<tag k="massgis:ATT_DATE" v="1998/06/05"/>
+		<tag k="massgis:COMMENTS" v="HORTICTURAL CENTER"/>
+		<tag k="massgis:LEV_PROT" v="P"/>
+		<tag k="massgis:ARTICLE97" v="9"/>
+		<tag k="massgis:FEE_OWNER" v="Harvard University"/>
+		<tag k="massgis:PRIM_PURP" v="B"/>
+		<tag k="massgis:SITE_NAME" v="ARNOLD ARBORETUM"/>
+		<tag k="massgis:ASSESS_ACR" v="265.00000000"/>
+		<tag k="massgis:DEED_ACRES" v="0.00000000"/>
+		<tag k="massgis:EOEAINVOLV" v="0"/>
+		<tag k="massgis:FY_FUNDING" v="0"/>
+		<tag k="massgis:MANAGR_ABR" v="M035PD"/>
+		<tag k="massgis:MANAGR_TYP" v="M"/>
+		<tag k="massgis:OS_DEED_BO" v="0"/>
+		<tag k="massgis:OS_DEED_PA" v="0"/>
+		<tag k="massgis:OWNER_ABRV" v="HU"/>
+		<tag k="massgis:OWNER_TYPE" v="P"/>
+		<tag k="massgis:PUB_ACCESS" v="Y"/>
+		<tag k="massgis:SOURCE_MAP" v="ORTHO"/>
+	</relation>
+	<relation id="65053" version="1">
+		<member type="way" ref="504651521" role="outer"/>
+		<tag k="name" v="Franklin Park"/>
+		<tag k="type" v="multipolygon"/>
+		<tag k="owner" v="City Of Boston"/>
+		<tag k="access" v="yes"/>
+		<tag k="leisure" v="park"/>
+		<tag k="ownership" v="municipal"/>
+		<tag k="protected" v="perpetuity"/>
+		<tag k="massgis:OS_ID" v="35-3251"/>
+		<tag k="massgis:FEESYM" v="M"/>
+		<tag k="massgis:DCAM_ID" v="0"/>
+		<tag k="massgis:MANAGER" v="City of Boston Parks Department"/>
+		<tag k="massgis:POLY_ID" v="3251"/>
+		<tag k="massgis:TOWN_ID" v="35"/>
+		<tag k="massgis:ATT_DATE" v="1998/06/05"/>
+		<tag k="massgis:COMMENTS" v="USH-GOLF COURSE"/>
+		<tag k="massgis:LEV_PROT" v="P"/>
+		<tag k="massgis:PROJ_ID1" v="DCS-LW339"/>
+		<tag k="massgis:PROJ_ID2" v="DCS-LW246"/>
+		<tag k="massgis:PROJ_ID3" v="DCS-USH4"/>
+		<tag k="massgis:ARTICLE97" v="1"/>
+		<tag k="massgis:FEE_OWNER" v="City of Boston"/>
+		<tag k="massgis:PRIM_PURP" v="R"/>
+		<tag k="massgis:SITE_NAME" v="FRANKLIN PARK"/>
+		<tag k="massgis:ASSESS_ACR" v="427.00000000"/>
+		<tag k="massgis:DEED_ACRES" v="0.00000000"/>
+		<tag k="massgis:EOEAINVOLV" v="1"/>
+		<tag k="massgis:FY_FUNDING" v="0"/>
+		<tag k="massgis:GRANTPROG1" v="DCS-LWCF"/>
+		<tag k="massgis:GRANTPROG2" v="DCS-USH"/>
+		<tag k="massgis:GRANTTYPE1" v="F"/>
+		<tag k="massgis:GRANTTYPE2" v="S"/>
+		<tag k="massgis:MANAGR_ABR" v="M035PD"/>
+		<tag k="massgis:MANAGR_TYP" v="M"/>
+		<tag k="massgis:OS_DEED_BO" v="0"/>
+		<tag k="massgis:OS_DEED_PA" v="0"/>
+		<tag k="massgis:OWNER_ABRV" v="M035"/>
+		<tag k="massgis:OWNER_TYPE" v="M"/>
+		<tag k="massgis:PUB_ACCESS" v="Y"/>
+		<tag k="massgis:SOURCE_MAP" v="ORTHO"/>
+	</relation>
+	<relation id="65363" version="1">
+		<member type="way" ref="29923821" role="outer"/>
+		<member type="way" ref="29930836" role="inner"/>
+		<tag k="type" v="multipolygon"/>
+		<tag k="building" v="yes"/>
+	</relation>
+	<relation id="395227" version="1">
+		<member type="way" ref="8637659" role="forward"/>
+		<member type="way" ref="426628511" role="forward"/>
+		<member type="way" ref="426628513" role="forward"/>
+		<member type="way" ref="8646652" role="forward"/>
+		<member type="way" ref="48919784" role="forward"/>
+		<member type="way" ref="8645644" role="forward"/>
+		<member type="way" ref="8650661" role="forward"/>
+		<member type="way" ref="8638927" role="forward"/>
+		<member type="way" ref="48919788" role="forward"/>
+		<member type="way" ref="8637942" role="forward"/>
+		<member type="way" ref="48919781" role="forward"/>
+		<member type="way" ref="312345623" role="forward"/>
+		<member type="way" ref="312345622" role="forward"/>
+		<member type="way" ref="34921154" role="forward"/>
+		<member type="way" ref="426628514" role="forward"/>
+		<member type="way" ref="570161105" role="forward"/>
+		<member type="way" ref="570161110" role="forward"/>
+		<member type="way" ref="570161111" role="forward"/>
+		<member type="way" ref="8650878" role="forward"/>
+		<member type="way" ref="48919776" role="forward"/>
+		<member type="way" ref="312345537" role="forward"/>
+		<member type="way" ref="426628515" role="forward"/>
+		<member type="way" ref="8648032" role="forward"/>
+		<member type="way" ref="8641955" role="forward"/>
+		<member type="way" ref="8647841" role="forward"/>
+		<member type="way" ref="426443649" role="forward"/>
+		<member type="way" ref="8652515" role="forward"/>
+		<member type="way" ref="48919783" role="forward"/>
+		<member type="way" ref="591278036" role="forward"/>
+		<member type="way" ref="8649127" role="forward"/>
+		<member type="way" ref="312345624" role=""/>
+		<member type="way" ref="34921156" role=""/>
+		<member type="way" ref="591278031" role=""/>
+		<member type="way" ref="8652588" role=""/>
+		<member type="way" ref="312345625" role=""/>
+		<member type="way" ref="312345627" role=""/>
+		<member type="way" ref="312345626" role=""/>
+		<member type="way" ref="8649418" role=""/>
+		<member type="way" ref="8640504" role=""/>
+		<tag k="ref" v="1"/>
+		<tag k="name" v="Claire Saltonstall Bikeway"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="bicycle"/>
+		<tag k="network" v="rcn"/>
+	</relation>
+	<relation id="1269021" version="1">
+		<member type="way" ref="34730752" role=""/>
+		<member type="way" ref="34730751" role=""/>
+		<member type="way" ref="34730750" role=""/>
+		<member type="way" ref="34730749" role=""/>
+		<member type="way" ref="34730748" role=""/>
+		<member type="way" ref="136680749" role=""/>
+		<tag k="to" v="Washington Union Station"/>
+		<tag k="ref" v="NEC"/>
+		<tag k="from" v="Boston South Station"/>
+		<tag k="name" v="Northeast Corridor"/>
+		<tag k="note" v="A reminder: this is route=railway (infrastructure), not route=train, so it should only contain track, not stations"/>
+		<tag k="type" v="route"/>
+		<tag k="FIXME" v="Needs minor connectivity fixes in Brooklyn, Bronx, Stamford, New Haven, Wickford, New Rochelle, Newark"/>
+		<tag k="route" v="railway"/>
+		<tag k="wikidata" v="Q678233"/>
+		<tag k="wikipedia" v="en:Northeast Corridor"/>
+	</relation>
+	<relation id="1337167" version="1">
+		<member type="way" ref="89789595" role="outer"/>
+		<member type="way" ref="91082362" role="inner"/>
+		<tag k="type" v="multipolygon"/>
+		<tag k="natural" v="wetland"/>
+		<tag k="wetland" v="swamp"/>
+		<tag k="massgis:SOURCE" v="DEP-WCP"/>
+		<tag k="massgis:IT_VALC" v="WS1"/>
+		<tag k="massgis:WETCODE" v="14"/>
+		<tag k="massgis:OBJECTID" v="116590"/>
+		<tag k="massgis:PALIS_ID" v="0"/>
+		<tag k="massgis:POLY_CODE" v="3"/>
+		<tag k="massgis:IT_VALDESC" v="WOODED SWAMP DECIDUOUS"/>
+		<tag k="massgis:SOURCE_SCA" v="12000"/>
+	</relation>
+	<relation id="1343988" version="1">
+		<member type="way" ref="8649994" role="forward"/>
+		<member type="way" ref="91858442" role="forward"/>
+		<member type="way" ref="533623520" role=""/>
+		<member type="way" ref="533623515" role=""/>
+		<member type="way" ref="8649191" role=""/>
+		<member type="way" ref="31494878" role="forward"/>
+		<member type="way" ref="426499594" role="forward"/>
+		<member type="way" ref="426499596" role="forward"/>
+		<member type="way" ref="426499593" role="forward"/>
+		<member type="way" ref="426499595" role="forward"/>
+		<member type="way" ref="422445959" role="forward"/>
+		<member type="way" ref="494969944" role="forward"/>
+		<member type="way" ref="494970240" role="forward"/>
+		<member type="way" ref="8641783" role="forward"/>
+		<member type="way" ref="495555868" role="forward"/>
+		<member type="way" ref="422445958" role="forward"/>
+		<member type="way" ref="494969947" role="forward"/>
+		<member type="way" ref="494969945" role="forward"/>
+		<member type="way" ref="495352041" role="forward"/>
+		<member type="way" ref="299911613" role="forward"/>
+		<member type="way" ref="495554429" role="forward"/>
+		<tag k="ref" v="203"/>
+		<tag k="name" v="MA 203"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="road"/>
+		<tag k="network" v="US:MA"/>
+	</relation>
+	<relation id="1345448" version="1">
+		<member type="way" ref="426467425" role="forward"/>
+		<member type="way" ref="426467420" role="forward"/>
+		<member type="way" ref="426467413" role="forward"/>
+		<member type="way" ref="426467416" role="forward"/>
+		<member type="way" ref="426473714" role="forward"/>
+		<member type="way" ref="426473709" role="forward"/>
+		<member type="way" ref="533623512" role="forward"/>
+		<member type="way" ref="8644670" role="forward"/>
+		<member type="way" ref="533625183" role="forward"/>
+		<member type="way" ref="426497602" role="forward"/>
+		<member type="way" ref="426497604" role="forward"/>
+		<member type="way" ref="426469243" role="forward"/>
+		<member type="way" ref="426469246" role="forward"/>
+		<member type="way" ref="533641953" role="forward"/>
+		<member type="way" ref="34729472" role="forward"/>
+		<member type="way" ref="426469228" role="forward"/>
+		<member type="way" ref="426469231" role="forward"/>
+		<member type="way" ref="34729473" role="forward"/>
+		<member type="way" ref="426469237" role="forward"/>
+		<member type="way" ref="420751705" role="forward"/>
+		<member type="way" ref="426469234" role="forward"/>
+		<member type="way" ref="426444762" role="forward"/>
+		<member type="way" ref="426444759" role="forward"/>
+		<member type="way" ref="8652272" role="forward"/>
+		<member type="way" ref="211852999" role="forward"/>
+		<member type="way" ref="9114615" role="forward"/>
+		<member type="way" ref="591278129" role="forward"/>
+		<member type="way" ref="9113904" role="forward"/>
+		<member type="way" ref="9114456" role="forward"/>
+		<member type="way" ref="426444764" role="forward"/>
+		<member type="way" ref="591278095" role="forward"/>
+		<member type="way" ref="426467422" role="forward"/>
+		<member type="way" ref="426467418" role="forward"/>
+		<member type="way" ref="426473716" role="forward"/>
+		<member type="way" ref="533624560" role="forward"/>
+		<member type="way" ref="426473712" role="forward"/>
+		<member type="way" ref="426497605" role="forward"/>
+		<member type="way" ref="533625185" role="forward"/>
+		<member type="way" ref="533625186" role="forward"/>
+		<member type="way" ref="426497603" role="forward"/>
+		<member type="way" ref="34729471" role="forward"/>
+		<member type="way" ref="426469239" role="forward"/>
+		<member type="way" ref="426469241" role="forward"/>
+		<member type="way" ref="426469225" role="forward"/>
+		<member type="way" ref="34729470" role="forward"/>
+		<member type="way" ref="623438663" role="forward"/>
+		<member type="way" ref="8644711" role="forward"/>
+		<member type="way" ref="8652289" role="forward"/>
+		<member type="way" ref="533640529" role="forward"/>
+		<member type="way" ref="420751701" role="forward"/>
+		<member type="way" ref="211852995" role="forward"/>
+		<member type="way" ref="8642290" role="forward"/>
+		<member type="way" ref="503099011" role="forward"/>
+		<member type="way" ref="591278128" role="forward"/>
+		<member type="way" ref="9113906" role="forward"/>
+		<member type="way" ref="592147958" role="forward"/>
+		<member type="way" ref="122376110" role="forward"/>
+		<member type="way" ref="9114346" role="forward"/>
+		<tag k="ref" v="28"/>
+		<tag k="name" v="MA 28"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="road"/>
+		<tag k="network" v="US:MA"/>
+		<tag k="wikidata" v="Q2483996"/>
+		<tag k="wikipedia" v="en:Massachusetts Route 28"/>
+	</relation>
+	<relation id="1346957" version="1">
+		<member type="way" ref="48960283" role=""/>
+		<member type="way" ref="211850612" role=""/>
+		<member type="way" ref="9113707" role="north"/>
+		<tag k="ref" v="138"/>
+		<tag k="name" v="MA 138"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="road"/>
+		<tag k="network" v="US:MA"/>
+		<tag k="wikidata" v="Q2484165"/>
+		<tag k="wikipedia" v="en:Massachusetts Route 138"/>
+	</relation>
+	<relation id="1353692" version="1">
+		<member type="node" ref="69486291" role="stop"/>
+		<member type="way" ref="34730752" role=""/>
+		<member type="way" ref="34730751" role=""/>
+		<member type="way" ref="34730750" role=""/>
+		<member type="way" ref="34921173" role=""/>
+		<member type="way" ref="136680721" role=""/>
+		<member type="way" ref="136680647" role=""/>
+		<member type="way" ref="34921147" role=""/>
+		<member type="way" ref="34921149" role=""/>
+		<member type="way" ref="34921148" role=""/>
+		<member type="way" ref="34921153" role=""/>
+		<member type="way" ref="562309656" role=""/>
+		<member type="way" ref="34921152" role=""/>
+		<member type="way" ref="289489074" role=""/>
+		<member type="way" ref="289489075" role=""/>
+		<member type="way" ref="34921167" role=""/>
+		<member type="way" ref="34921166" role=""/>
+		<member type="way" ref="171002898" role=""/>
+		<tag k="ref" v="Needham Line"/>
+		<tag k="name" v="Needham Line"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="train"/>
+		<tag k="colour" v="#7B388C"/>
+		<tag k="network" v="MBTA Commuter Rail"/>
+		<tag k="website" v="http://www.mbta.com/"/>
+		
+		<tag k="wikidata" v="Q6986548"/>
+		<tag k="passenger" v="suburban"/>
+		<tag k="wikipedia" v="en:Needham Line"/>
+	</relation>
+	<relation id="1353693" version="1">
+		<member type="way" ref="34729458" role=""/>
+		<tag k="ref" v="Fairmount Line"/>
+		<tag k="name" v="Fairmount Line"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="train"/>
+		<tag k="colour" v="#7B388C"/>
+		<tag k="network" v="MBTA Commuter Rail"/>
+		<tag k="website" v="http://www.mbta.com/"/>
+		
+		<tag k="wikidata" v="Q5430648"/>
+		<tag k="passenger" v="suburban"/>
+		<tag k="wikipedia" v="en:Fairmount Line"/>
+	</relation>
+	<relation id="1353694" version="1">
+		<member type="way" ref="136680661" role=""/>
+		<member type="way" ref="136680644" role=""/>
+		<member type="way" ref="136680731" role=""/>
+		<member type="way" ref="136680655" role=""/>
+		<member type="way" ref="136680631" role=""/>
+		<member type="way" ref="136680746" role=""/>
+		<tag k="to" v="Wickford Junction"/>
+		<tag k="ref" v="Providence/Stoughton Line"/>
+		<tag k="from" v="South Station"/>
+		<tag k="name" v="Providence/Stoughton Line (Providence Branch)"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="train"/>
+		<tag k="colour" v="#7B388C"/>
+		<tag k="network" v="MBTA Commuter Rail"/>
+		<tag k="website" v="http://www.mbta.com/"/>
+		
+		<tag k="wikidata" v="Q7252371"/>
+		<tag k="passenger" v="suburban"/>
+		<tag k="wikipedia" v="en:Providence/Stoughton Line"/>
+		<tag k="public_transport:version" v="2"/>
+	</relation>
+	<relation id="1353696" version="1">
+		<member type="way" ref="34729458" role=""/>
+		<tag k="ref" v="Franklin Line"/>
+		<tag k="name" v="Franklin Line"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="train"/>
+		<tag k="colour" v="#7B388C"/>
+		<tag k="website" v="http://www.mbta.com/"/>
+		
+		<tag k="wikidata" v="Q5491659"/>
+		<tag k="passenger" v="suburban"/>
+		<tag k="wikipedia" v="en:Franklin Line"/>
+	</relation>
+	<relation id="1458713" version="1">
+		<member type="way" ref="513725859" role="outer"/>
+		<tag k="type" v="multipolygon"/>
+		<tag k="water" v="river"/>
+		<tag k="natural" v="water"/>
+	</relation>
+	<relation id="1600276" version="1">
+		<member type="node" ref="69486291" role="stop"/>
+		<member type="way" ref="315693752" role=""/>
+		<member type="way" ref="315693750" role=""/>
+		<tag k="to" v="Forest Hills"/>
+		<tag k="ref" v="Orange Line"/>
+		<tag k="from" v="Oak Grove"/>
+		<tag k="name" v="Orange Line"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="subway"/>
+		<tag k="colour" v="#FF8000"/>
+		<tag k="network" v="BOS subway"/>
+		
+		<tag k="wikidata" v="Q152029"/>
+		<tag k="wikipedia" v="en:Orange Line (MBTA)"/>
+		<tag k="wikimedia_commons" v="Category:MBTA Orange Line"/>
+		<tag k="public_transport:version" v="2"/>
+	</relation>
+	<relation id="1600326" version="1">
+		<member type="way" ref="102769744" role="route"/>
+		<member type="node" ref="69489103" role="stop"/>
+		<member type="way" ref="534666418" role="route"/>
+		<member type="way" ref="534669399" role="route"/>
+		<member type="way" ref="534669397" role="route"/>
+		<member type="way" ref="534666421" role="route"/>
+		<member type="way" ref="534666420" role="route"/>
+		<member type="way" ref="534666419" role="route"/>
+		<member type="way" ref="102769746" role="route"/>
+		<tag k="to" v="Mattapan"/>
+		<tag k="ref" v="M Line"/>
+		<tag k="from" v="Ashmont"/>
+		<tag k="name" v="Ashmont–Mattapan High Speed Line"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="tram"/>
+		<tag k="colour" v="#FF0000"/>
+		<tag k="network" v="BOS subway"/>
+		
+	</relation>
+	<relation id="1840538" version="1">
+		<member type="way" ref="172302092" role="outer"/>
+		<member type="way" ref="143356965" role="outer"/>
+		<tag k="name" v="Middlesex County"/>
+		<tag k="note" v="There is not and should not be any admin_level (6 or otherwise) tag set here, as there is effectively no county-level government here"/>
+		<tag k="type" v="boundary"/>
+		<tag k="is_in" v="Massachusetts,Mass.,MA,USA"/>
+		<tag k="source" v="county_import_v0.1_20080508235451"/>
+		<tag k="boundary" v="administrative"/>
+		<tag k="wikidata" v="Q54073"/>
+		<tag k="wikipedia" v="en:Middlesex County, Massachusetts"/>
+		<tag k="population" v="1585139"/>
+		<tag k="source_ref" v="http://hubmaps1.cityofboston.gov/egis/Map.aspx?TabValue=Neighborhood"/>
+		<tag k="admin_level" v="6"/>
+		<tag k="attribution" v="USGS 2001 County Boundary"/>
+		<tag k="border_type" v="county"/>
+		<tag k="nist:fips_code" v="25017"/>
+		<tag k="nist:state_fips" v="25"/>
+		<tag k="source:population" v="Population Estimates Program"/>
+	</relation>
+	<relation id="1840539" version="1">
+		<member type="way" ref="506141682" role="outer"/>
+		<member type="way" ref="303073349" role="outer"/>
+		<member type="way" ref="172302092" role="outer"/>
+		<member type="way" ref="143356963" role="outer"/>
+		<member type="way" ref="303073405" role="outer"/>
+		<tag k="name" v="Norfolk County"/>
+		<tag k="type" v="boundary"/>
+		<tag k="source" v="county_import_v0.1_20080508235451"/>
+		<tag k="boundary" v="administrative"/>
+		<tag k="wikidata" v="Q54079"/>
+		<tag k="wikipedia" v="en:Norfolk County, Massachusetts"/>
+		<tag k="addr:state" v="Massachusetts"/>
+		<tag k="population" v="696023"/>
+		<tag k="source_ref" v="http://hubmaps1.cityofboston.gov/egis/Map.aspx?TabValue=Neighborhood"/>
+		<tag k="addr:county" v="Norfolk County"/>
+		<tag k="admin_level" v="6"/>
+		<tag k="attribution" v="USGS 2001 County Boundary"/>
+		<tag k="border_type" v="county"/>
+		<tag k="addr:country" v="US"/>
+		<tag k="nist:fips_code" v="25021"/>
+		<tag k="nist:state_fips" v="25"/>
+		<tag k="source:population" v="Population Estimates Program"/>
+	</relation>
+	<relation id="1875723" version="1">
+		<member type="way" ref="139333654" role="outer"/>
+		<member type="way" ref="29898204" role="outer"/>
+		<tag k="area" v="yes"/>
+		<tag k="name" v="Walter Street Tract"/>
+		<tag k="type" v="multipolygon"/>
+		<tag k="owner" v="Harvard Pres And Fellows"/>
+		<tag k="access" v="yes"/>
+		<tag k="source" v="MassGIS OpenSpace (http://www.mass.gov/mgis/osp.htm)"/>
+		<tag k="landuse" v="conservation"/>
+		<tag k="leisure" v="recreation_ground"/>
+		<tag k="ownership" v="private"/>
+		<tag k="protected" v="perpetuity"/>
+		<tag k="massgis:OS_ID" v="35-3300"/>
+		<tag k="massgis:FEESYM" v="P"/>
+		<tag k="massgis:DCAM_ID" v="0"/>
+		<tag k="massgis:POLY_ID" v="3300"/>
+		<tag k="massgis:TOWN_ID" v="35"/>
+		<tag k="massgis:ATT_DATE" v="2008/12/15"/>
+		<tag k="massgis:COMMENTS" v="TOWN, CPS"/>
+		<tag k="massgis:LEV_PROT" v="P"/>
+		<tag k="massgis:ARTICLE97" v="9"/>
+		<tag k="massgis:FEE_OWNER" v="HARVARD PRES AND FELLOWS"/>
+		<tag k="massgis:PRIM_PURP" v="B"/>
+		<tag k="massgis:SITE_NAME" v="WALTER STREET TRACT"/>
+		<tag k="massgis:ASSESS_ACR" v="14.00000000"/>
+		<tag k="massgis:ASSESS_BLK" v="20"/>
+		<tag k="massgis:ASSESS_LOT" v="05207"/>
+		<tag k="massgis:ASSESS_SUB" v="000"/>
+		<tag k="massgis:DEED_ACRES" v="0.00000000"/>
+		<tag k="massgis:EOEAINVOLV" v="0"/>
+		<tag k="massgis:FY_FUNDING" v="0"/>
+		<tag k="massgis:OS_DEED_BO" v="0"/>
+		<tag k="massgis:OS_DEED_PA" v="0"/>
+		<tag k="massgis:OWNER_TYPE" v="P"/>
+		<tag k="massgis:PUB_ACCESS" v="Y"/>
+		<tag k="massgis:SOURCE_TYP" v="OS"/>
+	</relation>
+	<relation id="1942017" version="1">
+		<member type="way" ref="143356965" role="outer"/>
+		<member type="way" ref="172302092" role="outer"/>
+		<tag k="name" v="Newton"/>
+		<tag k="type" v="boundary"/>
+		<tag k="boundary" v="administrative"/>
+		<tag k="wikidata" v="Q49196"/>
+		<tag k="wikipedia" v="en:Newton, Massachusetts"/>
+		<tag k="addr:county" v="Middlesex County"/>
+		<tag k="admin_level" v="8"/>
+	</relation>
+	<relation id="2273556" version="1">
+		<member type="way" ref="34921147" role=""/>
+		<member type="way" ref="34921149" role=""/>
+		<member type="way" ref="34921148" role=""/>
+		<member type="way" ref="34921153" role=""/>
+		<member type="way" ref="562309656" role=""/>
+		<member type="way" ref="34921152" role=""/>
+		<member type="way" ref="289489074" role=""/>
+		<member type="way" ref="34921167" role=""/>
+		<member type="way" ref="289489075" role=""/>
+		<member type="way" ref="34921166" role=""/>
+		<member type="way" ref="171002898" role=""/>
+		<member type="way" ref="310310962" role=""/>
+		<tag k="name" v="Forest Hills &amp; Attleboro Branch"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="railway"/>
+		<tag k="old_railway_operator" v="NYNH&amp;H"/>
+	</relation>
+	<relation id="2273575" version="1">
+		<member type="way" ref="136689842" role=""/>
+		<member type="way" ref="34729458" role=""/>
+		<tag k="name" v="Midland Division"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="railway"/>
+		<tag k="old_railway_operator" v="NYNH&amp;H"/>
+	</relation>
+	<relation id="2273592" version="1">
+		<member type="way" ref="102769744" role=""/>
+		<member type="way" ref="102769746" role=""/>
+		<member type="way" ref="534666418" role=""/>
+		<member type="way" ref="534669399" role=""/>
+		<member type="way" ref="534669397" role=""/>
+		<member type="way" ref="534666421" role=""/>
+		<member type="way" ref="534666420" role=""/>
+		<member type="way" ref="534666419" role=""/>
+		<tag k="name" v="Shawmut &amp; Milton Branch"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="railway"/>
+		<tag k="old_railway_operator" v="NYNH&amp;H"/>
+	</relation>
+	<relation id="2298154" version="1">
+		<member type="way" ref="506141682" role="outer"/>
+		<member type="way" ref="303073349" role="outer"/>
+		<member type="way" ref="143356965" role="outer"/>
+		<member type="way" ref="143356963" role="outer"/>
+		<member type="way" ref="303073405" role="outer"/>
+		<tag k="name" v="Suffolk County"/>
+		<tag k="note" v="There is not and should not be any admin_level (6 or otherwise) tag set here, as there is effectively no county-level government here"/>
+		<tag k="type" v="boundary"/>
+		<tag k="boundary" v="administrative"/>
+		<tag k="wikidata" v="Q54072"/>
+		<tag k="wikipedia" v="en:Suffolk County, Massachusetts"/>
+		<tag k="population" v="778121"/>
+		<tag k="admin_level" v="6"/>
+		<tag k="border_type" v="county"/>
+		<tag k="nist:fips_code" v="25025"/>
+		<tag k="nist:state_fips" v="25"/>
+		<tag k="source:population" v="Population Estimates Program"/>
+	</relation>
+	<relation id="2306361" version="1">
+		<member type="way" ref="172302092" role="outer"/>
+		<member type="way" ref="143356963" role="outer"/>
+		<member type="way" ref="303073405" role="outer"/>
+		<tag k="name" v="Brookline"/>
+		<tag k="type" v="boundary"/>
+		<tag k="boundary" v="administrative"/>
+		<tag k="wikidata" v="Q49142"/>
+		<tag k="wikipedia" v="en:Brookline, Massachusetts"/>
+		<tag k="addr:county" v="Norfolk County"/>
+		<tag k="admin_level" v="8"/>
+	</relation>
+	<relation id="2315704" version="1">
+		<member type="way" ref="506141682" role="outer"/>
+		<member type="way" ref="303073349" role="outer"/>
+		<member type="way" ref="143356965" role="outer"/>
+		<member type="way" ref="143356963" role="outer"/>
+		<member type="way" ref="303073405" role="outer"/>
+		<tag k="name" v="Boston"/>
+		<tag k="type" v="boundary"/>
+		<tag k="name:ar" v="بوسطن"/>
+		<tag k="boundary" v="administrative"/>
+		<tag k="wikidata" v="Q100"/>
+		<tag k="wikipedia" v="ar:بوسطن"/>
+		<tag k="addr:county" v="Suffolk County"/>
+		<tag k="admin_level" v="8"/>
+	</relation>
+	<relation id="2315739" version="1">
+		<member type="way" ref="506141682" role="outer"/>
+		<member type="way" ref="303073349" role="outer"/>
+		<tag k="name" v="Milton"/>
+		<tag k="type" v="boundary"/>
+		<tag k="boundary" v="administrative"/>
+		<tag k="addr:county" v="Norfolk County"/>
+		<tag k="admin_level" v="8"/>
+	</relation>
+	<relation id="2525885" version="1">
+		<member type="way" ref="9114346" role="forward"/>
+		<member type="way" ref="122376110" role="forward"/>
+		<member type="way" ref="592147958" role="forward"/>
+		<member type="way" ref="9113906" role="forward"/>
+		<member type="way" ref="591278128" role="forward"/>
+		<member type="way" ref="503099011" role="forward"/>
+		<member type="way" ref="8642290" role="forward"/>
+		<member type="way" ref="8651547" role="forward"/>
+		<member type="way" ref="426444771" role="forward"/>
+		<member type="way" ref="591278131" role="forward"/>
+		<member type="way" ref="8651081" role="forward"/>
+		<member type="way" ref="591278116" role="forward"/>
+		<member type="way" ref="591816719" role="forward"/>
+		<member type="way" ref="8652272" role="forward"/>
+		<member type="way" ref="211852999" role="forward"/>
+		<member type="way" ref="9114615" role="forward"/>
+		<member type="way" ref="591278129" role="forward"/>
+		<member type="way" ref="9113904" role="forward"/>
+		<member type="way" ref="9114456" role="forward"/>
+		<member type="way" ref="426444764" role="forward"/>
+		<tag k="ref" v="245"/>
+		<tag k="name" v="MBTA 245"/>
+		<tag k="type" v="route"/>
+		<tag k="FIXME" v="verify route at Mattapan"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="3486363" version="1">
+		<member type="way" ref="212128390" role=""/>
+	</relation>
+	<relation id="3844331" version="1">
+		<member type="way" ref="289487511" role="outer"/>
+		<member type="way" ref="289487510" role="inner"/>
+		<tag k="type" v="multipolygon"/>
+		<tag k="leisure" v="track"/>
+	</relation>
+	<relation id="3844332" version="1">
+		<member type="way" ref="289487519" role="outer"/>
+		<tag k="name" v="Catholic Memorial"/>
+		<tag k="type" v="multipolygon"/>
+		<tag k="owner" v="Roman Catholic Archdiocese Of Boston"/>
+		<tag k="phone" v="617-469-8000"/>
+		<tag k="grades" v="7,8,9,10,11,12"/>
+		<tag k="leisure" v="park"/>
+		<tag k="website" v="http://www.catholicmemorial.org/"/>
+		<tag k="addr:city" v="West Roxbury"/>
+		<tag k="addr:street" v="Baker Street"/>
+		<tag k="addr:postcode" v="02132"/>
+		<tag k="gnis:feature_id" v="1972247"/>
+		<tag k="addr:housenumber" v="235"/>
+		<tag k="massgis:school_id" v="00350718"/>
+	</relation>
+	<relation id="4033673" version="1">
+		<member type="way" ref="303073386" role="outer"/>
+		<member type="way" ref="303073390" role="outer"/>
+		<member type="way" ref="303073349" role="outer"/>
+		<member type="way" ref="303073399" role="outer"/>
+		<tag k="name" v="Hyde Park"/>
+		<tag k="type" v="boundary"/>
+		<tag k="is_in" v="Boston; MA; USA"/>
+		<tag k="source" v="BostonMaps: OpenData (http://maps.cityofboston.gov/ArcGIS/rest/services/Basemaps/basemap_SPF/MapServer/31)"/>
+		<tag k="boundary" v="neighborhood"/>
+	</relation>
+	<relation id="4033674" version="1">
+		<member type="way" ref="303073418" role="outer"/>
+		<member type="way" ref="303073405" role="outer"/>
+		<member type="way" ref="303073347" role="outer"/>
+		<member type="way" ref="303073412" role="outer"/>
+		<tag k="name" v="Jamaica Plain"/>
+		<tag k="type" v="boundary"/>
+		<tag k="is_in" v="Boston; MA; USA"/>
+		<tag k="source" v="BostonMaps: OpenData (http://maps.cityofboston.gov/ArcGIS/rest/services/Basemaps/basemap_SPF/MapServer/31)"/>
+		<tag k="boundary" v="neighborhood"/>
+	</relation>
+	<relation id="4033675" version="1">
+		<member type="way" ref="303073389" role="outer"/>
+		<member type="way" ref="303073398" role="outer"/>
+		<member type="way" ref="303073390" role="outer"/>
+		<member type="way" ref="506141682" role="outer"/>
+		<tag k="name" v="Mattapan"/>
+		<tag k="type" v="boundary"/>
+		<tag k="is_in" v="Boston; MA; USA"/>
+		<tag k="source" v="BostonMaps: OpenData (http://maps.cityofboston.gov/ArcGIS/rest/services/Basemaps/basemap_SPF/MapServer/31)"/>
+		<tag k="boundary" v="neighborhood"/>
+	</relation>
+	<relation id="4033678" version="1">
+		<member type="way" ref="303073412" role="outer"/>
+		<member type="way" ref="312344960" role="outer"/>
+		<member type="way" ref="8641955" role="outer"/>
+		<member type="way" ref="426443649" role="outer"/>
+		<member type="way" ref="8647841" role="outer"/>
+		<member type="way" ref="312344969" role="outer"/>
+		<member type="way" ref="312345624" role="outer"/>
+		<member type="way" ref="34921156" role="outer"/>
+		<member type="way" ref="591278031" role="outer"/>
+		<member type="way" ref="8652588" role="outer"/>
+		<member type="way" ref="312345625" role="outer"/>
+		<member type="way" ref="312345627" role="outer"/>
+		<member type="way" ref="312345626" role="outer"/>
+		<member type="way" ref="303073401" role="outer"/>
+		<member type="way" ref="303073386" role="outer"/>
+		<member type="way" ref="303073398" role="outer"/>
+		<member type="way" ref="303073359" role="outer"/>
+		<tag k="name" v="Roslindale"/>
+		<tag k="type" v="boundary"/>
+		<tag k="is_in" v="Boston; MA; USA"/>
+		<tag k="source" v="BostonMaps: OpenData (http://maps.cityofboston.gov/ArcGIS/rest/services/Basemaps/basemap_SPF/MapServer/31)"/>
+		<tag k="boundary" v="neighborhood"/>
+	</relation>
+	<relation id="4033679" version="1">
+		<member type="way" ref="303073389" role="outer"/>
+		<member type="way" ref="303073359" role="outer"/>
+		<member type="way" ref="303073418" role="outer"/>
+		<tag k="name" v="Roxbury"/>
+		<tag k="type" v="boundary"/>
+		<tag k="is_in" v="Boston; MA; USA"/>
+		<tag k="source" v="BostonMaps: OpenData (http://maps.cityofboston.gov/ArcGIS/rest/services/Basemaps/basemap_SPF/MapServer/31)"/>
+		<tag k="boundary" v="neighborhood"/>
+	</relation>
+	<relation id="4033685" version="1">
+		<member type="way" ref="143356963" role="outer"/>
+		<member type="way" ref="143356965" role="outer"/>
+		<member type="way" ref="303073399" role="outer"/>
+		<member type="way" ref="303073401" role="outer"/>
+		<member type="way" ref="312345626" role="outer"/>
+		<member type="way" ref="312345627" role="outer"/>
+		<member type="way" ref="312345625" role="outer"/>
+		<member type="way" ref="8652588" role="outer"/>
+		<member type="way" ref="591278031" role="outer"/>
+		<member type="way" ref="34921156" role="outer"/>
+		<member type="way" ref="312345624" role="outer"/>
+		<member type="way" ref="312344969" role="outer"/>
+		<member type="way" ref="8647841" role="outer"/>
+		<member type="way" ref="426443649" role="outer"/>
+		<member type="way" ref="8641955" role="outer"/>
+		<member type="way" ref="312344960" role="outer"/>
+		<member type="way" ref="303073347" role="outer"/>
+		<tag k="name" v="West Roxbury"/>
+		<tag k="type" v="boundary"/>
+		<tag k="is_in" v="Boston; MA; USA"/>
+		<tag k="source" v="BostonMaps: OpenData (http://maps.cityofboston.gov/ArcGIS/rest/services/Basemaps/basemap_SPF/MapServer/31)"/>
+		<tag k="boundary" v="neighborhood"/>
+	</relation>
+	<relation id="4144756" version="1">
+		<member type="way" ref="310169011" role="abutment"/>
+		<member type="way" ref="310169015" role="abutment"/>
+		<member type="way" ref="310168998" role="pier"/>
+		<member type="way" ref="310169377" role="across"/>
+		<member type="way" ref="34921166" role="across"/>
+		<member type="way" ref="310169178" role="under"/>
+		<tag k="note" v="The actual name (and ref) need to be found"/>
+		<tag k="type" v="bridge"/>
+		<tag k="description" v="La Grange Street Overpass"/>
+	</relation>
+	<relation id="4144761" version="1">
+		<member type="way" ref="289487521" role="platform"/>
+		<member type="way" ref="310169199" role="platform"/>
+		<member type="node" ref="3155470618" role="stop"/>
+		<member type="node" ref="3155470619" role="station"/>
+		<member type="way" ref="29775667" role="building"/>
+		<tag k="name" v="West Roxbury"/>
+		<tag k="tram" v="no"/>
+		<tag k="type" v="public_transport"/>
+		<tag k="train" v="yes"/>
+		<tag k="subway" v="no"/>
+		<tag k="network" v="MBTA"/>
+		
+		<tag k="light_rail" v="no"/>
+		<tag k="public_transport" v="stop_area"/>
+	</relation>
+	<relation id="4144762" version="1">
+		<member type="way" ref="34921173" role=""/>
+		<tag k="to" v="Brookline Village, Brookline"/>
+		<tag k="from" v="Forest Hills, Boston"/>
+		<tag k="name" v="Needham Branch (MBTA)"/>
+		<tag k="type" v="route"/>
+		<tag k="owner" v="Massachusetts Bay Transit Authority"/>
+		<tag k="route" v="railway"/>
+		<tag k="historic" v="no"/>
+	</relation>
+	<relation id="4144767" version="1">
+		<member type="way" ref="8646166" role="street"/>
+		<member type="way" ref="310169162" role="street"/>
+		<member type="way" ref="8646080" role="street"/>
+		<member type="way" ref="8648283" role="street"/>
+		<member type="way" ref="29904184" role="address"/>
+		<member type="way" ref="29750919" role="address"/>
+		<member type="way" ref="29604614" role="address"/>
+		<member type="way" ref="29536354" role="address"/>
+		<member type="way" ref="29775686" role="address"/>
+		<member type="way" ref="29750894" role="address"/>
+		<member type="way" ref="29884336" role="address"/>
+		<member type="way" ref="29903151" role="address"/>
+		<tag k="name" v="Alberta Street"/>
+		<tag k="type" v="street"/>
+	</relation>
+	<relation id="4144769" version="1">
+		<member type="way" ref="310169173" role="street"/>
+		<member type="way" ref="8648453" role="street"/>
+		<tag k="name" v="Elgin Street"/>
+		<tag k="type" v="street"/>
+	</relation>
+	<relation id="4147284" version="1">
+		<member type="way" ref="310310957" role="street"/>
+		<member type="way" ref="310310959" role="street"/>
+		<member type="way" ref="310310958" role="street"/>
+		<member type="way" ref="34921163" role="street"/>
+		<member type="way" ref="310310956" role="street"/>
+		<member type="way" ref="310169163" role="street"/>
+		<member type="way" ref="310310954" role="street"/>
+		<member type="way" ref="310310953" role="street"/>
+		<member type="way" ref="310169165" role="street"/>
+		<member type="way" ref="310310952" role="street"/>
+		<member type="way" ref="312345586" role="street"/>
+		<member type="way" ref="312345538" role="street"/>
+		<member type="way" ref="310169164" role="street"/>
+		<member type="way" ref="312345587" role="street"/>
+		<member type="way" ref="312345548" role="street"/>
+		<member type="way" ref="312345581" role="street"/>
+		<member type="way" ref="312345576" role="street"/>
+		<member type="way" ref="312345558" role="street"/>
+		<member type="way" ref="312345580" role="street"/>
+		<member type="way" ref="312345579" role="street"/>
+		<member type="way" ref="312345594" role="street"/>
+		<member type="way" ref="312345588" role="street"/>
+		<member type="way" ref="312345540" role="street"/>
+		<member type="way" ref="312345564" role="street"/>
+		<member type="way" ref="312345536" role="street"/>
+		<member type="way" ref="312345599" role="street"/>
+		<member type="way" ref="310310955" role="street"/>
+		<member type="way" ref="8650464" role="street"/>
+		<member type="way" ref="8651143" role="street"/>
+		<member type="way" ref="29750728" role="address"/>
+		<tag k="name" v="Centre Street"/>
+		<tag k="type" v="street"/>
+	</relation>
+	<relation id="4186472" version="1">
+		<member type="way" ref="312345677" role="across"/>
+		<member type="way" ref="34921157" role="across"/>
+		<member type="way" ref="312345730" role="across"/>
+		<member type="way" ref="312345073" role="support"/>
+		<member type="way" ref="312345069" role="support"/>
+		<tag k="type" v="bridge"/>
+		<tag k="start_date" v="1997"/>
+		<tag k="description" v="Belgrade Avenue overpass over Needham Branch"/>
+		<tag k="bridge:structure" v="beam"/>
+	</relation>
+	<relation id="4186473" version="1">
+		<member type="way" ref="29604054" role="outline"/>
+		<member type="way" ref="312345628" role="part"/>
+		<member type="way" ref="312345078" role="part"/>
+		<member type="way" ref="312345015" role="part"/>
+		<tag k="type" v="building"/>
+	</relation>
+	<relation id="4186474" version="1">
+		<member type="way" ref="29854462" role="outline"/>
+		<member type="way" ref="312345611" role="part"/>
+		<member type="node" ref="3181939558" role="entrance"/>
+		<member type="way" ref="312345634" role="part"/>
+		<member type="node" ref="3181983097" role="entrance"/>
+		<member type="node" ref="3181983052" role="entrance"/>
+		<member type="way" ref="312345603" role="part"/>
+		<member type="node" ref="3181982823" role="entrance"/>
+		<tag k="type" v="building"/>
+		<tag k="description" v="Strip Mall"/>
+	</relation>
+	<relation id="4186475" version="1">
+		<member type="way" ref="312345610" role="from"/>
+		<member type="node" ref="3181982493" role="via"/>
+		<member type="way" ref="312345534" role="to"/>
+		<tag k="type" v="restriction"/>
+		<tag k="restriction" v="no_left_turn"/>
+	</relation>
+	<relation id="4186476" version="1">
+		<member type="way" ref="312345184" role=""/>
+		<member type="way" ref="312345229" role=""/>
+		<member type="way" ref="312345271" role=""/>
+		<member type="way" ref="312345302" role=""/>
+		<member type="way" ref="312345322" role=""/>
+		<member type="way" ref="312345349" role=""/>
+		<member type="way" ref="312345370" role=""/>
+		<member type="way" ref="312345397" role=""/>
+		<member type="way" ref="312345416" role=""/>
+		<member type="way" ref="312345110" role=""/>
+		<member type="way" ref="312345098" role=""/>
+		<member type="way" ref="312345124" role=""/>
+		<member type="way" ref="312345136" role=""/>
+		<member type="way" ref="312345150" role=""/>
+		<member type="way" ref="312345161" role=""/>
+		<member type="way" ref="312345166" role=""/>
+		<member type="way" ref="312345172" role=""/>
+		<member type="way" ref="312345177" role=""/>
+		<member type="way" ref="312345178" role=""/>
+		<member type="way" ref="312345191" role=""/>
+		<member type="way" ref="312345193" role=""/>
+		<member type="way" ref="312345198" role=""/>
+		<member type="way" ref="312345200" role=""/>
+		<member type="way" ref="312345206" role=""/>
+		<member type="way" ref="312345209" role=""/>
+		<member type="way" ref="312345211" role=""/>
+		<member type="way" ref="312345217" role=""/>
+		<member type="way" ref="312345218" role=""/>
+		<member type="way" ref="312345222" role=""/>
+		<member type="way" ref="312345234" role=""/>
+		<member type="way" ref="312345236" role=""/>
+		<member type="way" ref="312345241" role=""/>
+		<member type="way" ref="312345246" role=""/>
+		<member type="way" ref="312345250" role=""/>
+		<member type="way" ref="312345253" role=""/>
+		<member type="way" ref="312345256" role=""/>
+		<member type="way" ref="312345260" role=""/>
+		<tag k="fee" v="yes"/>
+		
+		<tag k="ref" v="4360"/>
+		<tag k="name" v="Bellevue Commuter Rail Parking"/>
+		<tag k="site" v="parking"/>
+		<tag k="type" v="site"/>
+		<tag k="owner" v="Massachusetts Bay Transit Authority"/>
+		<tag k="access" v="customers"/>
+		<tag k="avg_fph" v="usd 4"/>
+		<tag k="covered" v="no"/>
+		<tag k="parking" v="surface"/>
+		<tag k="capacity" v="37"/>
+		
+		<tag k="payment:cash" v="yes"/>
+		<tag k="payment:cheque" v="no"/>
+	</relation>
+	<relation id="4186477" version="1">
+		<member type="way" ref="312345183" role=""/>
+		<member type="way" ref="312345228" role=""/>
+		<member type="way" ref="312345270" role=""/>
+		<member type="way" ref="312345299" role=""/>
+		<member type="way" ref="312345325" role=""/>
+		<member type="way" ref="312345346" role=""/>
+		<member type="way" ref="312345371" role=""/>
+		<member type="way" ref="312345395" role=""/>
+		<member type="way" ref="312345413" role=""/>
+		<member type="way" ref="312345095" role=""/>
+		<member type="way" ref="312345125" role=""/>
+		<member type="way" ref="312345108" role=""/>
+		<member type="way" ref="312345138" role=""/>
+		<member type="way" ref="312345152" role=""/>
+		<member type="way" ref="312345163" role=""/>
+		<member type="way" ref="312345168" role=""/>
+		<member type="way" ref="312345171" role=""/>
+		<member type="way" ref="312345176" role=""/>
+		<member type="way" ref="312345179" role=""/>
+		<member type="way" ref="312345188" role=""/>
+		<member type="way" ref="312345195" role=""/>
+		<member type="way" ref="312345199" role=""/>
+		<member type="way" ref="312345201" role=""/>
+		<member type="way" ref="312345059" role=""/>
+		<member type="way" ref="312345212" role=""/>
+		<member type="way" ref="312345214" role=""/>
+		<member type="way" ref="312345219" role=""/>
+		<member type="way" ref="312345224" role=""/>
+		<member type="way" ref="312345232" role=""/>
+		<member type="way" ref="312345238" role=""/>
+		<member type="way" ref="312345240" role=""/>
+		<member type="way" ref="312345244" role=""/>
+		<member type="way" ref="312345249" role=""/>
+		<member type="way" ref="312345252" role=""/>
+		<member type="way" ref="312345258" role=""/>
+		<member type="way" ref="312345259" role=""/>
+		<member type="way" ref="312345263" role=""/>
+		<member type="way" ref="312345268" role=""/>
+		<member type="way" ref="312345273" role=""/>
+		<member type="way" ref="312345276" role=""/>
+		<member type="way" ref="312345319" role=""/>
+		<member type="way" ref="312345317" role=""/>
+		<member type="way" ref="312345315" role=""/>
+		<member type="way" ref="312345314" role=""/>
+		<member type="way" ref="312345311" role=""/>
+		<member type="way" ref="312345310" role=""/>
+		<member type="way" ref="312345307" role=""/>
+		<member type="way" ref="312345305" role=""/>
+		<member type="way" ref="312345304" role=""/>
+		<member type="way" ref="312345297" role=""/>
+		<member type="way" ref="312345296" role=""/>
+		<member type="way" ref="312345292" role=""/>
+		<member type="way" ref="312345289" role=""/>
+		<member type="way" ref="312345288" role=""/>
+		<member type="way" ref="312345087" role=""/>
+		<member type="way" ref="312345088" role=""/>
+		<member type="way" ref="312345327" role=""/>
+		<member type="way" ref="312345328" role=""/>
+		<member type="way" ref="312345330" role=""/>
+		<member type="way" ref="312345333" role=""/>
+		<member type="way" ref="312345334" role=""/>
+		<member type="way" ref="312345089" role=""/>
+		<member type="way" ref="312345090" role=""/>
+		<member type="way" ref="312345091" role=""/>
+		<member type="way" ref="312345092" role=""/>
+		<member type="way" ref="312345093" role=""/>
+		<member type="way" ref="312345094" role=""/>
+		<member type="way" ref="312345337" role=""/>
+		<member type="way" ref="312345338" role=""/>
+		<member type="way" ref="312345341" role=""/>
+		<member type="way" ref="312345343" role=""/>
+		<member type="way" ref="312345345" role=""/>
+		<member type="way" ref="312345351" role=""/>
+		<member type="way" ref="312345353" role=""/>
+		<member type="way" ref="312345354" role=""/>
+		<member type="way" ref="312345099" role=""/>
+		<member type="way" ref="312345100" role=""/>
+		<member type="way" ref="312345101" role=""/>
+		<member type="way" ref="312345102" role=""/>
+		<member type="way" ref="312345103" role=""/>
+		<member type="way" ref="312345104" role=""/>
+		<member type="way" ref="312345105" role=""/>
+		<member type="way" ref="312345106" role=""/>
+		<member type="way" ref="312345356" role=""/>
+		<member type="way" ref="312345358" role=""/>
+		<member type="way" ref="312345360" role=""/>
+		<member type="way" ref="312345363" role=""/>
+		<member type="way" ref="312345365" role=""/>
+		<member type="way" ref="312345366" role=""/>
+		<member type="way" ref="312345369" role=""/>
+		<member type="way" ref="312345375" role=""/>
+		<member type="way" ref="312345376" role=""/>
+		<member type="way" ref="312345378" role=""/>
+		<member type="way" ref="312345381" role=""/>
+		<member type="way" ref="312345383" role=""/>
+		<member type="way" ref="312345384" role=""/>
+		<member type="way" ref="312345387" role=""/>
+		<member type="way" ref="312345388" role=""/>
+		<member type="way" ref="312345390" role=""/>
+		<member type="way" ref="312345393" role=""/>
+		<member type="way" ref="312345399" role=""/>
+		<member type="way" ref="312345403" role=""/>
+		<member type="way" ref="312345405" role=""/>
+		<member type="way" ref="312345406" role=""/>
+		<member type="way" ref="312345407" role=""/>
+		<member type="way" ref="312345408" role=""/>
+		<member type="way" ref="312345409" role=""/>
+		<member type="way" ref="312345410" role=""/>
+		<member type="way" ref="312345411" role=""/>
+		<member type="way" ref="312345412" role=""/>
+		<member type="way" ref="312345085" role=""/>
+		<member type="way" ref="312345086" role=""/>
+		<member type="way" ref="312345008" role=""/>
+		<member type="way" ref="312345010" role=""/>
+		<member type="way" ref="312344982" role=""/>
+		<member type="way" ref="312345046" role=""/>
+		<member type="way" ref="312344996" role=""/>
+		<member type="way" ref="312345029" role=""/>
+		<member type="way" ref="312345055" role=""/>
+		<member type="way" ref="312345007" role=""/>
+		<member type="way" ref="312345041" role=""/>
+		<member type="way" ref="312345020" role=""/>
+		<member type="way" ref="312345056" role=""/>
+		<member type="way" ref="312345160" role=""/>
+		<member type="way" ref="312345133" role=""/>
+		<member type="way" ref="312345132" role=""/>
+		<member type="way" ref="312345159" role=""/>
+		<member type="way" ref="312345158" role=""/>
+		<member type="way" ref="312345157" role=""/>
+		<member type="way" ref="312345156" role=""/>
+		<member type="way" ref="312345155" role=""/>
+		<member type="way" ref="312345128" role=""/>
+		<member type="way" ref="312345129" role=""/>
+		<member type="way" ref="312345130" role=""/>
+		<member type="way" ref="312345131" role=""/>
+		<member type="way" ref="312345127" role=""/>
+		<member type="way" ref="312345126" role=""/>
+		<member type="way" ref="312345149" role=""/>
+		<member type="way" ref="312345154" role=""/>
+		<member type="way" ref="312345148" role=""/>
+		<member type="way" ref="312345147" role=""/>
+		<member type="way" ref="312345146" role=""/>
+		<member type="way" ref="312345119" role=""/>
+		<member type="way" ref="312345120" role=""/>
+		<member type="way" ref="312345121" role=""/>
+		<member type="way" ref="312345118" role=""/>
+		<member type="way" ref="312345117" role=""/>
+		<member type="way" ref="312345116" role=""/>
+		<member type="way" ref="312345115" role=""/>
+		<member type="way" ref="312345142" role=""/>
+		<member type="way" ref="312345144" role=""/>
+		<member type="way" ref="312345143" role=""/>
+		<member type="way" ref="312345145" role=""/>
+		<member type="way" ref="312345141" role=""/>
+		<member type="way" ref="312345140" role=""/>
+		<member type="way" ref="312345135" role=""/>
+		<member type="way" ref="312345134" role=""/>
+		<member type="way" ref="312345107" role=""/>
+		<member type="way" ref="312345112" role=""/>
+		<member type="way" ref="312345113" role=""/>
+		<member type="way" ref="312345114" role=""/>
+		<member type="way" ref="312345030" role=""/>
+		<member type="way" ref="312345018" role=""/>
+		<member type="way" ref="312344983" role=""/>
+		<member type="way" ref="312345036" role=""/>
+		<member type="way" ref="312345052" role=""/>
+		<member type="way" ref="312345004" role=""/>
+		<member type="way" ref="312345038" role=""/>
+		<member type="way" ref="312345043" role=""/>
+		<member type="way" ref="312344994" role=""/>
+		<member type="way" ref="312345027" role=""/>
+		<member type="way" ref="312345066" role=""/>
+		<member type="way" ref="312345002" role=""/>
+		<member type="way" ref="312345023" role=""/>
+		<member type="way" ref="312344989" role=""/>
+		<tag k="fee" v="yes"/>
+		
+		<tag k="name" v="Highland Commuter Rail Parking"/>
+		<tag k="site" v="parking"/>
+		<tag k="type" v="site"/>
+		<tag k="owner" v="Massachusetts Bay Transit Authority"/>
+		<tag k="access" v="customers"/>
+		<tag k="avg_fph" v="usd 4"/>
+		<tag k="covered" v="no"/>
+		<tag k="parking" v="surface"/>
+		
+		<tag k="payment:cash" v="yes"/>
+		<tag k="payment:cheque" v="no"/>
+	</relation>
+	<relation id="4186478" version="1">
+		<member type="way" ref="312345182" role=""/>
+		<member type="way" ref="312345227" role=""/>
+		<member type="way" ref="312345269" role=""/>
+		<member type="way" ref="312345301" role=""/>
+		<member type="way" ref="312345324" role=""/>
+		<member type="way" ref="312345348" role=""/>
+		<member type="way" ref="312345373" role=""/>
+		<member type="way" ref="312345396" role=""/>
+		<member type="way" ref="312345415" role=""/>
+		<member type="way" ref="312345096" role=""/>
+		<member type="way" ref="312345109" role=""/>
+		<member type="way" ref="312345123" role=""/>
+		<member type="way" ref="312345139" role=""/>
+		<member type="way" ref="312345153" role=""/>
+		<member type="way" ref="312345164" role=""/>
+		<member type="way" ref="312345165" role=""/>
+		<member type="way" ref="312345170" role=""/>
+		<member type="way" ref="312345175" role=""/>
+		<member type="way" ref="312345180" role=""/>
+		<member type="way" ref="312345189" role=""/>
+		<member type="way" ref="312345192" role=""/>
+		<member type="way" ref="312345197" role=""/>
+		<member type="way" ref="312345203" role=""/>
+		<member type="way" ref="312345204" role=""/>
+		<member type="way" ref="312345208" role=""/>
+		<member type="way" ref="312345213" role=""/>
+		<member type="way" ref="312345216" role=""/>
+		<member type="way" ref="312345221" role=""/>
+		<member type="way" ref="312345223" role=""/>
+		<member type="way" ref="312345231" role=""/>
+		<member type="way" ref="312345237" role=""/>
+		<member type="way" ref="312345239" role=""/>
+		<member type="way" ref="312345243" role=""/>
+		<member type="way" ref="312345248" role=""/>
+		<member type="way" ref="312345254" role=""/>
+		<member type="way" ref="312345255" role=""/>
+		<member type="way" ref="312345261" role=""/>
+		<member type="way" ref="312345264" role=""/>
+		<member type="way" ref="312345266" role=""/>
+		<member type="way" ref="312345275" role=""/>
+		<member type="way" ref="312345278" role=""/>
+		<member type="way" ref="312345280" role=""/>
+		<member type="way" ref="312345281" role=""/>
+		<member type="way" ref="312345284" role=""/>
+		<member type="way" ref="312345287" role=""/>
+		<member type="way" ref="312345291" role=""/>
+		<member type="way" ref="312345293" role=""/>
+		<member type="way" ref="312345295" role=""/>
+		<member type="way" ref="312345298" role=""/>
+		<member type="way" ref="312345303" role=""/>
+		<member type="way" ref="312345306" role=""/>
+		<member type="way" ref="312345308" role=""/>
+		<member type="way" ref="312345309" role=""/>
+		<member type="way" ref="312345312" role=""/>
+		<member type="way" ref="312345313" role=""/>
+		<member type="way" ref="312345316" role=""/>
+		<member type="way" ref="312345318" role=""/>
+		<member type="way" ref="312345320" role=""/>
+		<member type="way" ref="312345321" role=""/>
+		<member type="way" ref="312345326" role=""/>
+		<member type="way" ref="312345329" role=""/>
+		<member type="way" ref="312345331" role=""/>
+		<member type="way" ref="312345332" role=""/>
+		<member type="way" ref="312345335" role=""/>
+		<member type="way" ref="312345336" role=""/>
+		<member type="way" ref="312345339" role=""/>
+		<member type="way" ref="312345340" role=""/>
+		<member type="way" ref="312345342" role=""/>
+		<member type="way" ref="312345344" role=""/>
+		<member type="way" ref="312345350" role=""/>
+		<member type="way" ref="312345352" role=""/>
+		<member type="way" ref="312345355" role=""/>
+		<member type="way" ref="312345357" role=""/>
+		<member type="way" ref="312345359" role=""/>
+		<member type="way" ref="312345361" role=""/>
+		<member type="way" ref="312345362" role=""/>
+		<member type="way" ref="312345364" role=""/>
+		<member type="way" ref="312345367" role=""/>
+		<member type="way" ref="312345368" role=""/>
+		<member type="way" ref="312345374" role=""/>
+		<member type="way" ref="312345377" role=""/>
+		<member type="way" ref="312345379" role=""/>
+		<member type="way" ref="312345380" role=""/>
+		<member type="way" ref="312345382" role=""/>
+		<member type="way" ref="312345385" role=""/>
+		<member type="way" ref="312345386" role=""/>
+		<member type="way" ref="312345389" role=""/>
+		<member type="way" ref="312345391" role=""/>
+		<member type="way" ref="312345392" role=""/>
+		<member type="way" ref="312345401" role=""/>
+		<member type="way" ref="312345402" role=""/>
+		<member type="way" ref="312345404" role=""/>
+		<member type="way" ref="312345062" role=""/>
+		<member type="way" ref="312345006" role=""/>
+		<member type="way" ref="312345013" role=""/>
+		<member type="way" ref="312345064" role=""/>
+		<member type="way" ref="312345185" role=""/>
+		<member type="way" ref="312345226" role=""/>
+		<member type="way" ref="312345272" role=""/>
+		<member type="way" ref="312345300" role=""/>
+		<member type="way" ref="312345323" role=""/>
+		<member type="way" ref="312345347" role=""/>
+		<member type="way" ref="312345372" role=""/>
+		<member type="way" ref="312345394" role=""/>
+		<member type="way" ref="312345414" role=""/>
+		<member type="way" ref="312345097" role=""/>
+		<member type="way" ref="312345111" role=""/>
+		<member type="way" ref="312345122" role=""/>
+		<member type="way" ref="312345137" role=""/>
+		<member type="way" ref="312345151" role=""/>
+		<member type="way" ref="312345162" role=""/>
+		<member type="way" ref="312345167" role=""/>
+		<member type="way" ref="312345169" role=""/>
+		<member type="way" ref="312345174" role=""/>
+		<member type="way" ref="312345181" role=""/>
+		<member type="way" ref="312345190" role=""/>
+		<member type="way" ref="312345194" role=""/>
+		<member type="way" ref="312345196" role=""/>
+		<member type="way" ref="312345202" role=""/>
+		<member type="way" ref="312345205" role=""/>
+		<member type="way" ref="312345207" role=""/>
+		<member type="way" ref="312345210" role=""/>
+		<member type="way" ref="312345215" role=""/>
+		<member type="way" ref="312345220" role=""/>
+		<member type="way" ref="312345225" role=""/>
+		<member type="way" ref="312345233" role=""/>
+		<member type="way" ref="312345235" role=""/>
+		<member type="way" ref="312345242" role=""/>
+		<member type="way" ref="312345245" role=""/>
+		<member type="way" ref="312345247" role=""/>
+		<member type="way" ref="312345251" role=""/>
+		<member type="way" ref="312345257" role=""/>
+		<member type="way" ref="312345262" role=""/>
+		<member type="way" ref="312345265" role=""/>
+		<member type="way" ref="312345267" role=""/>
+		<member type="way" ref="312345274" role=""/>
+		<member type="way" ref="312345277" role=""/>
+		<member type="way" ref="312345279" role=""/>
+		<member type="way" ref="312345283" role=""/>
+		<member type="way" ref="312345285" role=""/>
+		<member type="way" ref="312345286" role=""/>
+		<member type="way" ref="312345290" role=""/>
+		<member type="way" ref="312345294" role=""/>
+		<member type="way" ref="312345702" role=""/>
+		<member type="way" ref="139439574" role=""/>
+		<member type="way" ref="8649535" role=""/>
+		<member type="way" ref="312345732" role=""/>
+		<tag k="fee" v="yes"/>
+		
+		<tag k="ref" v="4379"/>
+		<tag k="name" v="Roslindale Village Commuter Rail Parking"/>
+		<tag k="site" v="parking"/>
+		<tag k="type" v="site"/>
+		<tag k="owner" v="Massachusetts Bay Transit Authority"/>
+		<tag k="access" v="customers"/>
+		<tag k="avg_fph" v="usd 4"/>
+		<tag k="covered" v="no"/>
+		<tag k="parking" v="surface"/>
+		<tag k="capacity" v="143"/>
+		
+		<tag k="payment:cash" v="yes"/>
+		<tag k="payment:cheque" v="no"/>
+	</relation>
+	<relation id="4186479" version="1">
+		<member type="node" ref="358278876" role="label"/>
+		<member type="way" ref="312345628" role=""/>
+		<member type="way" ref="312345068" role=""/>
+		<member type="way" ref="312345726" role=""/>
+		<member type="way" ref="312345753" role=""/>
+		<member type="way" ref="312345641" role=""/>
+		<member type="way" ref="312344998" role=""/>
+		<member type="way" ref="312345021" role=""/>
+		<member type="way" ref="312345058" role=""/>
+		<member type="way" ref="312344986" role=""/>
+		<member type="way" ref="312344985" role=""/>
+		<member type="way" ref="312345032" role=""/>
+		<member type="way" ref="312345011" role=""/>
+		<member type="way" ref="312344995" role=""/>
+		<member type="way" ref="312345067" role=""/>
+		<member type="way" ref="312345028" role=""/>
+		<member type="way" ref="312345019" role=""/>
+		<member type="way" ref="312345047" role=""/>
+		<member type="way" ref="312345057" role=""/>
+		<member type="way" ref="312345014" role=""/>
+		<member type="way" ref="312345044" role=""/>
+		<member type="way" ref="312345050" role=""/>
+		<member type="way" ref="312345016" role=""/>
+		<member type="way" ref="312345051" role=""/>
+		<member type="way" ref="312345003" role=""/>
+		<member type="way" ref="312345009" role=""/>
+		<member type="way" ref="312345042" role=""/>
+		<member type="way" ref="312344993" role=""/>
+		<member type="way" ref="312345026" role=""/>
+		<member type="way" ref="312345049" role=""/>
+		<member type="way" ref="312345001" role=""/>
+		<member type="way" ref="312345034" role=""/>
+		<member type="way" ref="312345037" role=""/>
+		<member type="way" ref="312344990" role=""/>
+		<member type="way" ref="312345024" role=""/>
+		<member type="way" ref="312345063" role=""/>
+		<member type="way" ref="312345065" role=""/>
+		<member type="way" ref="312345017" role=""/>
+		<member type="way" ref="312345031" role=""/>
+		<member type="way" ref="312344997" role=""/>
+		<member type="way" ref="312344984" role=""/>
+		<member type="way" ref="312345060" role=""/>
+		<member type="way" ref="312345005" role=""/>
+		<member type="way" ref="312345061" role=""/>
+		<member type="way" ref="312344992" role=""/>
+		<member type="way" ref="312345053" role=""/>
+		<member type="way" ref="312345040" role=""/>
+		<member type="way" ref="312345039" role=""/>
+		<member type="way" ref="312345022" role=""/>
+		<member type="way" ref="312344991" role=""/>
+		<member type="way" ref="312345025" role=""/>
+		<member type="way" ref="312345012" role=""/>
+		<member type="way" ref="312345048" role=""/>
+		<member type="way" ref="312344999" role=""/>
+		<member type="way" ref="312345033" role=""/>
+		<member type="way" ref="312345035" role=""/>
+		<member type="way" ref="312344987" role=""/>
+		<member type="way" ref="312344958" role=""/>
+		<member type="way" ref="312344973" role=""/>
+		<member type="way" ref="312344988" role=""/>
+		<member type="way" ref="312344961" role=""/>
+		<member type="way" ref="312344974" role=""/>
+		<member type="node" ref="3181982005" role=""/>
+		<tag k="name" v="West Roxbury Post Office"/>
+		<tag k="type" v="site"/>
+	</relation>
+	<relation id="4186480" version="1">
+		<member type="way" ref="312345534" role="street"/>
+		<member type="way" ref="34921158" role="street"/>
+		<member type="way" ref="34921157" role="street"/>
+		<member type="way" ref="8636723" role="street"/>
+		<member type="way" ref="8646969" role="street"/>
+		<member type="way" ref="312345426" role="street"/>
+		<member type="way" ref="312345532" role="street"/>
+		<member type="way" ref="591278030" role="street"/>
+		<member type="way" ref="312345477" role="street"/>
+		<member type="way" ref="312345424" role="street"/>
+		<member type="way" ref="312345448" role="street"/>
+		<member type="way" ref="312345417" role="street"/>
+		<member type="way" ref="312345418" role="street"/>
+		<member type="way" ref="312345522" role="street"/>
+		<member type="way" ref="312345498" role="street"/>
+		<member type="way" ref="312345429" role="street"/>
+		<member type="way" ref="312345421" role="street"/>
+		<member type="way" ref="312345422" role="street"/>
+		<member type="way" ref="312345524" role="street"/>
+		<member type="way" ref="312345509" role="street"/>
+		<member type="way" ref="312345443" role="street"/>
+		<member type="way" ref="312345533" role="street"/>
+		<member type="way" ref="312345494" role="street"/>
+		<member type="way" ref="312345435" role="street"/>
+		<member type="way" ref="312345517" role="street"/>
+		<member type="way" ref="312345510" role="street"/>
+		<member type="way" ref="312345446" role="street"/>
+		<member type="way" ref="312345519" role="street"/>
+		<member type="way" ref="312345473" role="street"/>
+		<member type="way" ref="312345527" role="street"/>
+		<member type="way" ref="312345420" role="street"/>
+		<member type="way" ref="312345453" role="street"/>
+		<member type="way" ref="312345436" role="street"/>
+		<member type="way" ref="312345440" role="street"/>
+		<member type="way" ref="312345450" role="street"/>
+		<member type="way" ref="312345425" role="street"/>
+		<member type="way" ref="312345434" role="street"/>
+		<member type="way" ref="312345513" role="street"/>
+		<member type="way" ref="312345483" role="street"/>
+		<member type="way" ref="312345430" role="street"/>
+		<member type="way" ref="312345518" role="street"/>
+		<member type="way" ref="312345525" role="street"/>
+		<member type="way" ref="312345428" role="street"/>
+		<member type="way" ref="312345488" role="street"/>
+		<member type="way" ref="312345423" role="street"/>
+		<member type="way" ref="312345432" role="street"/>
+		<member type="way" ref="312345486" role="street"/>
+		<member type="way" ref="312345521" role="street"/>
+		<member type="way" ref="312345500" role="street"/>
+		<member type="way" ref="312345438" role="street"/>
+		<member type="way" ref="312345463" role="street"/>
+		<member type="way" ref="312345529" role="street"/>
+		<member type="way" ref="312345490" role="street"/>
+		<member type="way" ref="312345433" role="street"/>
+		<member type="way" ref="312345431" role="street"/>
+		<member type="way" ref="312345531" role="street"/>
+		<member type="way" ref="312345523" role="street"/>
+		<member type="way" ref="312345528" role="street"/>
+		<member type="way" ref="312345530" role="street"/>
+		<member type="way" ref="139439561" role="street"/>
+		<member type="way" ref="591278000" role="street"/>
+		<member type="way" ref="8649736" role="street"/>
+		<member type="way" ref="591277995" role="street"/>
+		<member type="way" ref="312345520" role="street"/>
+		<member type="way" ref="312345419" role="street"/>
+		<member type="way" ref="312345469" role="street"/>
+		<member type="way" ref="312345507" role="street"/>
+		<member type="way" ref="312345465" role="street"/>
+		<member type="way" ref="312345481" role="street"/>
+		<member type="way" ref="139439560" role="street"/>
+		<tag k="name" v="Belgrade Avenue"/>
+		<tag k="type" v="street"/>
+	</relation>
+	<relation id="4186481" version="1">
+		<member type="way" ref="312345602" role="street"/>
+		<member type="way" ref="8648162" role="street"/>
+		<member type="node" ref="3181939556" role="address"/>
+		<tag k="name" v="Colbert Street"/>
+		<tag k="type" v="street"/>
+	</relation>
+	<relation id="4186482" version="1">
+		<member type="way" ref="312345608" role="street"/>
+		<member type="way" ref="312345610" role="street"/>
+		<member type="way" ref="312345609" role="street"/>
+		<member type="node" ref="3181982458" role="associated"/>
+		<member type="node" ref="3181982520" role="associated"/>
+		<tag k="name" v="Lord and Lady's Way"/>
+		<tag k="type" v="street"/>
+	</relation>
+	<relation id="4186483" version="1">
+		<member type="way" ref="8646698" role="street"/>
+		<member type="way" ref="312345644" role="sidewalk"/>
+		<member type="way" ref="312345722" role="sidewalk"/>
+		<tag k="name" v="McCraw Street"/>
+		<tag k="type" v="street"/>
+	</relation>
+	<relation id="4186484" version="1">
+		<member type="way" ref="591278035" role="street"/>
+		<member type="way" ref="312345616" role="street"/>
+		<member type="way" ref="591278034" role="street"/>
+		<member type="way" ref="34921160" role="street"/>
+		<member type="way" ref="34921159" role="street"/>
+		<member type="way" ref="8651245" role="street"/>
+		<member type="way" ref="312345615" role="street"/>
+		<member type="way" ref="312345612" role="street"/>
+		<member type="way" ref="312345613" role="street"/>
+		<member type="way" ref="312345614" role="street"/>
+		<member type="way" ref="312345618" role="street"/>
+		<member type="way" ref="8647742" role="street"/>
+		<tag k="name" v="Park Street"/>
+		<tag k="type" v="street"/>
+	</relation>
+	<relation id="4186485" version="1">
+		<member type="way" ref="312345629" role="street"/>
+		<member type="way" ref="312345633" role="street"/>
+		<member type="way" ref="312345630" role="street"/>
+		<member type="way" ref="312345631" role="street"/>
+		<member type="way" ref="312345632" role="street"/>
+		<member type="way" ref="8648538" role="street"/>
+		<tag k="type" v="street"/>
+	</relation>
+	<relation id="4186486" version="1">
+		<member type="node" ref="3181939559" role="station"/>
+		<member type="node" ref="1527823493" role="stop"/>
+		<member type="way" ref="29637527" role="building"/>
+		<member type="way" ref="312345638" role="building"/>
+		<member type="way" ref="139439577" role="platform"/>
+		<member type="way" ref="312345621" role="platform"/>
+		<member type="relation" ref="4186478" role=""/>
+		<member type="way" ref="312345701" role=""/>
+		<tag k="name" v="Roslindale Village"/>
+		<tag k="tram" v="no"/>
+		<tag k="type" v="public_transport"/>
+		<tag k="train" v="yes"/>
+		<tag k="subway" v="no"/>
+		<tag k="network" v="MBTA"/>
+		
+		<tag k="light_rail" v="no"/>
+		<tag k="public_transport" v="stop_area"/>
+	</relation>
+	<relation id="4186487" version="1">
+		<member type="way" ref="312345186" role="platform"/>
+		<member type="way" ref="289489078" role="platform"/>
+		<member type="way" ref="312345636" role="building"/>
+		<member type="way" ref="29792745" role="building"/>
+		<member type="node" ref="3181939556" role="station"/>
+		<member type="node" ref="3181939555" role="stop"/>
+		<member type="relation" ref="4186476" role=""/>
+		<member type="way" ref="312345645" role=""/>
+		<tag k="name" v="Bellevue"/>
+		<tag k="tram" v="no"/>
+		<tag k="type" v="public_transport"/>
+		<tag k="train" v="yes"/>
+		<tag k="subway" v="no"/>
+		<tag k="network" v="MBTA"/>
+		
+		<tag k="light_rail" v="no"/>
+		<tag k="public_transport" v="stop_area"/>
+	</relation>
+	<relation id="4186488" version="1">
+		<member type="node" ref="409737999" role="stop"/>
+		<member type="node" ref="3181939557" role="station"/>
+		<member type="way" ref="312345637" role="building"/>
+		<member type="way" ref="29536018" role="building"/>
+		<member type="way" ref="289489076" role="platform"/>
+		<member type="way" ref="312345187" role="platform"/>
+		<member type="way" ref="312345646" role=""/>
+		<member type="relation" ref="4186477" role=""/>
+		<tag k="name" v="Highland"/>
+		<tag k="tram" v="no"/>
+		<tag k="type" v="public_transport"/>
+		<tag k="train" v="yes"/>
+		<tag k="subway" v="no"/>
+		<tag k="network" v="MBTA"/>
+		
+		<tag k="light_rail" v="no"/>
+		<tag k="public_transport" v="stop_area"/>
+	</relation>
+	<relation id="4460896" version="1">
+		<member type="way" ref="136680749" role=""/>
+		<member type="way" ref="34730748" role=""/>
+		<member type="way" ref="34730749" role=""/>
+		<member type="way" ref="34730750" role=""/>
+		<member type="way" ref="34730751" role=""/>
+		<member type="way" ref="34730752" role=""/>
+		<member type="way" ref="136680749" role=""/>
+		<member type="way" ref="34730752" role=""/>
+		<member type="way" ref="34730749" role=""/>
+		<member type="way" ref="34730748" role=""/>
+		<member type="way" ref="34730751" role=""/>
+		<member type="way" ref="34730750" role=""/>
+		<tag k="to" v="Washington Union Station"/>
+		<tag k="ref" v="2100-2297"/>
+		<tag k="via" v="New York Penn Station"/>
+		<tag k="from" v="Boston South Station"/>
+		<tag k="name" v="Acela Express"/>
+		<tag k="type" v="route"/>
+		<tag k="FIXME" v="Underlying infrastructure &#34;Northeast Corridor&#34; needs some minor track connectivity fixes"/>
+		<tag k="route" v="train"/>
+		<tag k="colour" v="red"/>
+		<tag k="service" v="high_speed"/>
+		
+		<tag k="wikidata" v="Q481759"/>
+		<tag k="passenger" v="national"/>
+		<tag k="wikipedia" v="en:Acela Express"/>
+		<tag k="public_transport:version" v="1"/>
+	</relation>
+	<relation id="4473507" version="1">
+		<member type="relation" ref="1353693" role=""/>
+		<member type="relation" ref="1353692" role=""/>
+		<member type="relation" ref="4473913" role=""/>
+		<member type="relation" ref="4476404" role=""/>
+		<tag k="name" v="MBTA Commuter Rail"/>
+		<tag k="type" v="public_transport"/>
+		<tag k="colour" v="#7B388C"/>
+		<tag k="network" v="MBTA Commuter Rail"/>
+		<tag k="website" v="http://www.mbta.com/"/>
+		
+		<tag k="passenger" v="suburban"/>
+		<tag k="wikipedia" v="en:MBTA Commuter Rail"/>
+	</relation>
+	<relation id="4473909" version="1">
+		<member type="way" ref="34730752" role=""/>
+		<member type="way" ref="34730751" role=""/>
+		<member type="way" ref="34730750" role=""/>
+		<member type="way" ref="34730749" role=""/>
+		<member type="way" ref="34730748" role=""/>
+		<member type="way" ref="136680749" role=""/>
+		<member type="way" ref="136680661" role=""/>
+		<member type="way" ref="136680644" role=""/>
+		<member type="way" ref="136680731" role=""/>
+		<member type="way" ref="136680655" role=""/>
+		<member type="way" ref="136680631" role=""/>
+		<member type="way" ref="136680746" role=""/>
+		<tag k="ref" v="Franklin Line"/>
+		<tag k="name" v="Franklin Line (Limited)"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="train"/>
+		<tag k="colour" v="#7B388C"/>
+		<tag k="network" v="MBTA Commuter Rail"/>
+		<tag k="website" v="http://www.mbta.com/"/>
+		
+		<tag k="wikidata" v="Q5491659"/>
+		<tag k="passenger" v="suburban"/>
+		<tag k="wikipedia" v="en:Franklin Line"/>
+	</relation>
+	<relation id="4473912" version="1">
+		<member type="way" ref="136680661" role=""/>
+		<member type="way" ref="136680644" role=""/>
+		<member type="way" ref="136680731" role=""/>
+		<member type="way" ref="136680655" role=""/>
+		<member type="way" ref="136680631" role=""/>
+		<member type="way" ref="136680746" role=""/>
+		<tag k="ref" v="Providence/Stroughton"/>
+		<tag k="from" v="Boston South Station"/>
+		<tag k="name" v="Providence/Stoughton Line (Stoughton Branch)"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="train"/>
+		<tag k="colour" v="#7B388C"/>
+		<tag k="network" v="MBTA Commuter Rail"/>
+		<tag k="website" v="http://www.mbta.com/"/>
+		
+		<tag k="passenger" v="suburban"/>
+		<tag k="destination" v="Stoughton"/>
+	</relation>
+	<relation id="4473913" version="1">
+		<member type="relation" ref="1353694" role="route"/>
+		<member type="relation" ref="4473912" role="route"/>
+		<tag k="ref" v="Providence/Stoughton Line"/>
+		<tag k="name" v="Providence/Stoughton Line"/>
+		<tag k="type" v="route_master"/>
+		<tag k="colour" v="#7B388C"/>
+		<tag k="network" v="MBTA Commuter Rail"/>
+		<tag k="website" v="http://www.mbta.com/"/>
+		
+		<tag k="relation" v="route_master"/>
+		<tag k="passenger" v="suburban"/>
+		<tag k="route_master" v="train"/>
+	</relation>
+	<relation id="4476404" version="1">
+		<member type="relation" ref="1353696" role="route"/>
+		<member type="relation" ref="4473909" role="route"/>
+		<tag k="ref" v="Franklin Line"/>
+		<tag k="name" v="Franklin Line"/>
+		<tag k="type" v="route_master"/>
+		<tag k="colour" v="#7B388C"/>
+		<tag k="network" v="MBTA Commuter Rail"/>
+		<tag k="website" v="http://www.mbta.com/"/>
+		
+		<tag k="passenger" v="suburban"/>
+		<tag k="wikipedia" v="en:Franklin Line"/>
+		<tag k="route_master" v="train"/>
+	</relation>
+	<relation id="4799100" version="1">
+		<member type="way" ref="34730752" role=""/>
+		<member type="way" ref="34730751" role=""/>
+		<member type="way" ref="34730750" role=""/>
+		<member type="way" ref="34730749" role=""/>
+		<member type="way" ref="34730748" role=""/>
+		<member type="way" ref="136680749" role=""/>
+		<tag k="to" v="Newport News/Norfolk, Virginia"/>
+		<tag k="ref" v="65-199"/>
+		<tag k="via" v="New York Penn Station, New Haven, Philadelphia 30th Street, Washington Union Station"/>
+		<tag k="from" v="Boston South Station"/>
+		<tag k="name" v="Northeast Regional (Boston/Springfield - Newport News/Norfolk)"/>
+		<tag k="note" v="Early version of a route=train for NER services; still needs lots of work; coordinate with companion relation 4799101"/>
+		<tag k="type" v="route"/>
+		<tag k="FIXME" v="Underlying infrastructure &#34;Northeast Corridor&#34; is high-speed tracks for Acela AND regular-speed tracks for Northeast Regional"/>
+		<tag k="route" v="train"/>
+		<tag k="FIXME2" v="Track splits at New Haven, Alexandria, Quantico, Bluff Point"/>
+		<tag k="colour" v="#996633"/>
+		<tag k="note_2" v="This is a &#34;full span&#34; of many routes; still to do is to split this into each individual route"/>
+		
+		<tag k="wikidata" v="Q1218597"/>
+		<tag k="passenger" v="regional"/>
+		<tag k="public_transport:version" v="1"/>
+	</relation>
+	<relation id="4799101" version="1">
+		<member type="way" ref="34730752" role=""/>
+		<member type="way" ref="34730751" role=""/>
+		<member type="way" ref="34730750" role=""/>
+		<member type="way" ref="34730749" role=""/>
+		<member type="way" ref="34730748" role=""/>
+		<member type="way" ref="136680749" role=""/>
+		<tag k="to" v="Roanoake, Virginia"/>
+		<tag k="ref" v="65-199"/>
+		<tag k="via" v="New York Penn Station, New Haven, Philadelphia 30th Street, Washington Union Station"/>
+		<tag k="from" v="Boston South Station"/>
+		<tag k="name" v="Northeast Regional (Boston/Springfield - Roanoke)"/>
+		<tag k="note" v="Early version of a route=train for NER services; still needs lots of work; coordinate with companion relation 4799100"/>
+		<tag k="type" v="route"/>
+		<tag k="FIXME" v="Underlying infrastructure &#34;Northeast Corridor&#34; is high-speed tracks for Acela AND regular-speed tracks for Northeast Regional"/>
+		<tag k="route" v="train"/>
+		<tag k="FIXME2" v="Track splits at New Haven, Alexandria, Quantico, Bluff Point"/>
+		<tag k="FIXME3" v="Ordering of tracks and nodes is wrong, at least partly because of the &#34;legs&#34; at each terminus"/>
+		<tag k="colour" v="chocolate"/>
+		<tag k="note_2" v="This is a &#34;full span&#34; of many routes; still to do is to split this into each individual route"/>
+		
+		<tag k="passenger" v="regional"/>
+		<tag k="public_transport:version" v="1"/>
+	</relation>
+	<relation id="5422061" version="1">
+		<member type="way" ref="364674256" role="outer"/>
+		<member type="way" ref="364674258" role="inner"/>
+		<tag k="name" v="Mattapan Branch of the Boston Public Library"/>
+		<tag k="type" v="multipolygon"/>
+		<tag k="phone" v="+1 617 298 9218"/>
+		
+		<tag k="website" v="http://www.bpl.org/branches/mattapan.php"/>
+		<tag k="building" v="yes"/>
+		
+		<tag k="addr:city" v="Mattapan"/>
+		<tag k="addr:street" v="Blue Hill Avenue"/>
+		<tag k="addr:postcode" v="02126"/>
+		<tag k="opening_hours" v="Mo,We 10:00-18:00; Tu,Th 12:00-20:00; Fr,Sa 09:00-17:00"/>
+		<tag k="addr:housenumber" v="1350"/>
+	</relation>
+	<relation id="6085545" version="1">
+		<member type="way" ref="495553565" role=""/>
+		<tag k="name" v="Southwest Corridor Park"/>
+		<tag k="type" v="multipolygon"/>
+		<tag k="leisure" v="park"/>
+		<tag k="website" v="http://www.mass.gov/eea/agencies/dcr/massparks/region-boston/southwest-corridor-park.html"/>
+	</relation>
+	<relation id="6253016" version="1">
+		<member type="way" ref="420751701" role="from"/>
+		<member type="way" ref="420751710" role="to"/>
+		<member type="node" ref="61353101" role="via"/>
+		<tag k="type" v="restriction"/>
+		<tag k="restriction" v="no_left_turn"/>
+	</relation>
+	<relation id="6253017" version="1">
+		<member type="way" ref="420751701" role="from"/>
+		<member type="way" ref="420751710" role="via"/>
+		<member type="way" ref="426444762" role="to"/>
+		<tag k="type" v="restriction"/>
+		<tag k="restriction" v="no_u_turn"/>
+	</relation>
+	<relation id="7664820" version="1">
+		<member type="way" ref="533623515" role="from"/>
+		<member type="way" ref="533623512" role="to"/>
+		<member type="node" ref="61356574" role="via"/>
+		<tag k="type" v="restriction"/>
+		<tag k="restriction" v="no_left_turn"/>
+	</relation>
+	<relation id="7664822" version="1">
+		<member type="way" ref="533623515" role="from"/>
+		<member type="node" ref="61349441" role="via"/>
+		<member type="way" ref="533624560" role="to"/>
+		<tag k="type" v="restriction"/>
+		<tag k="restriction" v="no_left_turn"/>
+	</relation>
+	<relation id="7664824" version="1">
+		<member type="way" ref="533625185" role="from"/>
+		<member type="way" ref="533625184" role="via"/>
+		<member type="way" ref="533625183" role="to"/>
+		<tag k="type" v="restriction"/>
+		<tag k="restriction" v="no_u_turn"/>
+	</relation>
+	<relation id="7664846" version="1">
+		<member type="way" ref="8648499" role="from"/>
+		<member type="node" ref="61447100" role="via"/>
+		<member type="way" ref="186051125" role="to"/>
+		<tag k="type" v="restriction"/>
+		<tag k="restriction" v="no_u_turn"/>
+	</relation>
+	<relation id="7664871" version="1">
+		<member type="way" ref="122376110" role="from"/>
+		<member type="node" ref="67419288" role="via"/>
+		<member type="way" ref="533640047" role="to"/>
+		<tag k="type" v="restriction"/>
+		<tag k="restriction:conditional" v="no_right_turn @(Mo-Fr 07:00 - 09:00)"/>
+	</relation>
+	<relation id="7664873" version="1">
+		<member type="way" ref="426469234" role="from"/>
+		<member type="way" ref="420751710" role="via"/>
+		<member type="way" ref="533640529" role="to"/>
+		<tag k="type" v="restriction"/>
+		<tag k="restriction" v="no_u_turn"/>
+	</relation>
+	<relation id="7664881" version="1">
+		<member type="way" ref="426469225" role="from"/>
+		<member type="way" ref="533641952" role="via"/>
+		<member type="way" ref="533641953" role="to"/>
+		<tag k="type" v="restriction"/>
+		<tag k="restriction" v="no_u_turn"/>
+	</relation>
+	<relation id="7664882" version="1">
+		<member type="way" ref="211854671" role="from"/>
+		<member type="node" ref="2217981108" role="via"/>
+		<member type="way" ref="8647421" role="to"/>
+		<tag k="type" v="restriction"/>
+		<tag k="restriction" v="no_left_turn"/>
+	</relation>
+	<relation id="7664919" version="1">
+		<member type="way" ref="494966256" role="from"/>
+		<member type="way" ref="8638955" role="to"/>
+		<member type="node" ref="61374112" role="via"/>
+		<tag k="type" v="restriction"/>
+		<tag k="restriction" v="no_left_turn"/>
+	</relation>
+	<relation id="7874311" version="1">
+		<member type="node" ref="69486291" role="stop"/>
+		<member type="way" ref="315693750" role=""/>
+		<member type="way" ref="315693752" role=""/>
+		<tag k="to" v="Oak Grove"/>
+		<tag k="ref" v="Orange Line"/>
+		<tag k="from" v="Forest Hills"/>
+		<tag k="name" v="Orange Line"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="subway"/>
+		<tag k="colour" v="#FF8000"/>
+		<tag k="network" v="BOS subway"/>
+		
+		<tag k="wikidata" v="Q152029"/>
+		<tag k="wikipedia" v="en:Orange Line (MBTA)"/>
+		<tag k="wikimedia_commons" v="Category:MBTA Orange Line"/>
+		<tag k="public_transport:version" v="2"/>
+	</relation>
+	<relation id="7874312" version="1">
+		<member type="relation" ref="7874311" role=""/>
+		<member type="relation" ref="1600276" role=""/>
+		<tag k="ref" v="Orange Line"/>
+		<tag k="name" v="Orange Line"/>
+		<tag k="type" v="route_master"/>
+		<tag k="colour" v="#FF8000"/>
+		<tag k="network" v="BOS subway"/>
+		
+		<tag k="route_master" v="subway"/>
+	</relation>
+	<relation id="8118448" version="1">
+		<member type="way" ref="8648549" role="from"/>
+		<tag k="type" v="restriction"/>
+		<tag k="restriction" v="no_left_turn"/>
+	</relation>
+	<relation id="8118449" version="1">
+		<member type="way" ref="8648549" role="to"/>
+		<tag k="type" v="restriction"/>
+		<tag k="restriction" v="no_right_turn"/>
+	</relation>
+	<relation id="8118450" version="1">
+		<member type="way" ref="570161110" role="from"/>
+		<member type="way" ref="570161106" role="via"/>
+		<member type="way" ref="570161107" role="to"/>
+		<tag k="type" v="restriction"/>
+		<tag k="restriction" v="no_u_turn"/>
+	</relation>
+	<relation id="8118451" version="1">
+		<member type="way" ref="48919790" role="from"/>
+		<member type="way" ref="570161106" role="via"/>
+		<member type="way" ref="570161105" role="to"/>
+		<tag k="type" v="restriction"/>
+		<tag k="restriction" v="no_u_turn"/>
+	</relation>
+	<relation id="8118480" version="1">
+		<member type="way" ref="8645370" role="from"/>
+		<member type="node" ref="61349375" role="via"/>
+		<member type="way" ref="570170900" role="to"/>
+		<tag k="type" v="restriction"/>
+		<tag k="restriction" v="no_right_turn"/>
+	</relation>
+	<relation id="8118632" version="1">
+		<member type="way" ref="426494283" role="from"/>
+		<member type="way" ref="570201726" role="via"/>
+		<member type="way" ref="570201730" role="to"/>
+		<tag k="type" v="restriction"/>
+		<tag k="restriction" v="no_u_turn"/>
+	</relation>
+	<relation id="8126476" version="1">
+		<member type="way" ref="426494285" role="from"/>
+		<member type="way" ref="570201726" role="via"/>
+		<member type="way" ref="570201721" role="to"/>
+		<tag k="type" v="restriction"/>
+		<tag k="restriction" v="no_u_turn"/>
+	</relation>
+	<relation id="8229624" version="1">
+		<member type="node" ref="69489103" role=""/>
+		<member type="node" ref="5568771791" role="stop"/>
+		<member type="node" ref="5568771793" role="stop"/>
+		<member type="node" ref="5568771792" role="stop"/>
+		<member type="node" ref="5568771790" role="stop"/>
+		<member type="way" ref="534669404" role="platform"/>
+		<member type="way" ref="534669405" role="platform"/>
+		<tag k="name" v="Mattapan"/>
+		<tag k="tram" v="yes"/>
+		<tag k="type" v="public_transport"/>
+		<tag k="public_transport" v="stop_area"/>
+	</relation>
+	<relation id="8330276" version="1">
+		<member type="way" ref="495347566" role="forward"/>
+		<member type="way" ref="8646106" role="forward"/>
+		<member type="way" ref="102710885" role="forward"/>
+		<member type="way" ref="591252048" role=""/>
+		<member type="way" ref="495352041" role="forward"/>
+		<member type="way" ref="494969945" role="forward"/>
+		<member type="way" ref="494969947" role="forward"/>
+		<member type="way" ref="422445958" role="forward"/>
+		<member type="way" ref="591252049" role="forward"/>
+		<member type="way" ref="494970240" role="forward"/>
+		<member type="way" ref="494969944" role="forward"/>
+		<member type="way" ref="422445959" role="forward"/>
+		<member type="way" ref="426499595" role="forward"/>
+		<member type="way" ref="426499593" role="forward"/>
+		<member type="way" ref="426499596" role="forward"/>
+		<member type="way" ref="426499594" role="forward"/>
+		<member type="way" ref="31494878" role="forward"/>
+		<member type="way" ref="8649191" role=""/>
+		<member type="way" ref="533623515" role=""/>
+		<member type="way" ref="533623520" role=""/>
+		<member type="way" ref="91858442" role="forward"/>
+		<member type="way" ref="8649994" role="forward"/>
+		<tag k="ref" v="21"/>
+		<tag k="name" v="MBTA 21"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8330280" version="1">
+		<member type="way" ref="495347566" role="forward"/>
+		<member type="way" ref="8646106" role="forward"/>
+		<member type="way" ref="102710885" role="forward"/>
+		<member type="way" ref="591252048" role=""/>
+		<member type="way" ref="495352041" role="forward"/>
+		<member type="way" ref="591252052" role="forward"/>
+		<member type="way" ref="591252049" role="forward"/>
+		<member type="way" ref="494970240" role="forward"/>
+		<member type="way" ref="93123246" role=""/>
+		<member type="way" ref="8651669" role=""/>
+		<tag k="ref" v="16"/>
+		<tag k="name" v="MBTA 16"/>
+		<tag k="type" v="route"/>
+		<tag k="FIXME" v="verify route at South Bay Mall, UMass campus"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8330282" version="1">
+		<member type="way" ref="426459458" role="forward"/>
+		<member type="way" ref="426459444" role="forward"/>
+		<member type="way" ref="8647028" role="forward"/>
+		<member type="way" ref="426459452" role="forward"/>
+		<member type="way" ref="426459455" role="forward"/>
+		<member type="way" ref="426499583" role="forward"/>
+		<member type="way" ref="426499582" role="forward"/>
+		<member type="way" ref="8650649" role="forward"/>
+		<member type="way" ref="93123256" role="forward"/>
+		<member type="way" ref="93123284" role="forward"/>
+		<member type="way" ref="426499585" role="forward"/>
+		<member type="way" ref="426499581" role="forward"/>
+		<member type="way" ref="8647127" role="forward"/>
+		<member type="way" ref="426627260" role="forward"/>
+		<member type="way" ref="426627264" role="forward"/>
+		<member type="way" ref="426627262" role="forward"/>
+		<member type="way" ref="426652601" role="forward"/>
+		<member type="way" ref="426652608" role="forward"/>
+		<member type="way" ref="426652612" role="forward"/>
+		<member type="way" ref="426652605" role="forward"/>
+		<member type="way" ref="8648636" role="forward"/>
+		<member type="way" ref="426602270" role="forward"/>
+		<member type="way" ref="8646950" role="forward"/>
+		<member type="way" ref="426602275" role="forward"/>
+		<member type="way" ref="8636788" role="forward"/>
+		<member type="way" ref="508839215" role="forward"/>
+		<member type="way" ref="426627160" role="forward"/>
+		<member type="way" ref="426627163" role="forward"/>
+		<member type="way" ref="426627161" role="forward"/>
+		<member type="way" ref="426627158" role="forward"/>
+		<member type="way" ref="8648499" role="forward"/>
+		<member type="way" ref="485257990" role="forward"/>
+		<member type="way" ref="8646906" role="forward"/>
+		<member type="way" ref="426499584" role="forward"/>
+		<member type="way" ref="93123311" role="forward"/>
+		<member type="way" ref="426499586" role="forward"/>
+		<member type="way" ref="93123209" role="forward"/>
+		<member type="way" ref="8646036" role="forward"/>
+		<member type="way" ref="8647227" role="forward"/>
+		<member type="way" ref="426627263" role="forward"/>
+		<member type="way" ref="8651514" role="forward"/>
+		<member type="way" ref="426627261" role="forward"/>
+		<member type="way" ref="426627256" role="forward"/>
+		<member type="way" ref="508839217" role="forward"/>
+		<member type="way" ref="508839216" role="forward"/>
+		<member type="way" ref="8647069" role="forward"/>
+		<member type="way" ref="8636786" role="forward"/>
+		<member type="way" ref="426627162" role="forward"/>
+		<member type="way" ref="426627164" role="forward"/>
+		<member type="way" ref="426627159" role="forward"/>
+		<member type="way" ref="426627157" role="forward"/>
+		<member type="way" ref="186051125" role="forward"/>
+		<member type="way" ref="508839214" role=""/>
+		<member type="way" ref="508217065" role=""/>
+		<member type="way" ref="141392689" role=""/>
+		<member type="way" ref="141392690" role=""/>
+		<member type="way" ref="508807134" role=""/>
+		<member type="way" ref="426442090" role="forward"/>
+		<member type="way" ref="426442089" role="forward"/>
+		<member type="way" ref="139439566" role="forward"/>
+		<member type="way" ref="591278077" role="forward"/>
+		<member type="way" ref="8649795" role="forward"/>
+		<member type="way" ref="139439560" role="forward"/>
+		<member type="way" ref="312345481" role="forward"/>
+		<member type="way" ref="312345465" role="forward"/>
+		<member type="way" ref="312345507" role="forward"/>
+		<member type="way" ref="312345469" role="forward"/>
+		<member type="way" ref="312345419" role="forward"/>
+		<member type="way" ref="312345520" role="forward"/>
+		<member type="way" ref="8642326" role="forward"/>
+		<member type="way" ref="591252062" role="forward"/>
+		<member type="way" ref="426442091" role="forward"/>
+		<member type="way" ref="426442093" role="forward"/>
+		<tag k="ref" v="14"/>
+		<tag k="name" v="MBTA 14"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8330607" version="1">
+		<member type="way" ref="426847629" role="forward"/>
+		<member type="way" ref="102710889" role="forward"/>
+		<member type="way" ref="591278104" role=""/>
+		<member type="way" ref="426847630" role=""/>
+		<member type="way" ref="139439567" role=""/>
+		<member type="way" ref="591252063" role="forward"/>
+		<member type="way" ref="591278077" role="forward"/>
+		<member type="way" ref="8649795" role="forward"/>
+		<member type="way" ref="139439560" role="forward"/>
+		<member type="way" ref="312345481" role="forward"/>
+		<member type="way" ref="312345465" role="forward"/>
+		<member type="way" ref="312345507" role="forward"/>
+		<member type="way" ref="312345469" role="forward"/>
+		<member type="way" ref="312345419" role="forward"/>
+		<member type="way" ref="312345520" role="forward"/>
+		<member type="way" ref="591277995" role="forward"/>
+		<member type="way" ref="139439564" role="forward"/>
+		<member type="way" ref="8651553" role="forward"/>
+		<member type="way" ref="8650869" role="forward"/>
+		<member type="way" ref="426442089" role="forward"/>
+		<member type="way" ref="426442090" role="forward"/>
+		<member type="way" ref="426442093" role="forward"/>
+		<member type="way" ref="426442091" role="forward"/>
+		<member type="way" ref="591252062" role="forward"/>
+		<member type="way" ref="8650842" role="forward"/>
+		<member type="way" ref="591278000" role="forward"/>
+		<member type="way" ref="139439565" role="forward"/>
+		<member type="way" ref="8640058" role=""/>
+		<member type="way" ref="591277999" role="forward"/>
+		<member type="way" ref="591277998" role="forward"/>
+		<member type="way" ref="591277996" role="forward"/>
+		<member type="way" ref="591277997" role=""/>
+		<member type="way" ref="8650441" role=""/>
+		<member type="way" ref="139333587" role=""/>
+		<member type="way" ref="8647168" role=""/>
+		<member type="way" ref="8641167" role=""/>
+		<member type="way" ref="591277992" role=""/>
+		<member type="way" ref="591277988" role="forward"/>
+		<member type="way" ref="591277986" role="forward"/>
+		<member type="way" ref="591277991" role="forward"/>
+		<member type="way" ref="426634962" role="forward"/>
+		<member type="way" ref="591277989" role="forward"/>
+		<member type="way" ref="8647019" role=""/>
+		<member type="way" ref="8814879" role=""/>
+		<member type="way" ref="8814790" role=""/>
+		<member type="way" ref="8814363" role="forward"/>
+		<member type="way" ref="591277982" role="forward"/>
+		<member type="way" ref="8814140" role="forward"/>
+		<member type="way" ref="278391735" role="forward"/>
+		<member type="way" ref="8813970" role="forward"/>
+		<member type="way" ref="8814480" role="forward"/>
+		<tag k="ref" v="51"/>
+		<tag k="name" v="MBTA 51"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8330608" version="1">
+		<member type="way" ref="426847629" role="forward"/>
+		<member type="way" ref="102710889" role="forward"/>
+		<member type="way" ref="591278104" role=""/>
+		<member type="way" ref="426847630" role=""/>
+		<member type="way" ref="139439567" role=""/>
+		<member type="way" ref="591252063" role="forward"/>
+		<member type="way" ref="591278077" role="forward"/>
+		<member type="way" ref="8649554" role="forward"/>
+		<member type="way" ref="8651553" role="forward"/>
+		<member type="way" ref="8650869" role="forward"/>
+		<member type="way" ref="426442089" role="forward"/>
+		<member type="way" ref="426442090" role="forward"/>
+		<member type="way" ref="426442093" role="forward"/>
+		<member type="way" ref="426442091" role="forward"/>
+		<member type="way" ref="591278018" role=""/>
+		<member type="way" ref="8648712" role=""/>
+		<member type="way" ref="8647393" role=""/>
+		<member type="way" ref="8648733" role=""/>
+		<member type="way" ref="8647727" role=""/>
+		<member type="way" ref="8646540" role="forward"/>
+		<member type="way" ref="591278003" role="forward"/>
+		<tag k="ref" v="50"/>
+		<tag k="name" v="MBTA 50"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8330613" version="1">
+		<member type="way" ref="299911615" role=""/>
+		<member type="way" ref="591252050" role=""/>
+		<member type="way" ref="591252049" role=""/>
+		<member type="way" ref="591252048" role=""/>
+		<member type="way" ref="102710885" role="forward"/>
+		<member type="way" ref="8646106" role="forward"/>
+		<member type="way" ref="495347566" role="forward"/>
+		<tag k="ref" v="42"/>
+		<tag k="name" v="MBTA 42"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8330615" version="1">
+		<member type="way" ref="426847629" role="forward"/>
+		<member type="way" ref="102710889" role="forward"/>
+		<member type="way" ref="591278104" role=""/>
+		<member type="way" ref="426847630" role=""/>
+		<member type="way" ref="139439567" role=""/>
+		<member type="way" ref="591252063" role="forward"/>
+		<member type="way" ref="591278077" role="forward"/>
+		<member type="way" ref="8649554" role="forward"/>
+		<member type="way" ref="8651553" role="forward"/>
+		<member type="way" ref="8650869" role="forward"/>
+		<member type="way" ref="426442089" role="forward"/>
+		<member type="way" ref="426442090" role="forward"/>
+		<member type="way" ref="426442093" role="forward"/>
+		<member type="way" ref="426442091" role="forward"/>
+		<member type="way" ref="591278018" role=""/>
+		<member type="way" ref="510035800" role="forward"/>
+		<member type="way" ref="510035801" role="forward"/>
+		<member type="way" ref="8648258" role="forward"/>
+		<member type="way" ref="426606643" role="forward"/>
+		<member type="way" ref="426606639" role="forward"/>
+		<member type="way" ref="426494292" role="forward"/>
+		<member type="way" ref="426494295" role="forward"/>
+		<member type="way" ref="591278025" role="forward"/>
+		<member type="way" ref="8646055" role="forward"/>
+		<member type="way" ref="591278003" role="forward"/>
+		<member type="way" ref="8647727" role="forward"/>
+		<member type="way" ref="8648733" role="forward"/>
+		<member type="way" ref="8647393" role="forward"/>
+		<member type="way" ref="8648712" role="forward"/>
+		<tag k="ref" v="40/50"/>
+		<tag k="name" v="MBTA 40/50"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8330616" version="1">
+		<member type="way" ref="426847629" role="forward"/>
+		<member type="way" ref="102710889" role="forward"/>
+		<member type="way" ref="591278104" role=""/>
+		<member type="way" ref="426847630" role=""/>
+		<member type="way" ref="139439567" role=""/>
+		<member type="way" ref="591252063" role="forward"/>
+		<member type="way" ref="591278077" role="forward"/>
+		<member type="way" ref="8649554" role="forward"/>
+		<member type="way" ref="8651553" role="forward"/>
+		<member type="way" ref="8650869" role="forward"/>
+		<member type="way" ref="426442089" role="forward"/>
+		<member type="way" ref="426442090" role="forward"/>
+		<member type="way" ref="426442093" role="forward"/>
+		<member type="way" ref="426442091" role="forward"/>
+		<member type="way" ref="591278018" role=""/>
+		<member type="way" ref="510035800" role=""/>
+		<member type="way" ref="510035801" role=""/>
+		<member type="way" ref="8648258" role="forward"/>
+		<member type="way" ref="426606643" role="forward"/>
+		<member type="way" ref="426606639" role="forward"/>
+		<member type="way" ref="426494292" role="forward"/>
+		<member type="way" ref="426494295" role="forward"/>
+		<member type="way" ref="591278025" role="forward"/>
+		<member type="way" ref="8651719" role="forward"/>
+		<member type="way" ref="426606642" role="forward"/>
+		<member type="way" ref="426606641" role="forward"/>
+		<member type="way" ref="426606640" role="forward"/>
+		<member type="way" ref="426494293" role="forward"/>
+		<member type="way" ref="8646055" role=""/>
+		<tag k="ref" v="40"/>
+		<tag k="name" v="MBTA 40"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8330617" version="1">
+		<member type="way" ref="102710889" role="forward"/>
+		<member type="way" ref="426847629" role="forward"/>
+		<member type="way" ref="533645225" role=""/>
+		<member type="way" ref="8638955" role=""/>
+		<member type="way" ref="533645223" role=""/>
+		<member type="way" ref="495347219" role=""/>
+		<tag k="ref" v="39"/>
+		<tag k="name" v="MBTA 39"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8330618" version="1">
+		<member type="way" ref="591278033" role=""/>
+		<member type="way" ref="312345616" role=""/>
+		<member type="way" ref="8646600" role=""/>
+		<member type="way" ref="8652588" role=""/>
+		<member type="way" ref="312345532" role="forward"/>
+		<member type="way" ref="312345426" role="forward"/>
+		<member type="way" ref="8646969" role="forward"/>
+		<member type="way" ref="8636723" role="forward"/>
+		<member type="way" ref="34921157" role="forward"/>
+		<member type="way" ref="34921158" role="forward"/>
+		<member type="way" ref="312345534" role="forward"/>
+		<member type="way" ref="8647741" role="forward"/>
+		<member type="way" ref="312345539" role="forward"/>
+		<member type="way" ref="312345570" role="forward"/>
+		<member type="way" ref="312345542" role="forward"/>
+		<member type="way" ref="312345596" role="forward"/>
+		<member type="way" ref="48920801" role="forward"/>
+		<member type="way" ref="312345622" role="forward"/>
+		<member type="way" ref="48919782" role="forward"/>
+		<member type="way" ref="8652515" role="forward"/>
+		<member type="way" ref="312345601" role="forward"/>
+		<member type="way" ref="591278031" role="forward"/>
+		<member type="way" ref="34921156" role="forward"/>
+		<member type="way" ref="312345624" role="forward"/>
+		<member type="way" ref="34921154" role="forward"/>
+		<member type="way" ref="312345622" role="forward"/>
+		<member type="way" ref="312345623" role="forward"/>
+		<member type="way" ref="48919781" role="forward"/>
+		<member type="way" ref="8646052" role="forward"/>
+		<member type="way" ref="591278036" role="forward"/>
+		<member type="way" ref="312345535" role="forward"/>
+		<member type="way" ref="8647841" role=""/>
+		<member type="way" ref="426443649" role=""/>
+		<member type="way" ref="8641955" role=""/>
+		<member type="way" ref="312345537" role=""/>
+		<member type="way" ref="48919776" role="forward"/>
+		<member type="way" ref="8650878" role="forward"/>
+		<member type="way" ref="570161111" role="forward"/>
+		<member type="way" ref="570161110" role="forward"/>
+		<member type="way" ref="570161105" role="forward"/>
+		<member type="way" ref="426628514" role="forward"/>
+		<member type="way" ref="426628515" role="forward"/>
+		<member type="way" ref="8648032" role="forward"/>
+		<member type="way" ref="8641337" role="forward"/>
+		<member type="way" ref="426628512" role="forward"/>
+		<member type="way" ref="570161107" role="forward"/>
+		<member type="way" ref="48919790" role="forward"/>
+		<member type="way" ref="426628513" role="forward"/>
+		<member type="way" ref="426628511" role="forward"/>
+		<member type="way" ref="8637659" role="forward"/>
+		<member type="way" ref="495347219" role=""/>
+		<member type="way" ref="533645223" role=""/>
+		<member type="way" ref="8638955" role=""/>
+		<member type="way" ref="533645225" role=""/>
+		<member type="way" ref="426847629" role="forward"/>
+		<member type="way" ref="102710889" role="forward"/>
+		<tag k="ref" v="38"/>
+		<tag k="name" v="MBTA 38"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8330619" version="1">
+		<member type="way" ref="426847629" role="forward"/>
+		<member type="way" ref="102710889" role="forward"/>
+		<member type="way" ref="591278104" role=""/>
+		<member type="way" ref="426847630" role=""/>
+		<member type="way" ref="139439567" role=""/>
+		<member type="way" ref="591252063" role="forward"/>
+		<member type="way" ref="591278077" role="forward"/>
+		<member type="way" ref="8649795" role="forward"/>
+		<member type="way" ref="139439560" role="forward"/>
+		<member type="way" ref="312345481" role="forward"/>
+		<member type="way" ref="312345465" role="forward"/>
+		<member type="way" ref="312345507" role="forward"/>
+		<member type="way" ref="312345469" role="forward"/>
+		<member type="way" ref="312345419" role="forward"/>
+		<member type="way" ref="312345520" role="forward"/>
+		<member type="way" ref="591277995" role="forward"/>
+		<member type="way" ref="8649736" role="forward"/>
+		<member type="way" ref="8651553" role="forward"/>
+		<member type="way" ref="8650869" role="forward"/>
+		<member type="way" ref="426442089" role="forward"/>
+		<member type="way" ref="426442090" role="forward"/>
+		<member type="way" ref="426442093" role="forward"/>
+		<member type="way" ref="426442091" role="forward"/>
+		<member type="way" ref="591252062" role="forward"/>
+		<member type="way" ref="8650842" role="forward"/>
+		<member type="way" ref="591278000" role=""/>
+		<member type="way" ref="139439561" role=""/>
+		<member type="way" ref="312345530" role=""/>
+		<member type="way" ref="312345528" role=""/>
+		<member type="way" ref="312345523" role=""/>
+		<member type="way" ref="312345531" role=""/>
+		<member type="way" ref="312345431" role=""/>
+		<member type="way" ref="312345433" role=""/>
+		<member type="way" ref="312345490" role=""/>
+		<member type="way" ref="312345529" role=""/>
+		<member type="way" ref="312345463" role=""/>
+		<member type="way" ref="312345438" role=""/>
+		<member type="way" ref="312345500" role=""/>
+		<member type="way" ref="312345521" role=""/>
+		<member type="way" ref="312345486" role=""/>
+		<member type="way" ref="312345432" role=""/>
+		<member type="way" ref="312345423" role=""/>
+		<member type="way" ref="312345488" role=""/>
+		<member type="way" ref="312345428" role=""/>
+		<member type="way" ref="312345525" role=""/>
+		<member type="way" ref="312345518" role=""/>
+		<member type="way" ref="312345430" role=""/>
+		<member type="way" ref="312345483" role=""/>
+		<member type="way" ref="312345513" role=""/>
+		<member type="way" ref="312345434" role=""/>
+		<member type="way" ref="312345425" role=""/>
+		<member type="way" ref="312345450" role=""/>
+		<member type="way" ref="312345440" role=""/>
+		<member type="way" ref="312345436" role=""/>
+		<member type="way" ref="312345453" role=""/>
+		<member type="way" ref="312345420" role=""/>
+		<member type="way" ref="312345527" role=""/>
+		<member type="way" ref="312345473" role=""/>
+		<member type="way" ref="312345519" role=""/>
+		<member type="way" ref="312345446" role=""/>
+		<member type="way" ref="312345510" role=""/>
+		<member type="way" ref="312345517" role=""/>
+		<member type="way" ref="312345435" role=""/>
+		<member type="way" ref="312345494" role=""/>
+		<member type="way" ref="312345533" role=""/>
+		<member type="way" ref="312345443" role=""/>
+		<member type="way" ref="312345509" role=""/>
+		<member type="way" ref="312345524" role=""/>
+		<member type="way" ref="312345422" role=""/>
+		<member type="way" ref="312345421" role=""/>
+		<member type="way" ref="312345429" role=""/>
+		<member type="way" ref="312345498" role=""/>
+		<member type="way" ref="312345522" role=""/>
+		<member type="way" ref="312345418" role=""/>
+		<member type="way" ref="312345417" role=""/>
+		<member type="way" ref="312345448" role=""/>
+		<member type="way" ref="312345424" role=""/>
+		<member type="way" ref="312345477" role=""/>
+		<member type="way" ref="591278030" role=""/>
+		<member type="way" ref="312345532" role=""/>
+		<member type="way" ref="312345426" role=""/>
+		<member type="way" ref="8646969" role=""/>
+		<member type="way" ref="8636723" role=""/>
+		<member type="way" ref="34921157" role=""/>
+		<member type="way" ref="34921158" role=""/>
+		<member type="way" ref="312345534" role=""/>
+		<member type="way" ref="312345575" role=""/>
+		<member type="way" ref="312345585" role=""/>
+		<member type="way" ref="426444845" role=""/>
+		<member type="way" ref="312345574" role=""/>
+		<member type="way" ref="312345583" role=""/>
+		<member type="way" ref="312345582" role=""/>
+		<member type="way" ref="312345578" role=""/>
+		<member type="way" ref="312345595" role=""/>
+		<member type="way" ref="312345593" role=""/>
+		<member type="way" ref="312345597" role=""/>
+		<member type="way" ref="312345544" role=""/>
+		<member type="way" ref="312345541" role=""/>
+		<member type="way" ref="312345577" role=""/>
+		<member type="way" ref="312345600" role=""/>
+		<member type="way" ref="312345553" role=""/>
+		<member type="way" ref="312345591" role=""/>
+		<member type="way" ref="312345543" role=""/>
+		<member type="way" ref="312345598" role=""/>
+		<member type="way" ref="312345592" role=""/>
+		<member type="way" ref="312345590" role=""/>
+		<member type="way" ref="312345589" role=""/>
+		<member type="way" ref="312345599" role=""/>
+		<member type="way" ref="312345536" role=""/>
+		<member type="way" ref="312345564" role=""/>
+		<member type="way" ref="312345540" role=""/>
+		<member type="way" ref="312345588" role=""/>
+		<member type="way" ref="312345594" role=""/>
+		<member type="way" ref="312345579" role=""/>
+		<member type="way" ref="312345580" role=""/>
+		<member type="way" ref="312345558" role=""/>
+		<member type="way" ref="312345576" role=""/>
+		<member type="way" ref="312345581" role=""/>
+		<member type="way" ref="312345548" role=""/>
+		<member type="way" ref="312345587" role=""/>
+		<member type="way" ref="310169164" role=""/>
+		<member type="way" ref="312345538" role=""/>
+		<member type="way" ref="312345586" role=""/>
+		<member type="way" ref="310310952" role=""/>
+		<member type="way" ref="426842450" role=""/>
+		<member type="way" ref="426842454" role=""/>
+		<member type="way" ref="426842449" role=""/>
+		<member type="way" ref="310169179" role=""/>
+		<member type="way" ref="310169178" role=""/>
+		<member type="way" ref="8648896" role=""/>
+		<member type="way" ref="426634815" role=""/>
+		<member type="way" ref="8647703" role="forward"/>
+		<member type="way" ref="426634963" role="forward"/>
+		<tag k="ref" v="37"/>
+		<tag k="name" v="MBTA 37"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8330620" version="1">
+		<member type="way" ref="426847629" role="forward"/>
+		<member type="way" ref="102710889" role="forward"/>
+		<member type="way" ref="591278104" role=""/>
+		<member type="way" ref="426847630" role=""/>
+		<member type="way" ref="139439567" role=""/>
+		<member type="way" ref="591252063" role="forward"/>
+		<member type="way" ref="591278077" role="forward"/>
+		<member type="way" ref="8649795" role="forward"/>
+		<member type="way" ref="139439560" role="forward"/>
+		<member type="way" ref="312345481" role="forward"/>
+		<member type="way" ref="312345465" role="forward"/>
+		<member type="way" ref="312345507" role="forward"/>
+		<member type="way" ref="312345469" role="forward"/>
+		<member type="way" ref="312345419" role="forward"/>
+		<member type="way" ref="312345520" role="forward"/>
+		<member type="way" ref="591277995" role="forward"/>
+		<member type="way" ref="8649736" role="forward"/>
+		<member type="way" ref="8651553" role="forward"/>
+		<member type="way" ref="8650869" role="forward"/>
+		<member type="way" ref="426442089" role="forward"/>
+		<member type="way" ref="426442090" role="forward"/>
+		<member type="way" ref="426442093" role="forward"/>
+		<member type="way" ref="426442091" role="forward"/>
+		<member type="way" ref="591252062" role="forward"/>
+		<member type="way" ref="8650842" role="forward"/>
+		<member type="way" ref="591278000" role=""/>
+		<member type="way" ref="139439561" role=""/>
+		<member type="way" ref="312345530" role=""/>
+		<member type="way" ref="312345528" role=""/>
+		<member type="way" ref="312345523" role=""/>
+		<member type="way" ref="312345531" role=""/>
+		<member type="way" ref="312345431" role=""/>
+		<member type="way" ref="312345433" role=""/>
+		<member type="way" ref="312345490" role=""/>
+		<member type="way" ref="312345529" role=""/>
+		<member type="way" ref="312345463" role=""/>
+		<member type="way" ref="312345438" role=""/>
+		<member type="way" ref="312345500" role=""/>
+		<member type="way" ref="312345521" role=""/>
+		<member type="way" ref="312345486" role=""/>
+		<member type="way" ref="312345432" role=""/>
+		<member type="way" ref="312345423" role=""/>
+		<member type="way" ref="312345488" role=""/>
+		<member type="way" ref="312345428" role=""/>
+		<member type="way" ref="312345525" role=""/>
+		<member type="way" ref="312345518" role=""/>
+		<member type="way" ref="312345430" role=""/>
+		<member type="way" ref="312345483" role=""/>
+		<member type="way" ref="312345513" role=""/>
+		<member type="way" ref="312345434" role=""/>
+		<member type="way" ref="312345425" role=""/>
+		<member type="way" ref="312345450" role=""/>
+		<member type="way" ref="312345440" role=""/>
+		<member type="way" ref="312345436" role=""/>
+		<member type="way" ref="312345453" role=""/>
+		<member type="way" ref="312345420" role=""/>
+		<member type="way" ref="312345527" role=""/>
+		<member type="way" ref="312345473" role=""/>
+		<member type="way" ref="312345519" role=""/>
+		<member type="way" ref="312345446" role=""/>
+		<member type="way" ref="312345510" role=""/>
+		<member type="way" ref="312345517" role=""/>
+		<member type="way" ref="312345435" role=""/>
+		<member type="way" ref="312345494" role=""/>
+		<member type="way" ref="312345533" role=""/>
+		<member type="way" ref="312345443" role=""/>
+		<member type="way" ref="312345509" role=""/>
+		<member type="way" ref="312345524" role=""/>
+		<member type="way" ref="312345422" role=""/>
+		<member type="way" ref="312345421" role=""/>
+		<member type="way" ref="312345429" role=""/>
+		<member type="way" ref="312345498" role=""/>
+		<member type="way" ref="312345522" role=""/>
+		<member type="way" ref="312345418" role=""/>
+		<member type="way" ref="312345417" role=""/>
+		<member type="way" ref="312345448" role=""/>
+		<member type="way" ref="312345424" role=""/>
+		<member type="way" ref="312345477" role=""/>
+		<member type="way" ref="591278030" role=""/>
+		<member type="way" ref="312345532" role=""/>
+		<member type="way" ref="312345426" role=""/>
+		<member type="way" ref="8646969" role=""/>
+		<member type="way" ref="8636723" role=""/>
+		<member type="way" ref="34921157" role=""/>
+		<member type="way" ref="34921158" role=""/>
+		<member type="way" ref="312345534" role=""/>
+		<member type="way" ref="312345575" role=""/>
+		<member type="way" ref="312345585" role=""/>
+		<member type="way" ref="426444845" role=""/>
+		<member type="way" ref="312345574" role=""/>
+		<member type="way" ref="312345583" role=""/>
+		<member type="way" ref="312345582" role=""/>
+		<member type="way" ref="312345578" role=""/>
+		<member type="way" ref="312345595" role=""/>
+		<member type="way" ref="312345593" role=""/>
+		<member type="way" ref="312345597" role=""/>
+		<member type="way" ref="312345544" role=""/>
+		<member type="way" ref="312345541" role=""/>
+		<member type="way" ref="312345577" role=""/>
+		<member type="way" ref="312345600" role=""/>
+		<member type="way" ref="312345553" role=""/>
+		<member type="way" ref="312345591" role=""/>
+		<member type="way" ref="312345543" role=""/>
+		<member type="way" ref="312345598" role=""/>
+		<member type="way" ref="312345592" role=""/>
+		<member type="way" ref="312345590" role=""/>
+		<member type="way" ref="312345589" role=""/>
+		<member type="way" ref="312345599" role=""/>
+		<member type="way" ref="312345536" role=""/>
+		<member type="way" ref="312345564" role=""/>
+		<member type="way" ref="312345540" role=""/>
+		<member type="way" ref="312345588" role=""/>
+		<member type="way" ref="312345594" role=""/>
+		<member type="way" ref="312345579" role=""/>
+		<member type="way" ref="312345580" role=""/>
+		<member type="way" ref="312345558" role=""/>
+		<member type="way" ref="312345576" role=""/>
+		<member type="way" ref="312345581" role=""/>
+		<member type="way" ref="312345548" role=""/>
+		<member type="way" ref="312345587" role=""/>
+		<member type="way" ref="310169164" role=""/>
+		<member type="way" ref="312345538" role=""/>
+		<member type="way" ref="312345586" role=""/>
+		<member type="way" ref="310310952" role=""/>
+		<member type="way" ref="310169165" role=""/>
+		<member type="way" ref="310310953" role=""/>
+		<member type="way" ref="310310954" role=""/>
+		<member type="way" ref="310169163" role=""/>
+		<member type="way" ref="310310956" role="forward"/>
+		<member type="way" ref="34921163" role="forward"/>
+		<member type="way" ref="310310960" role="forward"/>
+		<member type="way" ref="310310957" role="forward"/>
+		<member type="way" ref="310310955" role="forward"/>
+		<member type="way" ref="310310961" role="forward"/>
+		<member type="way" ref="8650522" role=""/>
+		<tag k="ref" v="36"/>
+		<tag k="name" v="MBTA 36"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8330621" version="1">
+		<member type="way" ref="426847629" role="forward"/>
+		<member type="way" ref="102710889" role="forward"/>
+		<member type="way" ref="591278104" role=""/>
+		<member type="way" ref="426847630" role=""/>
+		<member type="way" ref="139439567" role=""/>
+		<member type="way" ref="591252063" role="forward"/>
+		<member type="way" ref="591278077" role="forward"/>
+		<member type="way" ref="8649795" role="forward"/>
+		<member type="way" ref="139439560" role="forward"/>
+		<member type="way" ref="312345481" role="forward"/>
+		<member type="way" ref="312345465" role="forward"/>
+		<member type="way" ref="312345507" role="forward"/>
+		<member type="way" ref="312345469" role="forward"/>
+		<member type="way" ref="312345419" role="forward"/>
+		<member type="way" ref="312345520" role="forward"/>
+		<member type="way" ref="591277995" role="forward"/>
+		<member type="way" ref="8649736" role="forward"/>
+		<member type="way" ref="8651553" role="forward"/>
+		<member type="way" ref="8650869" role="forward"/>
+		<member type="way" ref="426442089" role="forward"/>
+		<member type="way" ref="426442090" role="forward"/>
+		<member type="way" ref="426442093" role="forward"/>
+		<member type="way" ref="426442091" role="forward"/>
+		<member type="way" ref="591252062" role="forward"/>
+		<member type="way" ref="8650842" role="forward"/>
+		<member type="way" ref="591278000" role=""/>
+		<member type="way" ref="139439561" role=""/>
+		<member type="way" ref="312345530" role=""/>
+		<member type="way" ref="312345528" role=""/>
+		<member type="way" ref="312345523" role=""/>
+		<member type="way" ref="312345531" role=""/>
+		<member type="way" ref="312345431" role=""/>
+		<member type="way" ref="312345433" role=""/>
+		<member type="way" ref="312345490" role=""/>
+		<member type="way" ref="312345529" role=""/>
+		<member type="way" ref="312345463" role=""/>
+		<member type="way" ref="312345438" role=""/>
+		<member type="way" ref="312345500" role=""/>
+		<member type="way" ref="312345521" role=""/>
+		<member type="way" ref="312345486" role=""/>
+		<member type="way" ref="312345432" role=""/>
+		<member type="way" ref="312345423" role=""/>
+		<member type="way" ref="312345488" role=""/>
+		<member type="way" ref="312345428" role=""/>
+		<member type="way" ref="312345525" role=""/>
+		<member type="way" ref="312345518" role=""/>
+		<member type="way" ref="312345430" role=""/>
+		<member type="way" ref="312345483" role=""/>
+		<member type="way" ref="312345513" role=""/>
+		<member type="way" ref="312345434" role=""/>
+		<member type="way" ref="312345425" role=""/>
+		<member type="way" ref="312345450" role=""/>
+		<member type="way" ref="312345440" role=""/>
+		<member type="way" ref="312345436" role=""/>
+		<member type="way" ref="312345453" role=""/>
+		<member type="way" ref="312345420" role=""/>
+		<member type="way" ref="312345527" role=""/>
+		<member type="way" ref="312345473" role=""/>
+		<member type="way" ref="312345519" role=""/>
+		<member type="way" ref="312345446" role=""/>
+		<member type="way" ref="312345510" role=""/>
+		<member type="way" ref="312345517" role=""/>
+		<member type="way" ref="312345435" role=""/>
+		<member type="way" ref="312345494" role=""/>
+		<member type="way" ref="312345533" role=""/>
+		<member type="way" ref="312345443" role=""/>
+		<member type="way" ref="312345509" role=""/>
+		<member type="way" ref="312345524" role=""/>
+		<member type="way" ref="312345422" role=""/>
+		<member type="way" ref="312345421" role=""/>
+		<member type="way" ref="312345429" role=""/>
+		<member type="way" ref="312345498" role=""/>
+		<member type="way" ref="312345522" role=""/>
+		<member type="way" ref="312345418" role=""/>
+		<member type="way" ref="312345417" role=""/>
+		<member type="way" ref="312345448" role=""/>
+		<member type="way" ref="312345424" role=""/>
+		<member type="way" ref="312345477" role=""/>
+		<member type="way" ref="591278030" role=""/>
+		<member type="way" ref="312345532" role=""/>
+		<member type="way" ref="312345426" role=""/>
+		<member type="way" ref="8646969" role=""/>
+		<member type="way" ref="8636723" role=""/>
+		<member type="way" ref="34921157" role=""/>
+		<member type="way" ref="34921158" role=""/>
+		<member type="way" ref="312345534" role=""/>
+		<member type="way" ref="312345575" role=""/>
+		<member type="way" ref="312345585" role=""/>
+		<member type="way" ref="426444845" role=""/>
+		<member type="way" ref="312345574" role=""/>
+		<member type="way" ref="312345583" role=""/>
+		<member type="way" ref="312345582" role=""/>
+		<member type="way" ref="312345578" role=""/>
+		<member type="way" ref="312345595" role=""/>
+		<member type="way" ref="312345593" role=""/>
+		<member type="way" ref="312345597" role=""/>
+		<member type="way" ref="312345544" role=""/>
+		<member type="way" ref="312345541" role=""/>
+		<member type="way" ref="312345577" role=""/>
+		<member type="way" ref="312345600" role=""/>
+		<member type="way" ref="312345553" role=""/>
+		<member type="way" ref="312345591" role=""/>
+		<member type="way" ref="312345543" role=""/>
+		<member type="way" ref="312345598" role=""/>
+		<member type="way" ref="312345592" role=""/>
+		<member type="way" ref="312345590" role=""/>
+		<member type="way" ref="312345589" role=""/>
+		<member type="way" ref="312345599" role=""/>
+		<member type="way" ref="312345536" role=""/>
+		<member type="way" ref="312345564" role=""/>
+		<member type="way" ref="312345540" role=""/>
+		<member type="way" ref="312345588" role=""/>
+		<member type="way" ref="312345594" role=""/>
+		<member type="way" ref="312345579" role=""/>
+		<member type="way" ref="312345580" role=""/>
+		<member type="way" ref="312345558" role=""/>
+		<member type="way" ref="312345576" role=""/>
+		<member type="way" ref="312345581" role=""/>
+		<member type="way" ref="312345548" role=""/>
+		<member type="way" ref="312345587" role=""/>
+		<member type="way" ref="310169164" role=""/>
+		<member type="way" ref="312345538" role=""/>
+		<member type="way" ref="312345586" role=""/>
+		<member type="way" ref="310310952" role=""/>
+		<member type="way" ref="310169165" role=""/>
+		<member type="way" ref="310310953" role=""/>
+		<member type="way" ref="310310954" role=""/>
+		<member type="way" ref="310169163" role=""/>
+		<member type="way" ref="310310956" role="forward"/>
+		<member type="way" ref="34921163" role="forward"/>
+		<member type="way" ref="310310958" role="forward"/>
+		<member type="way" ref="310310957" role="forward"/>
+		<member type="way" ref="310310959" role="forward"/>
+		<member type="way" ref="8651143" role=""/>
+		<member type="way" ref="8650464" role=""/>
+		<member type="way" ref="8643890" role=""/>
+		<member type="way" ref="8638040" role=""/>
+		<member type="way" ref="8650596" role="forward"/>
+		<tag k="ref" v="35"/>
+		<tag k="name" v="MBTA 35"/>
+		<tag k="type" v="route"/>
+		<tag k="FIXME" v="needs details at Dedham Mall"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8330622" version="1">
+		<member type="way" ref="426847629" role="forward"/>
+		<member type="way" ref="102710889" role="forward"/>
+		<member type="way" ref="591278104" role=""/>
+		<member type="way" ref="426847630" role=""/>
+		<member type="way" ref="139439567" role=""/>
+		<member type="way" ref="591252063" role="forward"/>
+		<member type="way" ref="591278077" role="forward"/>
+		<member type="way" ref="8649554" role="forward"/>
+		<member type="way" ref="8651553" role="forward"/>
+		<member type="way" ref="8650869" role="forward"/>
+		<member type="way" ref="426442089" role="forward"/>
+		<member type="way" ref="426442090" role="forward"/>
+		<member type="way" ref="426442093" role="forward"/>
+		<member type="way" ref="426442091" role="forward"/>
+		<member type="way" ref="591278018" role=""/>
+		<member type="way" ref="510035800" role=""/>
+		<member type="way" ref="510035801" role=""/>
+		<member type="way" ref="8648258" role="forward"/>
+		<member type="way" ref="426606643" role="forward"/>
+		<member type="way" ref="426606639" role="forward"/>
+		<member type="way" ref="426494292" role="forward"/>
+		<member type="way" ref="426494295" role="forward"/>
+		<member type="way" ref="426494285" role="forward"/>
+		<member type="way" ref="570201730" role="forward"/>
+		<member type="way" ref="426494294" role="forward"/>
+		<member type="way" ref="8651719" role="forward"/>
+		<member type="way" ref="426606642" role="forward"/>
+		<member type="way" ref="426606641" role="forward"/>
+		<member type="way" ref="426606640" role="forward"/>
+		<member type="way" ref="426494293" role="forward"/>
+		<member type="way" ref="426494288" role="forward"/>
+		<member type="way" ref="570201721" role="forward"/>
+		<member type="way" ref="426494283" role="forward"/>
+		<member type="way" ref="426494287" role="forward"/>
+		<member type="way" ref="426494298" role="forward"/>
+		<member type="way" ref="426494286" role="forward"/>
+		<member type="way" ref="426494299" role="forward"/>
+		<tag k="ref" v="34E"/>
+		<tag k="name" v="MBTA 34E"/>
+		<tag k="type" v="route"/>
+		<tag k="FIXME" v="needs details at Dedham Mall"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8330623" version="1">
+		<member type="way" ref="426847629" role="forward"/>
+		<member type="way" ref="102710889" role="forward"/>
+		<member type="way" ref="591278104" role=""/>
+		<member type="way" ref="426847630" role=""/>
+		<member type="way" ref="139439567" role=""/>
+		<member type="way" ref="591252063" role="forward"/>
+		<member type="way" ref="591278077" role="forward"/>
+		<member type="way" ref="8649554" role="forward"/>
+		<member type="way" ref="8651553" role="forward"/>
+		<member type="way" ref="8650869" role="forward"/>
+		<member type="way" ref="426442089" role="forward"/>
+		<member type="way" ref="426442090" role="forward"/>
+		<member type="way" ref="426442093" role="forward"/>
+		<member type="way" ref="426442091" role="forward"/>
+		<member type="way" ref="591278018" role=""/>
+		<member type="way" ref="510035800" role=""/>
+		<member type="way" ref="510035801" role=""/>
+		<member type="way" ref="8648258" role="forward"/>
+		<member type="way" ref="426606643" role="forward"/>
+		<member type="way" ref="426606639" role="forward"/>
+		<member type="way" ref="426494292" role="forward"/>
+		<member type="way" ref="426494295" role="forward"/>
+		<member type="way" ref="426494285" role="forward"/>
+		<member type="way" ref="570201730" role="forward"/>
+		<member type="way" ref="426494294" role="forward"/>
+		<member type="way" ref="426494299" role="forward"/>
+		<member type="way" ref="426494286" role="forward"/>
+		<member type="way" ref="426494298" role="forward"/>
+		<member type="way" ref="426494287" role="forward"/>
+		<member type="way" ref="426494283" role="forward"/>
+		<member type="way" ref="570201721" role="forward"/>
+		<member type="way" ref="426494288" role="forward"/>
+		<member type="way" ref="426494293" role="forward"/>
+		<member type="way" ref="426606640" role="forward"/>
+		<member type="way" ref="426606641" role="forward"/>
+		<member type="way" ref="426606642" role="forward"/>
+		<member type="way" ref="8651719" role="forward"/>
+		<tag k="ref" v="34"/>
+		<tag k="name" v="MBTA 34"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8330624" version="1">
+		<member type="way" ref="591278109" role="forward"/>
+		<member type="way" ref="508840509" role="forward"/>
+		<member type="way" ref="591816719" role="forward"/>
+		<member type="way" ref="591278116" role="forward"/>
+		<member type="way" ref="8651081" role="forward"/>
+		<member type="way" ref="591278131" role="forward"/>
+		<member type="way" ref="426444771" role="forward"/>
+		<member type="way" ref="8651547" role="forward"/>
+		<member type="way" ref="8642290" role="forward"/>
+		<member type="way" ref="503099011" role="forward"/>
+		<member type="way" ref="9113783" role="forward"/>
+		<member type="way" ref="9114615" role="forward"/>
+		<member type="way" ref="211852999" role="forward"/>
+		<member type="way" ref="591278130" role="forward"/>
+		<member type="way" ref="8648585" role="forward"/>
+		<member type="way" ref="8645600" role=""/>
+		<member type="way" ref="34729476" role=""/>
+		<member type="way" ref="34729477" role=""/>
+		<member type="way" ref="426628619" role=""/>
+		<tag k="ref" v="33"/>
+		<tag k="name" v="MBTA 33"/>
+		<tag k="type" v="route"/>
+		<tag k="FIXME" v="verify route at Mattapan"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8330625" version="1">
+		<member type="way" ref="8647562" role=""/>
+		<member type="way" ref="591252081" role=""/>
+		<member type="way" ref="508839214" role=""/>
+		<member type="way" ref="508217064" role=""/>
+		<member type="way" ref="8648734" role=""/>
+		<member type="way" ref="8646106" role="forward"/>
+		<member type="way" ref="495347566" role="forward"/>
+		<member type="way" ref="102710885" role="forward"/>
+		<tag k="ref" v="32"/>
+		<tag k="name" v="MBTA 32"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8330626" version="1">
+		<member type="way" ref="495347566" role="forward"/>
+		<member type="way" ref="8646106" role="forward"/>
+		<member type="way" ref="102710885" role="forward"/>
+		<member type="way" ref="591252048" role=""/>
+		<member type="way" ref="495352041" role="forward"/>
+		<member type="way" ref="494969945" role="forward"/>
+		<member type="way" ref="494969947" role="forward"/>
+		<member type="way" ref="422445958" role="forward"/>
+		<member type="way" ref="591252049" role="forward"/>
+		<member type="way" ref="494970240" role="forward"/>
+		<member type="way" ref="494969944" role="forward"/>
+		<member type="way" ref="422445959" role="forward"/>
+		<member type="way" ref="426499595" role="forward"/>
+		<member type="way" ref="426499593" role="forward"/>
+		<member type="way" ref="426499596" role="forward"/>
+		<member type="way" ref="426499594" role="forward"/>
+		<member type="way" ref="31494878" role="forward"/>
+		<member type="way" ref="8649191" role=""/>
+		<member type="way" ref="533623512" role="forward"/>
+		<member type="way" ref="8644670" role="forward"/>
+		<member type="way" ref="533625183" role="forward"/>
+		<member type="way" ref="426497602" role="forward"/>
+		<member type="way" ref="426497604" role="forward"/>
+		<member type="way" ref="426469243" role="forward"/>
+		<member type="way" ref="426469246" role="forward"/>
+		<member type="way" ref="533641953" role="forward"/>
+		<member type="way" ref="34729472" role="forward"/>
+		<member type="way" ref="426469228" role="forward"/>
+		<member type="way" ref="426469231" role="forward"/>
+		<member type="way" ref="34729473" role="forward"/>
+		<member type="way" ref="426469237" role="forward"/>
+		<member type="way" ref="420751705" role="forward"/>
+		<member type="way" ref="426469234" role="forward"/>
+		<member type="way" ref="426444762" role="forward"/>
+		<member type="way" ref="426444759" role="forward"/>
+		<member type="way" ref="8652272" role="forward"/>
+		<member type="way" ref="211852999" role="forward"/>
+		<member type="way" ref="9114615" role="forward"/>
+		<member type="way" ref="9113783" role="forward"/>
+		<member type="way" ref="503099011" role="forward"/>
+		<member type="way" ref="8642290" role="forward"/>
+		<member type="way" ref="8651547" role="forward"/>
+		<member type="way" ref="426444771" role="forward"/>
+		<member type="way" ref="591278131" role="forward"/>
+		<member type="way" ref="8651081" role="forward"/>
+		<member type="way" ref="591278116" role="forward"/>
+		<member type="way" ref="420751701" role="forward"/>
+		<member type="way" ref="533640529" role="forward"/>
+		<member type="way" ref="8652289" role="forward"/>
+		<member type="way" ref="8644711" role="forward"/>
+		<member type="way" ref="623438663" role="forward"/>
+		<member type="way" ref="34729470" role="forward"/>
+		<member type="way" ref="426469225" role="forward"/>
+		<member type="way" ref="426469241" role="forward"/>
+		<member type="way" ref="426469239" role="forward"/>
+		<member type="way" ref="34729471" role="forward"/>
+		<member type="way" ref="426497603" role="forward"/>
+		<member type="way" ref="533625186" role="forward"/>
+		<member type="way" ref="533625185" role="forward"/>
+		<member type="way" ref="426497605" role="forward"/>
+		<member type="way" ref="426473712" role="forward"/>
+		<member type="way" ref="533623515" role="forward"/>
+		<tag k="ref" v="31"/>
+		<tag k="name" v="MBTA 31"/>
+		<tag k="type" v="route"/>
+		<tag k="FIXME" v="verify route at Mattapan"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8330627" version="1">
+		<member type="way" ref="426847629" role="forward"/>
+		<member type="way" ref="102710889" role="forward"/>
+		<member type="way" ref="591278104" role=""/>
+		<member type="way" ref="426847630" role=""/>
+		<member type="way" ref="139439567" role=""/>
+		<member type="way" ref="591252063" role="forward"/>
+		<member type="way" ref="591278077" role="forward"/>
+		<member type="way" ref="8649795" role="forward"/>
+		<member type="way" ref="139439560" role="forward"/>
+		<member type="way" ref="312345481" role="forward"/>
+		<member type="way" ref="312345465" role="forward"/>
+		<member type="way" ref="312345507" role="forward"/>
+		<member type="way" ref="312345469" role="forward"/>
+		<member type="way" ref="312345419" role="forward"/>
+		<member type="way" ref="312345520" role="forward"/>
+		<member type="way" ref="8642326" role="forward"/>
+		<member type="way" ref="591252062" role="forward"/>
+		<member type="way" ref="426442091" role="forward"/>
+		<member type="way" ref="426442093" role="forward"/>
+		<member type="way" ref="8651553" role="forward"/>
+		<member type="way" ref="8650869" role="forward"/>
+		<member type="way" ref="426442089" role="forward"/>
+		<member type="way" ref="426442090" role="forward"/>
+		<member type="way" ref="508807134" role=""/>
+		<member type="way" ref="141392690" role=""/>
+		<member type="way" ref="141392689" role=""/>
+		<member type="way" ref="508217065" role=""/>
+		<member type="way" ref="426602292" role=""/>
+		<member type="way" ref="426602280" role=""/>
+		<member type="way" ref="426602284" role=""/>
+		<member type="way" ref="426602288" role=""/>
+		<member type="way" ref="426678899" role=""/>
+		<member type="way" ref="426678898" role=""/>
+		<member type="way" ref="8648848" role=""/>
+		<member type="way" ref="8645965" role="forward"/>
+		<member type="way" ref="34729474" role="forward"/>
+		<member type="way" ref="34729475" role="forward"/>
+		<member type="way" ref="591278130" role="forward"/>
+		<member type="way" ref="211852999" role="forward"/>
+		<member type="way" ref="9114615" role="forward"/>
+		<member type="way" ref="9113783" role="forward"/>
+		<member type="way" ref="503099011" role="forward"/>
+		<member type="way" ref="8642290" role="forward"/>
+		<member type="way" ref="8651547" role="forward"/>
+		<member type="way" ref="426444771" role="forward"/>
+		<member type="way" ref="591278131" role="forward"/>
+		<member type="way" ref="8651081" role="forward"/>
+		<member type="way" ref="591278116" role="forward"/>
+		<member type="way" ref="591816719" role="forward"/>
+		<member type="way" ref="508840509" role="forward"/>
+		<member type="way" ref="8638338" role="forward"/>
+		<member type="way" ref="211854672" role="forward"/>
+		<member type="way" ref="211854671" role="forward"/>
+		<member type="way" ref="533642258" role="forward"/>
+		<tag k="ref" v="30"/>
+		<tag k="name" v="MBTA 30"/>
+		<tag k="type" v="route"/>
+		<tag k="FIXME" v="verify route at Mattapan"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8330628" version="1">
+		<member type="way" ref="426467425" role="forward"/>
+		<member type="way" ref="426467420" role="forward"/>
+		<member type="way" ref="591278103" role="backward"/>
+		<member type="way" ref="591278095" role="forward"/>
+		<member type="way" ref="435364607" role=""/>
+		<member type="way" ref="435364607" role=""/>
+		<member type="way" ref="591278103" role="forward"/>
+		<member type="way" ref="426467413" role="forward"/>
+		<member type="way" ref="426467416" role="forward"/>
+		<member type="way" ref="426473714" role="forward"/>
+		<member type="way" ref="426473709" role="forward"/>
+		<member type="way" ref="533623512" role="forward"/>
+		<member type="way" ref="8644670" role="forward"/>
+		<member type="way" ref="533625183" role="forward"/>
+		<member type="way" ref="426497602" role="forward"/>
+		<member type="way" ref="426497604" role="forward"/>
+		<member type="way" ref="426469243" role="forward"/>
+		<member type="way" ref="426469246" role="forward"/>
+		<member type="way" ref="533641953" role="forward"/>
+		<member type="way" ref="34729472" role="forward"/>
+		<member type="way" ref="426469228" role="forward"/>
+		<member type="way" ref="426469231" role="forward"/>
+		<member type="way" ref="34729473" role="forward"/>
+		<member type="way" ref="426469237" role="forward"/>
+		<member type="way" ref="420751705" role="forward"/>
+		<member type="way" ref="426469234" role="forward"/>
+		<member type="way" ref="426444762" role="forward"/>
+		<member type="way" ref="426444759" role="forward"/>
+		<member type="way" ref="8652272" role="forward"/>
+		<member type="way" ref="211852999" role="forward"/>
+		<member type="way" ref="9114615" role="forward"/>
+		<member type="way" ref="9113783" role="forward"/>
+		<member type="way" ref="503099011" role="forward"/>
+		<member type="way" ref="8642290" role="forward"/>
+		<member type="way" ref="8651547" role="forward"/>
+		<member type="way" ref="426444771" role="forward"/>
+		<member type="way" ref="591278131" role="forward"/>
+		<member type="way" ref="8651081" role="forward"/>
+		<member type="way" ref="591278116" role="forward"/>
+		<member type="way" ref="420751701" role="forward"/>
+		<member type="way" ref="533640529" role="forward"/>
+		<member type="way" ref="8652289" role="forward"/>
+		<member type="way" ref="8644711" role="forward"/>
+		<member type="way" ref="623438663" role="forward"/>
+		<member type="way" ref="34729470" role="forward"/>
+		<member type="way" ref="426469225" role="forward"/>
+		<member type="way" ref="426469241" role="forward"/>
+		<member type="way" ref="426469239" role="forward"/>
+		<member type="way" ref="34729471" role="forward"/>
+		<member type="way" ref="426497603" role="forward"/>
+		<member type="way" ref="533625186" role="forward"/>
+		<member type="way" ref="533625185" role="forward"/>
+		<member type="way" ref="426497605" role="forward"/>
+		<member type="way" ref="426473712" role="forward"/>
+		<member type="way" ref="533624560" role="forward"/>
+		<member type="way" ref="426473716" role="forward"/>
+		<member type="way" ref="426467418" role="forward"/>
+		<member type="way" ref="426467422" role="forward"/>
+		<tag k="ref" v="29"/>
+		<tag k="name" v="MBTA 29"/>
+		<tag k="type" v="route"/>
+		<tag k="FIXME" v="verify route at Mattapan"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8330629" version="1">
+		<member type="way" ref="426467425" role="forward"/>
+		<member type="way" ref="426467420" role="forward"/>
+		<member type="way" ref="426467413" role="forward"/>
+		<member type="way" ref="426467416" role="forward"/>
+		<member type="way" ref="426473714" role="forward"/>
+		<member type="way" ref="426473709" role="forward"/>
+		<member type="way" ref="533623512" role="forward"/>
+		<member type="way" ref="8644670" role="forward"/>
+		<member type="way" ref="533625183" role="forward"/>
+		<member type="way" ref="426497602" role="forward"/>
+		<member type="way" ref="426497604" role="forward"/>
+		<member type="way" ref="426469243" role="forward"/>
+		<member type="way" ref="426469246" role="forward"/>
+		<member type="way" ref="533641953" role="forward"/>
+		<member type="way" ref="34729472" role="forward"/>
+		<member type="way" ref="426469228" role="forward"/>
+		<member type="way" ref="426469231" role="forward"/>
+		<member type="way" ref="34729473" role="forward"/>
+		<member type="way" ref="426469237" role="forward"/>
+		<member type="way" ref="420751705" role="forward"/>
+		<member type="way" ref="426469234" role="forward"/>
+		<member type="way" ref="426444762" role="forward"/>
+		<member type="way" ref="426444759" role="forward"/>
+		<member type="way" ref="8652272" role="forward"/>
+		<member type="way" ref="211852999" role="forward"/>
+		<member type="way" ref="9114615" role="forward"/>
+		<member type="way" ref="9113783" role="forward"/>
+		<member type="way" ref="503099011" role="forward"/>
+		<member type="way" ref="8642290" role="forward"/>
+		<member type="way" ref="8651547" role="forward"/>
+		<member type="way" ref="426444771" role="forward"/>
+		<member type="way" ref="591278131" role="forward"/>
+		<member type="way" ref="8651081" role="forward"/>
+		<member type="way" ref="591278116" role="forward"/>
+		<member type="way" ref="420751701" role="forward"/>
+		<member type="way" ref="533640529" role="forward"/>
+		<member type="way" ref="8652289" role="forward"/>
+		<member type="way" ref="8644711" role="forward"/>
+		<member type="way" ref="623438663" role="forward"/>
+		<member type="way" ref="34729470" role="forward"/>
+		<member type="way" ref="426469225" role="forward"/>
+		<member type="way" ref="426469241" role="forward"/>
+		<member type="way" ref="426469239" role="forward"/>
+		<member type="way" ref="34729471" role="forward"/>
+		<member type="way" ref="426497603" role="forward"/>
+		<member type="way" ref="533625186" role="forward"/>
+		<member type="way" ref="533625185" role="forward"/>
+		<member type="way" ref="426497605" role="forward"/>
+		<member type="way" ref="426473712" role="forward"/>
+		<member type="way" ref="533624560" role="forward"/>
+		<member type="way" ref="426473716" role="forward"/>
+		<member type="way" ref="426467418" role="forward"/>
+		<member type="way" ref="426467422" role="forward"/>
+		<member type="way" ref="591278095" role="forward"/>
+		<tag k="ref" v="28"/>
+		<tag k="name" v="MBTA 28"/>
+		<tag k="type" v="route"/>
+		<tag k="FIXME" v="verify route at Mattapan"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8330630" version="1">
+		<member type="way" ref="211853000" role=""/>
+		<member type="way" ref="8651081" role="forward"/>
+		<member type="way" ref="8645302" role="forward"/>
+		<member type="way" ref="591278131" role="forward"/>
+		<tag k="ref" v="27"/>
+		<tag k="name" v="MBTA 27"/>
+		<tag k="type" v="route"/>
+		<tag k="FIXME" v="verify route at Mattapan"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8330632" version="1">
+		<member type="way" ref="426628619" role=""/>
+		<member type="way" ref="34729477" role=""/>
+		<member type="way" ref="34729476" role=""/>
+		<member type="way" ref="8645600" role=""/>
+		<member type="way" ref="8648585" role="forward"/>
+		<member type="way" ref="591278130" role="forward"/>
+		<member type="way" ref="211852999" role="forward"/>
+		<member type="way" ref="9114615" role="forward"/>
+		<member type="way" ref="9113783" role="forward"/>
+		<member type="way" ref="503099011" role="forward"/>
+		<member type="way" ref="8642290" role="forward"/>
+		<member type="way" ref="8651547" role="forward"/>
+		<member type="way" ref="426444771" role="forward"/>
+		<member type="way" ref="591278131" role="forward"/>
+		<member type="way" ref="8651081" role="forward"/>
+		<member type="way" ref="591278116" role="forward"/>
+		<member type="way" ref="591816719" role="forward"/>
+		<member type="way" ref="508840509" role="forward"/>
+		<member type="way" ref="591278109" role="forward"/>
+		<tag k="ref" v="24"/>
+		<tag k="name" v="MBTA 24"/>
+		<tag k="type" v="route"/>
+		<tag k="FIXME" v="verify route at Mattapan"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8335667" version="1">
+		<member type="way" ref="8651669" role="forward"/>
+		<tag k="ref" v="195"/>
+		<tag k="name" v="MBTA 195"/>
+		<tag k="type" v="route"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8340145" version="1">
+		<member type="way" ref="48960283" role=""/>
+		<member type="way" ref="9113707" role="forward"/>
+		<member type="way" ref="9113906" role="forward"/>
+		<member type="way" ref="591278128" role="forward"/>
+		<member type="way" ref="503099011" role="forward"/>
+		<member type="way" ref="8642290" role="forward"/>
+		<member type="way" ref="8651547" role="forward"/>
+		<member type="way" ref="426444771" role="forward"/>
+		<member type="way" ref="591278131" role="forward"/>
+		<member type="way" ref="8651081" role="forward"/>
+		<member type="way" ref="591278116" role="forward"/>
+		<member type="way" ref="591816719" role="forward"/>
+		<member type="way" ref="8652272" role="forward"/>
+		<member type="way" ref="211852999" role="forward"/>
+		<member type="way" ref="9114615" role="forward"/>
+		<member type="way" ref="591278129" role="forward"/>
+		<member type="way" ref="211850612" role="forward"/>
+		<tag k="ref" v="716"/>
+		<tag k="name" v="MBTA 716"/>
+		<tag k="type" v="route"/>
+		<tag k="FIXME" v="verify route at Mattapan, Cobbs Corner"/>
+		<tag k="route" v="bus"/>
+		<tag k="network" v="MBTA"/>
+		
+	</relation>
+	<relation id="8768542" version="1">
+		<member type="way" ref="630214340" role="from"/>
+		<member type="node" ref="5951269202" role="via"/>
+		<member type="way" ref="630214339" role="to"/>
+		<tag k="type" v="restriction"/>
+		<tag k="restriction" v="no_left_turn"/>
+	</relation>
+	<relation id="8768576" version="1">
+		<member type="way" ref="426444764" role="from"/>
+		<tag k="type" v="restriction"/>
+		<tag k="restriction" v="no_u_turn"/>
+	</relation>
 </osm>

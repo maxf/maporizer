@@ -2,6 +2,13 @@
 
   <xsl:template match="way[tag[@k='building']]"/>
 
+  <xsl:template match="way[tag[@k='highway' and (@v='pedestrian' or
+                       @v='footway' or
+                       @v='service' or
+                       @v='cycleway' or
+                       @v='residential' or
+                       @v='tertiary')]]"/>
+
   <xsl:template match="tag[@k='surface' or
                            @k='maxspeed' or
                            @k='lit' or
