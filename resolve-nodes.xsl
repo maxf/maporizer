@@ -2,7 +2,7 @@
 
   <xsl:template match="node"/>
 
-  <xsl:template match="way/nd">
+  <xsl:template match="nd">
     <xsl:variable name="node" select="/osm/node[@id = current()/@ref]"/>
     <node lat="{$node/@lat}" lon="{$node/@lon}"/>
   </xsl:template>
