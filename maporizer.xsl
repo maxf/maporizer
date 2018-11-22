@@ -74,6 +74,15 @@
         <g transform="{$trans2}" id="trans2">
 
           <x:apply-templates
+              select="(way|relation)[tag[@k='leisure' and (@v='common' or @v='park' or @v='golf_course')]]"
+              mode="park"/>
+
+          <x:apply-templates
+              select="(way|relation)[tag[@k='landuse' and @v='cemetary']]"
+              mode="park"/>
+
+
+          <x:apply-templates
               select="way[tag[@k='highway' and (@v='primary' or
                       @v='secondary' or
                       @v='tertiary' or
@@ -84,23 +93,21 @@
                       @v='service' or
                       @v='footway' or
                       @v='pedestrian')]]"
-              mode="line"/>
+              mode="road"/>
 <!--
           <x:apply-templates
               select="way[tag[@k='building']]"
               mode="building"/>
 -->
-          <x:apply-templates
-              select="way[tag[@k='leisure' and (@v='common' or @v='park' or @v='golf_course')]]"
-              mode="park"/>
 
-          <x:apply-templates
-              select="way[tag[@k='landuse' and @v='cemetery']]"
-              mode="park"/>
 
+<!--
           <x:apply-templates
-              select="relation[tag[@k='leisure' and (@v='common' or @v='park' or @v='golf_course')]]"
-              mode="park"/>
+              select="way[tag[@k='waterway' and @v='river']]"
+              mode="waterway"/>
+-->
+
+
 
 <!--
           <x:apply-templates
@@ -147,16 +154,33 @@
     <x:apply-templates select="member" mode="park"/>
   </x:template>
 
+<!--
+  <x:template match="relation" mode="waterway">
+    <x:apply-templates select="member" mode="waterway"/>
+  </x:template>
+-->
+
   <x:template match="member" mode="park">
     <x:variable name="way" select="/osm/way[@id=current()/@ref]"/>
     <path class="park" id="ID{@id}">
       <x:attribute name="d">
-        <x:call-template name="make-path"><x:with-param name="way" select="."/></x:call-template>
+        <x:call-template name="make-path"><x:with-param name="way" select="$way"/></x:call-template>
       </x:attribute>
     </path>
   </x:template>
 
-  <x:template match="way" mode="line">
+<!--
+  <x:template match="member" mode="waterway">
+    <x:apply-templates select="member[type='relation']" mode="waterway"/>
+    <x:variable name="way" select="/osm/way[@id=current()/@ref]"/>
+    <path class="waterway" id="ID{@id}">
+      <x:attribute name="d">
+        <x:call-template name="make-path"><x:with-param name="way" select="$way"/></x:call-template>
+      </x:attribute>
+    </path>
+  </x:template>
+-->
+  <x:template match="way" mode="road">
     <x:variable name="size">
       <x:choose>
         <x:when test="tag[@k='highway' and (@v='primary' or @v='trunk')]">xl</x:when>
@@ -186,6 +210,7 @@
     </path>
   </x:template>
 
+
   <x:template match="way" mode="park">
     <path class="park" id="ID{@id}">
       <x:attribute name="d">
@@ -193,6 +218,16 @@
       </x:attribute>
     </path>
   </x:template>
+
+<!--
+  <x:template match="way" mode="waterway">
+    <path class="waterway" id="ID{@id}">
+      <x:attribute name="d">
+        <x:call-template name="make-path"><x:with-param name="way" select="."/></x:call-template>
+      </x:attribute>
+    </path>
+  </x:template>
+-->
 
   <x:template name="make-path">
     <x:param name="way" select="."/>

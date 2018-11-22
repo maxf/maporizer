@@ -57,6 +57,10 @@ stroke: black;
     stroke-width: 0.00002;
 }
 
+.waterway {
+    fill: #226;
+}
+
 .park2 {
     fill: red;
     stroke: black;

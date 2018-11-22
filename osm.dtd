@@ -1,6 +1,14 @@
- <!ELEMENT osm (api|permissions|user|preferences|gpx_file|changeset|(node|way|relation)+)>
+ <!ELEMENT osm ANY>
  <!ATTLIST osm version            CDATA #FIXED "0.6"><!-- decimal floating point -->
  <!ATTLIST osm generator          CDATA #IMPLIED><!-- UTF-8 encoded, informative -->
+ <!ATTLIST osm timestamp          CDATA #IMPLIED>
+
+ <!ELEMENT bounds EMPTY>
+ <!ATTLIST bounds minlat        CDATA #REQUIRED><!-- decimal floating point <= "0.6" -->
+ <!ATTLIST bounds minlon        CDATA #REQUIRED><!-- decimal floating point <= "0.6" -->
+ <!ATTLIST bounds maxlat        CDATA #REQUIRED><!-- decimal floating point <= "0.6" -->
+ <!ATTLIST bounds maxlon        CDATA #REQUIRED><!-- decimal floating point <= "0.6" -->
+
 
  <!-- response to request message api/capabilities -->
  <!ELEMENT api ((version|area|tracepoints|waynodes|changesets|timeout|status)+)>
@@ -50,7 +58,7 @@
 
  <!-- response to request message api/0.6/user/gpx -->
  <!ELEMENT gpx_file EMPTY>
- <!ATTLIST gpx_file id            CDATA #REQUIRED>
+ <!ATTLIST gpx_file id            ID #REQUIRED>
  <!ATTLIST gpx_file name          CDATA #REQUIRED><!-- UTF-8 encoded -->
  <!ATTLIST gpx_file lat           CDATA #REQUIRED><!-- decimal floating point, in [-90 .. 90] degrees on the WGS84 spheroid -->
  <!ATTLIST gpx_file lon           CDATA #REQUIRED><!-- decimal floating point, in [-180 .. 180] degrees on the WGS84 spheroid -->
@@ -61,7 +69,7 @@
 
  <!-- response to request message api/0.6/changeset/ -->
  <!ELEMENT changeset (tag*, discussion?)>
- <!ATTLIST changeset id           CDATA #REQUIRED><!-- 64-bit decimal integer -->
+ <!ATTLIST changeset id           ID #REQUIRED><!-- 64-bit decimal integer -->
  <!ATTLIST changeset uid          CDATA #IMPLIED><!-- decimal integer -->
  <!ATTLIST changeset user         CDATA #IMPLIED><!-- UTF-8 encoded -->
  <!ATTLIST changeset created_at   CDATA #IMPLIED><!-- ISO 8601 format -->
@@ -93,7 +101,7 @@
  <!ATTLIST node timestamp         CDATA #IMPLIED><!-- ISO 8601 format -->
 
  <!ELEMENT way ((tag|nd)*)><!-- should contain at least two nd elements -->
- <!ATTLIST way id                 CDATA #IMPLIED><!-- 64-bit decimal integer, negative when creating a new way with a placeholder -->
+ <!ATTLIST way id                 ID #IMPLIED><!-- 64-bit decimal integer, negative when creating a new way with a placeholder -->
  <!ATTLIST way version            CDATA #IMPLIED><!-- decimal integer, required when id > 0 -->
  <!ATTLIST way changeset          CDATA #IMPLIED><!-- 64-bit decimal integer -->
  <!ATTLIST way visible            (true|false) #IMPLIED><!-- false requires a request by a user with permission -->
@@ -105,7 +113,7 @@
  <!ATTLIST nd ref                 IDREF #REQUIRED><!-- 64-bit decimal integer, must match the id of an existing node element -->
 
  <!ELEMENT relation ((tag|member)*)><!-- should contain at least one member element -->
- <!ATTLIST relation id            CDATA #IMPLIED><!-- 64-bit decimal integer, negative when creating a new relation -->
+ <!ATTLIST relation id            ID #IMPLIED><!-- 64-bit decimal integer, negative when creating a new relation -->
  <!ATTLIST relation version       CDATA #IMPLIED><!-- decimal integer, required when id > 0 -->
  <!ATTLIST relation changeset     CDATA #IMPLIED><!-- 64-bit decimal integer -->
  <!ATTLIST relation visible       (true|false) #IMPLIED><!-- false requires a request by a user with permission -->
@@ -115,7 +123,7 @@
 
  <!ELEMENT member EMPTY>
  <!ATTLIST member type            (way|node|relation) #REQUIRED>
- <!ATTLIST member ref             CDATA #REQUIRED><!-- 64-bit decimal integer, must match the id of an existing element of this type -->
+ <!ATTLIST member ref             IDREF #REQUIRED><!-- 64-bit decimal integer, must match the id of an existing element of this type -->
  <!ATTLIST member role            CDATA #IMPLIED><!-- UTF-8 encoded, shorter than 256 characters, should be documented on the OSM wiki -->
 
  <!-- complements to various request messages api/0.6/(user/preferences|changeset|create|delete|update)/ -->
