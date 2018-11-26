@@ -1,23 +1,9 @@
 .background {
-//    fill: #e0e4cc;
-fill: black;
-}
-
-.frame {
-    fill: none;
-//    stroke: #e0e4cc;
-stroke: black;
-    stroke-width: 200px;
-}
-
-.building {
-//    filter: url('#hand-drawn');
-    fill: #bbb;
+  fill: black;
 }
 
 .way {
-//    filter: url('#hand-drawn');
-    stroke: #888;
+    stroke: #DDD;
     fill: none;
     stroke-linejoin: round;
     stroke-linecap: round;
@@ -28,14 +14,6 @@ stroke: black;
 .way.m {stroke-width: 0.00008;}
 .way.s {stroke-width: 0.00006;}
 .way.xs {stroke-width: 0.00004;}
-
-.rail {
-//    stroke: #fa6900;
-    stroke: #888;
-    fill: none;
-//    filter: url(#shadow);
-    stroke-width: 0.00008;
-}
 
 .border {
     fill: none;
@@ -51,25 +29,7 @@ stroke: black;
 }
 
 .park {
-//    fill: green;
     fill: #262;
     stroke: black;
     stroke-width: 0.00002;
-}
-
-.waterway {
-    fill: #226;
-}
-
-.park2 {
-    fill: red;
-    stroke: black;
-    stroke-width: 0.00002;
-}
-
-.station {
-  fill: #fa6900;
-  stroke: black;
-  stroke-width: 0.000002;
-//  filter: url(#shadow);
 }

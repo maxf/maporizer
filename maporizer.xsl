@@ -10,7 +10,6 @@
   <x:param name="bottom-border" select="800"/>
   <x:param name="title" select="''"/>
 
-<!--  <x:param name="bgCol" select="'#e0e4cc'"/> -->
   <x:param name="bgCol" select="'black'"/>
 
   <x:variable name="border-width" select="$W - (2 * $border)"/>
@@ -94,26 +93,7 @@
                       @v='footway' or
                       @v='pedestrian')]]"
               mode="road"/>
-<!--
-          <x:apply-templates
-              select="way[tag[@k='building']]"
-              mode="building"/>
--->
 
-
-<!--
-          <x:apply-templates
-              select="way[tag[@k='waterway' and @v='river']]"
-              mode="waterway"/>
--->
-
-
-
-<!--
-          <x:apply-templates
-              select="way[@id=209391138]"
-              mode="station"/>
--->
           <x:apply-templates
               select="way[tag[@k='railway' and @v='rail']]"
               mode="railway"/>
@@ -143,8 +123,8 @@
             class="border"/>
 
       <text
-          x="{$W div 2}" y="{$H - 170}"
-          font-size="670"
+          x="{$W div 2}" y="{$H}"
+          font-size="550"
           text-anchor="middle"
           class="title"><x:value-of select="$title"/></text>
    </svg>
@@ -154,32 +134,13 @@
     <x:apply-templates select="member" mode="park"/>
   </x:template>
 
-<!--
-  <x:template match="relation" mode="waterway">
-    <x:apply-templates select="member" mode="waterway"/>
-  </x:template>
--->
-
   <x:template match="member" mode="park">
-    <x:variable name="way" select="/osm/way[@id=current()/@ref]"/>
-    <path class="park" id="ID{@id}">
-      <x:attribute name="d">
-        <x:call-template name="make-path"><x:with-param name="way" select="$way"/></x:call-template>
-      </x:attribute>
-    </path>
+    <x:call-template name="path">
+      <x:with-param name="way" select="id(@ref)"/>
+      <x:with-param name="class" select="'park'"/>
+    </x:call-template>
   </x:template>
 
-<!--
-  <x:template match="member" mode="waterway">
-    <x:apply-templates select="member[type='relation']" mode="waterway"/>
-    <x:variable name="way" select="/osm/way[@id=current()/@ref]"/>
-    <path class="waterway" id="ID{@id}">
-      <x:attribute name="d">
-        <x:call-template name="make-path"><x:with-param name="way" select="$way"/></x:call-template>
-      </x:attribute>
-    </path>
-  </x:template>
--->
   <x:template match="way" mode="road">
     <x:variable name="size">
       <x:choose>
@@ -191,51 +152,29 @@
         <x:otherwise>xs</x:otherwise>
       </x:choose>
     </x:variable>
-    <path class="way {$size}" id="ID{@id}">
-      <x:attribute name="d">
-        <x:call-template name="make-path"><x:with-param name="way" select="."/></x:call-template>
-      </x:attribute>
-    </path>
+    <x:call-template name="path">
+      <x:with-param name="class" select="concat('way ', $size)"/>
+    </x:call-template>
   </x:template>
-
-  <x:template match="way" mode="railway">
-     <path
-         class="rail"
-         id="ID{@id}"
-         stroke-linejoin="round"
-         stroke-linecap="round">
-      <x:attribute name="d">
-        <x:call-template name="make-path"><x:with-param name="way" select="."/></x:call-template>
-      </x:attribute>
-    </path>
-  </x:template>
-
 
   <x:template match="way" mode="park">
-    <path class="park" id="ID{@id}">
-      <x:attribute name="d">
-        <x:call-template name="make-path"><x:with-param name="way" select="."/></x:call-template>
-      </x:attribute>
-    </path>
+    <x:call-template name="path">
+      <x:with-param name="class" select="'park'"/>
+    </x:call-template>
   </x:template>
 
-<!--
-  <x:template match="way" mode="waterway">
-    <path class="waterway" id="ID{@id}">
-      <x:attribute name="d">
-        <x:call-template name="make-path"><x:with-param name="way" select="."/></x:call-template>
-      </x:attribute>
-    </path>
-  </x:template>
--->
-
-  <x:template name="make-path">
+  <x:template name="path">
     <x:param name="way" select="."/>
-    <x:for-each select="$way/nd">
-      <x:variable name="node" select="id(@ref)"/>
-      <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
-      <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
-    </x:for-each>
+    <x:param name="class" select="''"/>
+    <path class="{$class}">
+      <x:attribute name="d">
+        <x:for-each select="$way/nd">
+          <x:variable name="node" select="id(@ref)"/>
+          <x:value-of select="if (position() = 1) then 'M' else ' L'"/>
+          <x:value-of select="concat($node/@lon,',',$node/@lat)"/>
+        </x:for-each>
+      </x:attribute>
+    </path>
   </x:template>
 
 </x:transform>
