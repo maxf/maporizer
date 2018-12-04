@@ -128,7 +128,7 @@
           text-anchor="middle"
           class="title"><x:value-of select="$title"/></text>
 
-      <script src="draw.js" type="application/src"></script>
+      <script href="draw.js" type="application/javascript"></script>
    </svg>
   </x:template>
 

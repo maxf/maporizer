@@ -1,8 +1,9 @@
 .background {
-  fill: black;
+  fill: white;
 }
 
 .way {
+  display: none;
     stroke: #DDD;
     fill: none;
     stroke-linejoin: round;
@@ -22,6 +23,7 @@
 }
 
 .title {
+  display: none;
     fill: #BBB;
     stroke: black;
     font-family: DejaVu Sans;
@@ -29,7 +31,7 @@
 }
 
 .park {
-    fill: #262;
+    fill: none; //#262;
     stroke: black;
     stroke-width: 0.00002;
 }
