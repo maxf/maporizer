@@ -77,7 +77,7 @@
               mode="park"/>
 
           <x:apply-templates
-              select="(way|relation)[tag[@k='landuse' and @v='cemetary']]"
+              select="(way|relation)[tag[@k='landuse' and @v='cemetery']]"
               mode="park"/>
 
 
@@ -123,10 +123,12 @@
             class="border"/>
 
       <text
-          x="{$W div 2}" y="{$H}"
+          x="{$W div 2}" y="{$H - 200}"
           font-size="550"
           text-anchor="middle"
           class="title"><x:value-of select="$title"/></text>
+
+      <script src="draw.js" type="application/src"></script>
    </svg>
   </x:template>
 
