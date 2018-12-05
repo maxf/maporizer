@@ -1,21 +1,39 @@
 const parksCollection = document.getElementsByClassName('park');
 const parksArray = [];
 const draw = SVG('svgroot');
+const Flatten = window.flatten;
+const g = SVG.select('#trans2').members[0]; //SVG.adopt(document.getElementById('trans2'));
+
+const flattenPoint = function(pointString) {
+  const coords = pointString.match(/(L|M)([^,]+),(.+)/);
+  const x = 100 * parseFloat(coords[2], 10);
+  const y = 100 * parseFloat(coords[3], 10);
+  return new Flatten.Point(x, y);
+};
+
+const flattenPath = function(svgPath) {
+  const polygon = new Flatten.Polygon();
+  const points = svgPath.attributes.d.value
+    .split(' ')
+    .map(flattenPoint);
+  polygon.addFace(points);
+  return polygon;
+};
 
 const processPark = function(svgPath) {
   const bb = svgPath.getBBox();
-   for (let i=0; i< 100; i++) {
+  const polygon = flattenPath(svgPath);
+  const area = polygon.area();
+   for (let i=0; i < 10000*area; i++) {
      const x = Math.random() * bb.width + bb.x;
      const y = Math.random() * bb.height + bb.y;
-     console.log(x,y)
-     draw.circle(0.003).fill('green').move(x,y);
+     const point = new Flatten.Point(100*x, 100*y);
+     if (polygon.contains(point)) {
+       const circle = draw.circle(0.0003).addClass('tree').move(x-0.00015, y-0.00015);
+       g.add(circle);
+     }
    }
 }
-
-
-
-  // M-0.0506517,51.465869 L-0.0501401,51.4595587 L-0.0534532,51.461409 L-0.0556934,51.4626977 L-0.0532695,51.4641953 L-0.0512267,51.4655321 L-0.0506517,51.465869
-
 
 for (let i=0; i<parksCollection.length; i++) {
   parksArray.push(parksCollection.item(i));

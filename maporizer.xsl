@@ -128,6 +128,7 @@
           text-anchor="middle"
           class="title"><x:value-of select="$title"/></text>
 
+      <script href="flatten.umd.min.js" type="application/javascript"></script>
       <script href="svg.js" type="application/javascript"></script>
       <script href="draw.js" type="application/javascript"></script>
    </svg>
