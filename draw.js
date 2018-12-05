@@ -31,8 +31,9 @@ const processPark = function(svgPath) {
      const y = Math.random() * bb.height + bb.y;
      const point = new Flatten.Point(100*x, 100*y);
      if (polygon.contains(point)) {
-       const circle = draw.circle(0.0003).addClass('tree').move(x-0.00015, y-0.00015);
-       g.add(circle);
+//       const tree = draw.circle(0.0003).addClass('tree').move(x-0.00015, y-0.00015);
+       const tree = draw.image('img/tree.png', 0.0005, 0.0005).move(x-0.00015, y-0.00015);
+       g.add(tree);
      }
    }
 }
