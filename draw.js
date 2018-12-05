@@ -4,6 +4,8 @@ const draw = SVG('svgroot');
 const Flatten = window.flatten;
 const g = SVG.select('#trans2').members[0]; //SVG.adopt(document.getElementById('trans2'));
 
+Math.seedrandom('randomseedstring');
+
 const flattenPoint = function(pointString) {
   const coords = pointString.match(/(L|M)([^,]+),(.+)/);
   const x = 100 * parseFloat(coords[2], 10);
