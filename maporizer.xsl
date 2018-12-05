@@ -80,7 +80,7 @@
               select="(way|relation)[tag[@k='landuse' and @v='cemetery']]"
               mode="park"/>
 
-
+<!--
           <x:apply-templates
               select="way[tag[@k='highway' and (@v='primary' or
                       @v='secondary' or
@@ -97,10 +97,9 @@
           <x:apply-templates
               select="way[tag[@k='railway' and @v='rail']]"
               mode="railway"/>
-
+-->
         </g>
       </g>
-
 
       <!-- clipping rectangles -->
       <rect x="{$border div 2}" y="{$border div 2}"

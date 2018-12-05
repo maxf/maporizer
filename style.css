@@ -3,7 +3,6 @@
 }
 
 .way {
-  display: none;
     stroke: #DDD;
     fill: none;
     stroke-linejoin: round;
@@ -23,7 +22,6 @@
 }
 
 .title {
-  display: none;
     fill: #BBB;
     stroke: black;
     font-family: DejaVu Sans;
