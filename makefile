@@ -4,4 +4,4 @@
 %.svg: %.xml maporizer.xsl
 	time java -jar saxon.jar -s:$< -xsl:maporizer.xsl -o:$@ title='P E C K H A M'
 
-.PRECIOUS: .xml
+.PRECIOUS: %.xml

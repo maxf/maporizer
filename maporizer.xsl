@@ -16,10 +16,10 @@
   <x:variable name="border-height" select="$H - $border - $bottom-border"/>
   <x:variable name="F" select="($border-width div $border-height) * 1.3"/>
 
-  <x:variable name="minLon" select="/osm/bounds/@minlon + 0.0005"/>
-  <x:variable name="maxLon" select="/osm/bounds/@maxlon - 0.0005"/>
-  <x:variable name="minLat" select="/osm/bounds/@minlat + 0.0005"/>
-  <x:variable name="maxLat" select="/osm/bounds/@maxlat - 0.0005"/>
+  <x:variable name="minLon" select="/osm/bounds/@minlon + 0.0095"/>
+  <x:variable name="maxLon" select="/osm/bounds/@maxlon - 0.0095"/>
+  <x:variable name="minLat" select="/osm/bounds/@minlat + 0.0095"/>
+  <x:variable name="maxLat" select="/osm/bounds/@maxlat - 0.0095"/>
 
   <x:output indent="yes"/>
 
@@ -80,7 +80,6 @@
               select="(way|relation)[tag[@k='landuse' and @v='cemetery']]"
               mode="park"/>
 
-<!--
           <x:apply-templates
               select="way[tag[@k='highway' and (@v='primary' or
                       @v='secondary' or
@@ -93,11 +92,15 @@
                       @v='footway' or
                       @v='pedestrian')]]"
               mode="road"/>
-
+<!--
           <x:apply-templates
               select="way[tag[@k='railway' and @v='rail']]"
               mode="railway"/>
 -->
+          <x:apply-templates
+              select="(way|relation)[tag[@k='building']]"
+              mode="building"/>
+
         </g>
       </g>
 
@@ -164,6 +167,12 @@
   <x:template match="way" mode="park">
     <x:call-template name="path">
       <x:with-param name="class" select="'park'"/>
+    </x:call-template>
+  </x:template>
+
+  <x:template match="way" mode="building">
+    <x:call-template name="path">
+      <x:with-param name="class" select="'building'"/>
     </x:call-template>
   </x:template>
 

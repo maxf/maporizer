@@ -1,2 +1,3 @@
 *.svg
-map.xml
+*.xml
+*.osm

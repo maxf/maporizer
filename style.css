@@ -1,5 +1,5 @@
 .background {
-  fill: white;
+  fill: #EBA000;
 }
 
 .way {
@@ -29,13 +29,19 @@
 }
 
 .park {
-    fill: none; //#262;
-    stroke: black;
-    stroke-width: 0.00002;
+    fill: #262;
+//    stroke: black;
+//    stroke-width: 0.00002;
 }
 
 .tree {
   fill: #262;
   stroke: black;
   stroke-width: 0.00002;
+}
+
+.building {
+  fill: red;
+  stroke: black;
+  stroke-width: 0.00001;
 }
