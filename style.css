@@ -1,9 +1,11 @@
 .background {
-  fill: black;
+//  fill: black;
+  fill:  #e0e4cc;
 }
 
 .way {
-    stroke: #DDD;
+    stroke: #888;
+// stroke: #000;
     fill: none;
     stroke-linejoin: round;
     stroke-linecap: round;
@@ -17,12 +19,14 @@
 
 .border {
     fill: none;
-    stroke: #BBB;
+//    stroke: #BBB;
+stroke: black;
     stroke-width: 5;
 }
 
 .title {
-    fill: #BBB;
+#    fill: #BBB;
+    fill: black;
     stroke: black;
     font-family: DejaVu Sans;
     font-weight: 100;
@@ -32,4 +36,26 @@
     fill: #262;
     stroke: black;
     stroke-width: 0.00002;
+}
+
+.farmland {
+    fill: #a88535;
+    stroke: black;
+    stroke-width: 0.00002;
+}
+
+.industrial {
+    fill: #ccc;
+    stroke: black;
+    stroke-width: 0.00002;
+}
+
+.waterway {
+    stroke: #88f;
+    fill: none;
+    stroke-width: 0.0005;
+}
+
+.water {
+  fill: #88f;
 }

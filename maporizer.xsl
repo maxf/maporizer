@@ -8,18 +8,18 @@
   <x:param name="pxHeight" select="'1000px'"/>
   <x:param name="border" select="200"/>
   <x:param name="bottom-border" select="800"/>
-  <x:param name="title" select="''"/>
+  <x:param name="title" select="'D O U A I'"/>
 
-  <x:param name="bgCol" select="'black'"/>
+  <x:param name="bgCol" select="'#e0e4cc'"/>
 
   <x:variable name="border-width" select="$W - (2 * $border)"/>
   <x:variable name="border-height" select="$H - $border - $bottom-border"/>
-  <x:variable name="F" select="($border-width div $border-height) * 1.3"/>
+  <x:variable name="F" select="($border-width div $border-height) * 1.6"/>
 
-  <x:variable name="minLon" select="/osm/bounds/@minlon + 0.0005"/>
-  <x:variable name="maxLon" select="/osm/bounds/@maxlon - 0.0005"/>
-  <x:variable name="minLat" select="/osm/bounds/@minlat + 0.0005"/>
-  <x:variable name="maxLat" select="/osm/bounds/@maxlat - 0.0005"/>
+  <x:variable name="minLon" select="/osm/bounds/@minlon + 0.015 - 0.013"/>
+  <x:variable name="maxLon" select="/osm/bounds/@maxlon - 0.015 - 0.013"/>
+  <x:variable name="minLat" select="/osm/bounds/@minlat + 0.015"/>
+  <x:variable name="maxLat" select="/osm/bounds/@maxlat - 0.015"/>
 
   <x:output indent="yes"/>
 
@@ -73,12 +73,40 @@
         <g transform="{$trans2}" id="trans2">
 
           <x:apply-templates
-              select="(way|relation)[tag[@k='leisure' and (@v='common' or @v='park' or @v='golf_course')]]"
+              select="(way|relation)[tag[@k='leisure' and
+                      (@v='common' or
+                      @v='park' or
+                      @v='golf_course' or
+                      @v='pitch' or
+                      @v='nature_reserve' or
+                      @v='garden' or
+                      @v='playground')]]"
               mode="park"/>
 
           <x:apply-templates
-              select="(way|relation)[tag[@k='landuse' and @v='cemetary']]"
+              select="(way|relation)[(tag[@k='landuse' and
+                      (@v='cemetery' or
+                      @v='meadow' or
+                      @v='village_green' or
+                      @v='allotments')] or (tag[@k='natural']))]"
               mode="park"/>
+
+          <x:apply-templates
+              select="(way|relation)[tag[@k='landuse' and @v='farmland']]" mode="farmland"/>
+
+          <x:apply-templates
+              select="(way|relation)[tag[@k='landuse' and @v='industrial']]" mode="industrial"/>
+
+          <x:apply-templates
+              select="(way|relation)[tag[@k='natural' and @v='water']]" mode="water"/>
+
+          <x:apply-templates
+              select="(way|relation)[tag[@k='natural' and @v='wood']]"
+              mode="park"/>
+
+          <x:apply-templates
+              select="(way|relation)[tag[@k='waterway' and (@v='canal' or @v='river')]]"
+              mode="waterway"/>
 
 
           <x:apply-templates
@@ -87,6 +115,8 @@
                       @v='tertiary' or
                       @v='residential' or
                       @v='trunk' or
+                      @v='trunk_link' or
+                      @v='primary_link' or
                       @v='unclassified' or
                       @v='cycleway' or
                       @v='service' or
@@ -96,7 +126,7 @@
 
           <x:apply-templates
               select="way[tag[@k='railway' and @v='rail']]"
-              mode="railway"/>
+              mode="road"/>
 
         </g>
       </g>
@@ -123,7 +153,7 @@
             class="border"/>
 
       <text
-          x="{$W div 2}" y="{$H}"
+          x="{$W div 2}" y="{$H - 200}"
           font-size="550"
           text-anchor="middle"
           class="title"><x:value-of select="$title"/></text>
@@ -134,6 +164,18 @@
     <x:apply-templates select="member" mode="park"/>
   </x:template>
 
+  <x:template match="relation" mode="farmland">
+    <x:apply-templates select="member" mode="farmland"/>
+  </x:template>
+
+  <x:template match="relation" mode="industrial">
+    <x:apply-templates select="member" mode="industrial"/>
+  </x:template>
+
+   <x:template match="relation" mode="water">
+    <x:apply-templates select="member" mode="water"/>
+  </x:template>
+
   <x:template match="member" mode="park">
     <x:call-template name="path">
       <x:with-param name="way" select="id(@ref)"/>
@@ -141,10 +183,31 @@
     </x:call-template>
   </x:template>
 
+  <x:template match="member" mode="farmland">
+    <x:call-template name="path">
+      <x:with-param name="way" select="id(@ref)"/>
+      <x:with-param name="class" select="'farmland'"/>
+    </x:call-template>
+  </x:template>
+
+  <x:template match="member" mode="industrial">
+    <x:call-template name="path">
+      <x:with-param name="way" select="id(@ref)"/>
+      <x:with-param name="class" select="'industrial'"/>
+    </x:call-template>
+  </x:template>
+
+  <x:template match="member" mode="water">
+    <x:call-template name="path">
+      <x:with-param name="way" select="id(@ref)"/>
+      <x:with-param name="class" select="'water'"/>
+    </x:call-template>
+  </x:template>
+
   <x:template match="way" mode="road">
     <x:variable name="size">
       <x:choose>
-        <x:when test="tag[@k='highway' and (@v='primary' or @v='trunk')]">xl</x:when>
+        <x:when test="tag[@k='highway' and (@v='primary' or @v='trunk' or @v='trunk_link' or @v='primary_link')]">xl</x:when>
         <x:when test="tag[@k='highway' and @v='secondary']">l</x:when>
         <x:when test="tag[@k='highway' and (@v='tertiary' or @v='unclassified')]">m</x:when>
         <x:when test="tag[@k='highway' and @v='residential']">s</x:when>
@@ -160,6 +223,31 @@
   <x:template match="way" mode="park">
     <x:call-template name="path">
       <x:with-param name="class" select="'park'"/>
+    </x:call-template>
+  </x:template>
+
+  <x:template match="way" mode="farmland">
+    <x:call-template name="path">
+      <x:with-param name="class" select="'farmland'"/>
+    </x:call-template>
+  </x:template>
+
+  <x:template match="way" mode="industrial">
+    <x:call-template name="path">
+      <x:with-param name="class" select="'industrial'"/>
+    </x:call-template>
+  </x:template>
+
+  <x:template match="way" mode="water">
+    <x:call-template name="path">
+      <x:with-param name="class" select="'water'"/>
+    </x:call-template>
+  </x:template>
+
+
+  <x:template match="way" mode="waterway">
+    <x:call-template name="path">
+      <x:with-param name="class" select="'waterway'"/>
     </x:call-template>
   </x:template>
 
